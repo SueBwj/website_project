@@ -7,8 +7,9 @@ class TreeResources(Resource):
     @staticmethod
     def get(topic_id):
         """
-        根据topic_id从files文件夹中选取对应的文件，根据tree structure返回到前端
+        根据topic_id从files文件夹中选取对应的文件，根据tree structure将数据返回到前端
         """
         data = TreeServices.get_tree_structure(topic_id)
         return data, 200
         
+

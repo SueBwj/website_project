@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+from services.roleplay_services import RoleplayService
 from routes.tree_routes import tree_bp
 
 app = Flask(__name__)
