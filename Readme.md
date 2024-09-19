@@ -4,3 +4,6 @@ https://github.com/mattmezza/vue-beautiful-chat?tab=readme-ov-file -- chat 参�
 可以使用一些模块
 - vuetify
 - element ui
+
+### Todo
+- 创建用户标识符用来标记每个不同用户
