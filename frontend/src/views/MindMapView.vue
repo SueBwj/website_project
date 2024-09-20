@@ -14,6 +14,7 @@
     :visible="dialogVisible"
     @close="dialogVisible = false"
     :mode="mode"
+    :claim="claim"
     >
     </ChatModal>
 </template>
@@ -33,7 +34,8 @@
             menuX: 0,
             menuY: 0,
             mode : null,
-            dialogVisible:false
+            dialogVisible:false,
+            claim:''
         }
     },
     components:{
@@ -67,6 +69,7 @@
         const is_comment = node.children.length === 0 ? true : false
         if(!is_comment){
           this.mode = '角色扮演'
+          this.claim = node.nodeData.data.text
         }else{
           this.mode = '头脑风暴'
         }
@@ -78,7 +81,7 @@
     },
     methods:{
       loadTree(mindMap){
-        axios.get(`http://localhost:5000/tree/${this.topic_id}`)
+        axios.get(`http://localhost:5001/tree/${this.topic_id}`)
           .then(response => {
             mindMap.setData({
               data:{
