@@ -35,7 +35,7 @@ class RoleplayService:
                 old_data.append(item)
             save_json(file, old_data)
     
-
+    @staticmethod
     def getGeneratedText(messages):
         """
         返回gpt的回复信息
@@ -53,6 +53,7 @@ class RoleplayService:
         
         return generated_text
     
+    @staticmethod
     def returnFirstReply(claim:str,user_id:str):
         # 先插入观点
         claim, messages = RoleplayService.insertClaim(claim)
@@ -64,4 +65,17 @@ class RoleplayService:
         })
         # 将记录保存
         RoleplayService.saveHistory(messages, user_id, claim)
+        return reply
+
+    @staticmethod
+    def returnReply(user_cookie:str, claim:str ,message:str):
+        """对用户的消息进行回应"""
+        # 根据user_id和claim取出对应的历史文件
+        file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim) + '.json')
+        data = load_json(file)
+        data.append({
+            'role':'user',
+            'content': f'{message}'
+        })
+        reply = RoleplayService.getGeneratedText(data)
         return reply

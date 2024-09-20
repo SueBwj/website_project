@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_restful import Api
-from resources.roleplay_resoources import RoleplayResources
+from backend.resources.roleplay_resources import RoleplayResources
 
 # 创建蓝图
 roleplay_bp = Blueprint('roleplay_bp',__name__)
