@@ -49,7 +49,7 @@ class RoleplayService:
         )
         
         # 从响应中提取生成的文本
-        generated_text = completion.choices[0].message
+        generated_text = completion.choices[0].message.content
         
         return generated_text
     
@@ -64,3 +64,4 @@ class RoleplayService:
         })
         # 将记录保存
         RoleplayService.saveHistory(messages, user_id, claim)
+        return reply
