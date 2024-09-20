@@ -8,7 +8,6 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 - element ui
 
 ### Todo
-- 创建用户标识符用来标记每个不同用户 -- 前端ChatModal需要获取对应的cookies：user_id
-- 需要改进聊天框的样式
-- 需要调整gpt输出的样式
-- 需要能够进行对话
+- 前端ChatModal需要获取对应的cookies：user_id
+- 测试进行对话
+    - 前端发送请求code
