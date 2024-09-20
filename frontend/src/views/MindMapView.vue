@@ -15,6 +15,8 @@
     @close="dialogVisible = false"
     :mode="mode"
     :claim="claim"
+    userAvatar="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Brown&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Blue03&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Light"
+    botAvatar="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortRound&accessoriesType=Round&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Pale"
     >
     </ChatModal>
 </template>
@@ -81,7 +83,7 @@
     },
     methods:{
       loadTree(mindMap){
-        axios.get(`http://localhost:5001/tree/${this.topic_id}`)
+        axios.get(`http://localhost:5000/tree/${this.topic_id}`)
           .then(response => {
             mindMap.setData({
               data:{
