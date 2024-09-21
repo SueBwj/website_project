@@ -39,6 +39,17 @@
             </div>
           </div>
         </div>
+        <!-- 预设问题按钮区域 -->
+        <div class="preset-questions">
+          <button 
+            v-for="(question, index) in question_list" 
+            :key="index" 
+            class="preset-button"
+            @click="handlePresetQuestion(question)"
+          >
+            {{ question }}
+          </button>
+        </div>
         <!-- 模态框底部 -->
         <div class="modal-footer">
           <input
@@ -90,7 +101,9 @@ export default {
   data() {
     return {
       message: '',
-      messages: []
+      messages: [],
+      user_cookie: '',
+      question_list: []
     };
   },
   computed: {
@@ -103,8 +116,9 @@ export default {
       console.log("newVal",newVal)
       if(newVal.trim() !== ''){
         // 在开启新话题的时候清空聊天窗口
-        this.messages = [{ text: '正在加载回复...', sender: 'bot' }]
+        this.messages = [{ text: `正在加载关于支持观点" ${newVal} "的理由...`, sender: 'bot' }]
         this.getGptReply()
+        this.getQuestionList()
       }
     }
   },
@@ -116,13 +130,36 @@ export default {
       if (this.message.trim() !== '') {
         const userMessage = this.message;
         this.messages.push({ text: userMessage, sender: 'user' });
-        this.message = '';
-
-        // 模拟回复
-        setTimeout(() => {
-          this.messages.push({ text: '这是自动回复的消息', sender: 'bot' });
+      
+        axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${this.message}`,{withCredentials: true})
+        .then(response => {
+          this.messages.push({text: response.data, sender: 'bot'})
           this.scrollToBottom();
-        }, 1000);
+        })
+        .catch(error => {
+          console.error("return reply error: ", error)
+        })
+        this.message = '';
+        // // 模拟回复
+        // setTimeout(() => {
+        //   this.messages.push({ text: '这是自动回复的消息', sender: 'bot' });
+        //   this.scrollToBottom();
+        // }, 1000);
+      }
+    },
+    handlePresetQuestion(question) {
+      if (question.trim() !== '') {
+        const userMessage = question;
+        this.messages.push({ text: userMessage, sender: 'user' });
+
+        axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
+          .then(response => {
+            this.messages.push({ text: response.data, sender: 'bot' });
+            this.scrollToBottom();
+          })
+          .catch(error => {
+            console.error("返回回复错误: ", error)
+          });
       }
     },
     getMessageClass(sender) {
@@ -136,6 +173,11 @@ export default {
       .then(response => {
         this.messages.push({text: response.data, sender: 'bot'})
         this.scrollToBottom();
+        const userId = this.getCookie('user_id')
+        if(userId){
+          this.userId = userId
+          console.log('获取到的 user_id:', this.userId);
+        }
       })
       .catch(error => {
         console.error('roleplay first reply error', error)
@@ -163,6 +205,27 @@ export default {
     handleImageError(event) {
       // 头像加载失败时显示默认占位图
       event.target.src = 'https://via.placeholder.com/40?text=?';
+    },
+    getCookie(name){
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    },
+    getQuestionList(){
+      axios.get(`http://localhost:5000/roleplay/prompt?claim=${this.claim}`, {withCredentials: true})
+      .then(response => {
+        try {
+          // 假设 response.data 是一个字符串，需要解析为 JSON
+          console.log("response.data",response.data)
+          this.question_list = response.data.question_list
+        } catch (e) {
+          console.error("解析问题列表时出错:", e);
+        }
+      })
+      .catch(error => {
+        console.error('roleplay question list error', error)
+      })
     }
   },
 };
@@ -177,7 +240,7 @@ export default {
 }
 
 .modal-dialog {
-  width: 700px; /* 增加宽度 */
+  width: 900px; /* 增加宽度 */
   max-width: 95%;
 }
 
@@ -255,6 +318,7 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: relative;
   white-space: pre-wrap; /* 保留换行符 */
+  text-align: left;
 }
 
 /* 用户消息样式 */
@@ -356,6 +420,32 @@ export default {
 
 .message-text li {
   margin-bottom: 5px;
+}
+
+/* 预设问题按钮样式 */
+.preset-questions {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.preset-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #20c997; /* 蓝绿色背景 */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  font-size: 14px;
+}
+
+.preset-button:hover {
+  background: #17a2b8; /* 悬停时的蓝绿色 */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 响应式调整 */
