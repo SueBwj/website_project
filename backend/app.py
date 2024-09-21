@@ -5,7 +5,7 @@ from routes.tree_routes import tree_bp
 from routes.roleplay_routes import roleplay_bp
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, supports_credentials=True)
 # 注册蓝图
 app.register_blueprint(tree_bp)
 app.register_blueprint(roleplay_bp)

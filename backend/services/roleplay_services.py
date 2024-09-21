@@ -78,4 +78,36 @@ class RoleplayService:
             'content': f'{message}'
         })
         reply = RoleplayService.getGeneratedText(data)
+        data.append({
+            'role':'system',
+            'content': f'{reply}'
+        })
+        RoleplayService.saveHistory(data, user_cookie, claim)
         return reply
+
+    @staticmethod
+    def file_exist(user_cookie:str, claim:str):
+        """
+        判断文件是否存在
+        """
+        file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim) + '.json')
+        return os.path.exists(file)
+
+
+class RoleplayPromptService:
+
+    @staticmethod
+    def generate_question(claim: str,user_cookie:str)->list:
+        """
+        根据 claim 生成 2-3 个问题, 返回一个列表包含三个问题
+        """
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": "你是一位专家，需要根据给定的观点生成 3 个问题，用于用户选择。"},
+                {"role": "user", "content": f"请根据以下观点生成问题：{claim},每个问题字数不超过10个字,直接给出问题即可"}
+            ],
+            max_tokens=100
+        )
+
+        return response.choices[0].message.content.split('\n')
