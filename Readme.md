@@ -8,6 +8,6 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 - element ui
 
 ### Todo
-- 用户与某一个观点交互完成之后就对这个node进行标注，改变颜色或者增加标签
-- 载入数据到map -- 富文本的处理和备注的功能
 - 在node的effectiveStyles属性中可以修改颜色，字体，背景色等
+    - 给与node的objection和evidence特定的样式
+- 重新设计一下chat功能, 还有文件的保存，可以采用node的uid
