@@ -8,6 +8,6 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 - element ui
 
 ### Todo
-- 前端ChatModal需要获取对应的cookies：user_id
-- 测试进行对话
-    - 前端发送请求code
+- 用户与某一个观点交互完成之后就对这个node进行标注，改变颜色或者增加标签
+- 载入数据到map -- 富文本的处理和备注的功能
+- 在node的effectiveStyles属性中可以修改颜色，字体，背景色等
