@@ -11,3 +11,6 @@ def setUserId():
     })
     response.set_cookie('user_id',user_id, max_age=30*24*60*60)
     return response
+
+def generate_uid():
+    return str(uuid.uuid4())
