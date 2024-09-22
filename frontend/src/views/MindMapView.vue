@@ -57,7 +57,7 @@
         initRootNodePosition: ['left', 'center']
       });
       this.loadTree(mindMap); // 等待 loadTree 完成
-
+      mindMap.setTheme('classic4')
       mindMap.on('node_active', (node, nodeList) => {
         this.activeNodes = nodeList; // 使用 this 访问 activeNodes
         if(!node){
@@ -85,11 +85,12 @@
       loadTree(mindMap){
         axios.get(`http://localhost:5000/tree/${this.topic_id}`)
           .then(response => {
+            console.log(response.data)
             mindMap.setData({
-              data:{
-                'text': '萝卜快跑'
+              data: {
+                text: response.data[0].data.text
               },
-              children : response.data
+              children: response.data[0].children
             })
           })
           .catch(error => {
