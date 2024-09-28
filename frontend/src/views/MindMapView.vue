@@ -56,14 +56,19 @@
         },
         initRootNodePosition: ['left', 'center']
       });
-      this.loadTree(mindMap); // 等待 loadTree 完成
+      // 加载树结构
+      this.loadTree(mindMap)
+      // 设置主题
       mindMap.setTheme('classic4')
+      
+
       mindMap.on('node_active', (node, nodeList) => {
         this.activeNodes = nodeList; // 使用 this 访问 activeNodes
         if(!node){
           this.showMenu = false
         }
       });
+      
       mindMap.on('node_contextmenu',(event, node) => {
         console.log('click node and event information: ', node)
         console.log('click right')
@@ -81,6 +86,7 @@
         
       })
     },
+
     methods:{
       loadTree(mindMap){
         axios.get(`http://localhost:5000/tree/${this.topic_id}`)
@@ -92,6 +98,9 @@
               },
               children: response.data[0].children
             })
+            // 应用节点样式
+            this.applyNodeStyle(mindMap)
+            
           })
           .catch(error => {
             console.error("Error loading tree data:", error)
@@ -111,8 +120,32 @@
       },
       addNote(){
         this.showMenu = false
-      }
+        this.dialogVisible = true; // 打开聊天窗口
+      },
+      applyNodeStyle(mindMap){
+        const traverse = (node) => {
+          console.log("travserse node data",node.opt.data)
+          if (!node) return;
+
+          if (node.data && node.data.text) {
+            if(node.data.text === 'Evidence'){
+              node.setStyle('color', 'green')
+            }
+            if(node.data.text === 'Objection'){
+              node.setStyle('color', 'red')
+            }
+          }
+          if(node.children && node.children.length > 0){
+            node.children.forEach(child => {
+              traverse(child)
+            })
+          }
+      };
+      const treeData = mindMap.renderer.root
+      console.log("root ",mindMap.renderer.root)
+      traverse(treeData)
     }
+  }
 }
 </script>
   
