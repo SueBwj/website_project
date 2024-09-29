@@ -58,8 +58,6 @@
       });
       // 加载树结构
       this.loadTree(mindMap)
-      // 设置主题
-      mindMap.setTheme('classic4')
       
 
       mindMap.on('node_active', (node, nodeList) => {
@@ -89,7 +87,8 @@
 
     methods:{
       loadTree(mindMap){
-        axios.get(`http://localhost:5000/tree/${this.topic_id}`)
+        console.log("loadTree function is called");
+        axios.get(`http://localhost:5001/tree/${this.topic_id}`)
           .then(response => {
             console.log(response.data)
             mindMap.setData({
