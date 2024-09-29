@@ -5,10 +5,11 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 
 可以使用一些模块
 - vuetify
-- element ui
 
 ### Todo
 - 前端
-    - 分页
     - reddit 评论区设计
-    - map聊天窗口设计
+- 后端
+    - 树的结构
+    - 评论的内容和结构
+    - llm交互
