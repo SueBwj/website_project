@@ -1,19 +1,17 @@
 <template>
   <!-- 聊天模态框 -->
-  <div
-    class="modal fade"
-    id="borderTest"
-    tabindex="-1"
-    role="dialog"
-    :class="{ show: isVisible }"
-    :style="{ display: isVisible ? 'block' : 'none' }"
-  >
-    <div class="modal-dialog" role="document">
+  <transition name="slide">
+    <div
+      class="chat-modal"
+      v-if="isVisible"
+    >
       <div class="modal-content">
         <!-- 模态框头部 -->
         <div class="modal-header">
-          <h5 class="modal-title">{{ mode }}</h5>
-          <button type="button" class="close btn" @click="closeModal" aria-label="关闭">
+          <h5 class="modal-title">
+            {{ mode }}
+          </h5>
+          <button type="button" class="close btn p-0" @click="closeModal" aria-label="关闭">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -69,7 +67,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -234,22 +232,47 @@ export default {
 <style scoped>
 /* 自定义样式 */
 
+/* 过渡效果 */
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.slide-enter-from {
+  opacity: 0;
+}
+
+.slide-enter-to {
+  opacity: 1;
+}
+
+.slide-leave-from {
+  opacity: 1;
+}
+
+.slide-leave-to {
+  opacity: 0;
+}
+
 /* 基础模态框样式 */
-.modal {
-  background: rgba(255, 255, 255, 0.8); /* 浅色背景 */
+.chat-modal {
+  background: rgba(255, 255, 255, 0.9); /* 浅色背景 */
+  position: fixed; /* 固定位置 */
+  bottom: 50px; /* 距离底部20px */
+  right: 20px; /* 距离右侧20px */
+  width: 450px; /* 设置固定宽度 */
+  max-width: 90%; /* 响应式宽度 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 10000; /* 确保在其他内容之上 */
 }
 
-.modal-dialog {
-  width: 900px; /* 增加宽度 */
-  max-width: 95%;
-}
-
+/* 内容区域样式 */
 .modal-content {
   background: #f9f9f9; /* 浅色背景 */
   border: none;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 /* 头部样式 */
@@ -259,7 +282,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 10px 10px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -282,7 +305,7 @@ export default {
 .chat-container {
   background: #ffffff;
   padding: 20px;
-  height: 500px; /* 增加高度 */
+  height: 400px; /* 调整高度 */
   overflow-y: auto;
 }
 
@@ -309,7 +332,7 @@ export default {
 /* 消息内容样式 */
 .message-text {
   max-width: 70%;
-  padding: 12px 18px;
+  padding: 5px 10px;
   border-radius: 15px;
   background: #e0e0e0;
   color: #333;
@@ -396,6 +419,7 @@ export default {
 
 .send-button:hover {
   background: #15602b; /* 深化颜色以显示悬停效果 */
+  color:#ddd;
   transform: translateY(-2px);
 }
 
@@ -450,8 +474,9 @@ export default {
 
 /* 响应式调整 */
 @media (max-width: 800px) {
-  .modal-dialog {
-    width: 90%;
+  .chat-modal {
+    width: 90%; /* 调整宽度 */
+    right: 5%; /* 调整右边距 */
   }
 
   .modal-footer input {

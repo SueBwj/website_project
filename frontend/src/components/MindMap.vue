@@ -73,10 +73,10 @@
         const rect = node.getRect()
         const is_comment = node.children.length === 0 ? true : false
         if(!is_comment){
-          this.mode = '角色扮演'
+          this.mode = 'Explore claims'
           this.claim = node.nodeData.data.text
         }else{
-          this.mode = '头脑风暴'
+          this.mode = 'Brainstorm'
         }
         if(!node.isRoot){
           this.showContextMenu(rect.cx,rect.cy + rect.h/2)
