@@ -43,18 +43,20 @@
             </div>
           </div>
         </div>
-        <!-- 预设选项按钮区域 -->
-        <div class="preset-options " v-if="showPresetOptions">
-          <button 
-            v-for="(option, index) in presetOptions" 
-            :key="index"
-            class="preset-option-btn rounded-pill"
-            @click="handlePresetOption(option)"
-          >
-            <i :class="option.icon"></i>
-            {{ option.text }}
-          </button>
-        </div>
+        <transition name="fade">
+          <!-- 预设选项按钮区域 -->
+          <div class="preset-options" v-if="showPresetOptions">
+            <button 
+              v-for="(option, index) in presetOptions" 
+              :key="index"  
+              class="preset-option-btn rounded-pill"
+              @click="handlePresetOption(option)"
+              >
+                <i :class="option.icon"></i>
+                {{ option.text }}
+              </button>
+          </div>
+        </transition>
         <!-- 预设问题按钮区域 -->
         <div class="preset-questions">
           <button 
@@ -148,6 +150,8 @@ export default {
       this.$emit('close');
     },
     sendMessage() {
+      // 一旦用户发送信息，则取消预设选项
+      this.showPresetOptions = false;
       if (this.message.trim() !== '') {
         const userMessage = this.message;
         this.messages.push({ text: userMessage, sender: 'user' });
@@ -181,6 +185,7 @@ export default {
       if (question.trim() !== '') {
         const userMessage = question;
         this.messages.push({ text: userMessage, sender: 'user' });
+        this.showPresetOptions = false;
 
         axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
           .then(response => {
@@ -209,6 +214,7 @@ export default {
       return sender === 'user' ? this.userAvatar : this.botAvatar;
     },
     getGptReply(){
+      this.showPresetOptions = false;
       axios.get(`http://localhost:5000/roleplay?claim=${this.claim}`)
       .then(response => {
         this.messages.push({text: response.data, sender: 'bot'})
@@ -528,6 +534,26 @@ export default {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* 预设选项的淡入淡出效果 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* 预设选项的列表效果 */
+.list-enter-active, .list-leave-active {
+  transition: all 0.3s;
+}
+
+.list-enter, .list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 
 /* 响应式调整 */
 @media (max-width: 800px) {

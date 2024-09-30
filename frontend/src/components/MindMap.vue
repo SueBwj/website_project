@@ -2,11 +2,11 @@
     <div id="mindMapContainer"></div>
     <div class="context-me" v-if="showMenu" :style="{ top: menuY + 'px', left: menuX + 'px' }">
       <ul>
-            <li @click="addNote">
-              <i class="fas fa-pen"></i> 备注
+            <li @click="exploreClaims">
+              <i class="fas fa-pen"></i> {{ this.mode === 'Brainstorm' ? 'Explore claims' : 'Brainstorm' }}
             </li>
             <li @click="brainstorm">
-              <i class="fas fa-lightbulb"></i> {{ this.mode }}
+              <i class="fas fa-lightbulb"></i> {{ this.mode === 'Brainstorm' ? 'Brainstorm' : 'Explore claims' }}
             </li>
         </ul>
     </div>
@@ -35,7 +35,7 @@
             showMenu: false,
             menuX: 0,
             menuY: 0,
-            mode : null,
+            mode : 'Brainstorm',
             dialogVisible:false,
             claim:''
         }
@@ -114,10 +114,12 @@
         console.log('menu')
       },
       brainstorm(){
+        this.mode = 'Brainstorm'
         this.showMenu = false
         this.dialogVisible = true; // 打开聊天窗口
       },
-      addNote(){
+      exploreClaims(){
+        this.mode = 'Explore claims'
         this.showMenu = false
         this.dialogVisible = true; // 打开聊天窗口
       },

@@ -14,7 +14,12 @@
       </div>
     </div>
     <div class="chat-container">
-      <button type="button" class="btn btn-light shadow" id="liveToastBtn" @click="toggleChatModal">
+      <button 
+        type="button" 
+        class="btn btn-light shadow" 
+        id="liveToastBtn" 
+        @click="toggleChatModal"
+      >
         <img src='../assets/ai.png' class="me-2">
         Explore claims
       </button>
