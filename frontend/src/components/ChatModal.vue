@@ -11,10 +11,16 @@
           <h5 class="modal-title">
             {{ mode }}
           </h5>
-          <button type="button" class="close btn p-0" @click="closeModal" aria-label="关闭">
-            <span aria-hidden="true">&times;</span>
+          <div class="basic-button">
+            <button type="button" class="btn btn-sm me-1 add" @click="startNewConversation">
+            <i class="fas fa-edit"></i>
           </button>
+          <button type="button" class="close btn p-0" @click="closeModal" aria-label="关闭">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         </div>
+        
         <!-- 模态框主体 -->
         <div class="chat-container">
           <div id="chatContent" ref="chatContent">
@@ -37,6 +43,18 @@
             </div>
           </div>
         </div>
+        <!-- 预设选项按钮区域 -->
+        <div class="preset-options " v-if="showPresetOptions">
+          <button 
+            v-for="(option, index) in presetOptions" 
+            :key="index"
+            class="preset-option-btn rounded-pill"
+            @click="handlePresetOption(option)"
+          >
+            <i :class="option.icon"></i>
+            {{ option.text }}
+          </button>
+        </div>
         <!-- 预设问题按钮区域 -->
         <div class="preset-questions">
           <button 
@@ -58,7 +76,7 @@
             placeholder="输入消息..."
           />
           <button type="button" class="btn send-button" @click="sendMessage">
-            发送
+            send
           </button>
         </div>
         <!-- 归属信息 -->
@@ -101,7 +119,12 @@ export default {
       message: '',
       messages: [],
       user_cookie: '',
-      question_list: []
+      question_list: [],
+      presetOptions: [
+        { icon: 'fas fa-plus', text: 'Critical exercises' },
+        { icon: 'fas fa-search', text: 'Explore Claims' },
+      ],
+      showPresetOptions: true,
     };
   },
   computed: {
@@ -145,6 +168,15 @@ export default {
         // }, 1000);
       }
     },
+    startNewConversation(){
+      // 清空当前对话
+      this.messages = [];
+      // 重新显示预设选项
+      this.showPresetOptions = true;
+      // 可能需要重置其他相关状态
+      // 例如：重置 claim
+      this.$emit('reset-claim');
+    },
     handlePresetQuestion(question) {
       if (question.trim() !== '') {
         const userMessage = question;
@@ -159,6 +191,16 @@ export default {
             console.error("返回回复错误: ", error)
           });
       }
+    },
+    handlePresetOption(option) {
+      console.log('Selected option:', option);
+      // 这里可以根据选项执行相应的操作，比如发送特定的消息
+      this.message = option.text;
+      // 完成特定的操作
+      this.messages.push({ text: this.message, sender: 'user' });
+      // this.sendMessage();
+      this.showPresetOptions = false; // 隐藏预设选项
+      this.message = '';
     },
     getMessageClass(sender) {
       return sender === 'user' ? 'user-message' : 'bot-message';
@@ -291,21 +333,36 @@ export default {
   font-weight: 500;
 }
 
+
+.modal-header .add {
+  font-size: 15px;
+  color: #bbb;
+  transition: color 0.3s;
+  justify-content: flex-end;
+}
+
+.modal-header .add:hover {
+  color: #333;
+}
+
 .modal-header .close {
   font-size: 24px;
   color: #bbb;
   transition: color 0.3s;
+  justify-content: flex-end;
 }
 
 .modal-header .close:hover {
   color: #333;
 }
 
+
+
 /* 聊天区域样式 */
 .chat-container {
   background: #ffffff;
   padding: 20px;
-  height: 400px; /* 调整高度 */
+  height: 250px; /* 调整高度 */
   overflow-y: auto;
 }
 
@@ -332,7 +389,7 @@ export default {
 /* 消息内容样式 */
 .message-text {
   max-width: 70%;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 15px;
   background: #e0e0e0;
   color: #333;
@@ -522,5 +579,38 @@ export default {
 
 .attribution a:hover {
   color: #4a90e2;
+}
+
+
+/* 预设选项按钮样式 */
+.preset-options {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: white;
+}
+
+.preset-option-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: left;
+}
+
+.preset-option-btn:hover {
+  background-color: #e9e9e9;
+}
+
+.preset-option-btn i {
+  margin-right: 10px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
 }
 </style>
