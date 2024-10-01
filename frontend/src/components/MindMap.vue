@@ -30,7 +30,7 @@
     export default {
     data() {
         return {
-            topic_id: 1,
+            topic_id: 3,
             activeNodes: [],
             showMenu: false,
             menuX: 0,
