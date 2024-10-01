@@ -1,0 +1,184 @@
+[
+    {
+        "Statement": "Although it is agreed that China is rapidly modernising its army, there is some doubt surrounding the exact amount it is spending. The research institute 'PIPPI', submits that the annual Chinese defence spending has risen from almost $31 billion in 2000 to over $120 billion in 2010. This figure is almost double the official figure published by the Chinese government, who fail to include many other areas, such as research and development in the official figure each year. In 2010, the United States government spent around $400 billion on military defence. Based on the current level of military growth, statistics suggest that China's defence spending could overtake America's by 2030. In addition to military spending, China's army continues to enjoy the largest number of people within the ranks of its army than any other country.",
+        "Inference": "The official figures published by the Chinese government in relation to their military spending are thought to be misleading.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "True",
+        "Explanation": "The passage notes that the Chinese government leave certain areas out of their calculations when creating their official figures for military spending. This suggests that their official figure is misleading. In this way, the inference is true."
+    },
+    {
+        "Statement": "Although it is agreed that China is rapidly modernising its army, there is some doubt surrounding the exact amount it is spending. The research institute 'PIPPI', submits that the annual Chinese defence spending has risen from almost $31 billion in 2000 to over $120 billion in 2010. This figure is almost double the official figure published by the Chinese government, who fail to include many other areas, such as research and development in the official figure each year. In 2010, the United States government spent around $400 billion on military defence. Based on the current level of military growth, statistics suggest that China's defence spending could overtake America's by 2030. In addition to military spending, China's army continues to enjoy the largest number of people within the ranks of its army than any other country.",
+        "Inference": "It is known that the Chinese government leave areas such as 'research' and 'development' from their official figures, however, this would also suggest that other areas of spending are also omitted from their official figure for military spending.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "Probably True",
+        "Explanation": "The passage notes that 'other areas, such as research' are omitted from the official figure. This suggests that other areas may also be omitted. However, we cannot be certain of this. We can infer from the passage that it is slightly more likely to be true than false. Therefore, this inference is 'probably true' as we cannot know for certain."
+    },
+    {
+        "Statement": "Although it is agreed that China is rapidly modernising its army, there is some doubt surrounding the exact amount it is spending. The research institute 'PIPPI', submits that the annual Chinese defence spending has risen from almost $31 billion in 2000 to over $120 billion in 2010. This figure is almost double the official figure published by the Chinese government, who fail to include many other areas, such as research and development in the official figure each year. In 2010, the United States government spent around $400 billion on military defence. Based on the current level of military growth, statistics suggest that China's defence spending could overtake America's by 2030. In addition to military spending, China's army continues to enjoy the largest number of people within the ranks of its army than any other country.",
+        "Inference": "The Chinese government omits several key areas from its official spending figures, in areas such as military spending, agriculture, human rights and law.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "More Information Required",
+        "Explanation": "The passage provides information on the official figures for military spending. We cannot infer, based on this information that official figures for other areas of government spending are also incorrect. This would require more information."
+    },
+    {
+        "Statement": "Although it is agreed that China is rapidly modernising its army, there is some doubt surrounding the exact amount it is spending. The research institute 'PIPPI', submits that the annual Chinese defence spending has risen from almost $31 billion in 2000 to over $120 billion in 2010. This figure is almost double the official figure published by the Chinese government, who fail to include many other areas, such as research and development in the official figure each year. In 2010, the United States government spent around $400 billion on military defence. Based on the current level of military growth, statistics suggest that China's defence spending could overtake America's by 2030. In addition to military spending, China's army continues to enjoy the largest number of people within the ranks of its army than any other country.",
+        "Inference": "If there are any anomalies between the published figures on military spending and the actual figure spent, this is merely a clerical error.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "Probably False",
+        "Explanation": "The passage notes that the official figure for military spending omits entire areas, such as research and development on a regular basis, rather than on one occasion. This is unlikely to be a clerical error as it happens more than once. However, we cannot be certain that a clerical error has not occurred. Therefore, the correct answer is 'probably false'."
+    },
+    {
+        "Statement": "Although it is agreed that China is rapidly modernising its army, there is some doubt surrounding the exact amount it is spending. The research institute 'PIPPI', submits that the annual Chinese defence spending has risen from almost $31 billion in 2000 to over $120 billion in 2010. This figure is almost double the official figure published by the Chinese government, who fail to include many other areas, such as research and development in the official figure each year. In 2010, the United States government spent around $400 billion on military defence. Based on the current level of military growth, statistics suggest that China's defence spending could overtake America's by 2030. In addition to military spending, China's army continues to enjoy the largest number of people within the ranks of its army than any other country.",
+        "Inference": "In 2010, the United States of America spent less on its military defence than the Chinese government.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "False",
+        "Explanation": "This inference is false. The passage states that the United States government spent $400 billion in 2010 and (based on PIPPI's research) the Chinese spent over $120 billion. The official Chinese figures are given as less than half this figure. Whilst the passage envisages that, in the future, China may spend more on defence than the USA, in 2010 this was not the case. For this reason, this inference is false."
+    },
+    {
+        "Statement": "Turkey is a surprising addition to the list of rapidly developing economies; with a GDP increase of 8.5% in the year 2011 alone. However, such rapid growth leaves worries regarding possible side-effects. For instance, in 2011 Turkey's rate of inflation was well above that of its peers. Secondly, there is increasing concern regarding Turkey's growing dependency on foreign capital. A large portion of the Turkish banking system is part-owned by banks within the Eurozone. As the single currency falters, such a dependency raises questions about the stability of Turkish growth.",
+        "Inference": "There are concerns that Turkey's development is at risk of faltering in the years after 2011.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "True",
+        "Explanation": "This inference is true. The passage states that Turkey is a 'surprising' addition to the list of countries whose economy is rapidly developing. This suggests that it is performing above expectations. The passage then goes on to note that there are worries regarding the possible side effects of such growth. This suggests that there are concerns such growth will be short lived."
+    },
+    {
+        "Statement": "Turkey is a surprising addition to the list of rapidly developing economies; with a GDP increase of 8.5% in the year 2011 alone. However, such rapid growth leaves worries regarding possible side-effects. For instance, in 2011 Turkey's rate of inflation was well above that of its peers. Secondly, there is increasing concern regarding Turkey's growing dependency on foreign capital. A large portion of the Turkish banking system is part-owned by banks within the Eurozone. As the single currency falters, such a dependency raises questions about the stability of Turkish growth.",
+        "Inference": "As Turkish banks are part-owned by those in the Eurozone, they may suffer if the European banks face financial difficulty.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "Probably True",
+        "Explanation": "The inference is probably true. The passage states that one of the concerns facing the Turkish economy is that they are part owned by banks in the Eurozone. The passage does not speculate over whether the Eurozone banks are likely to face financial instability, but by the fact that they are stated as linked, if Eurozone banks do face difficulty, the part-owned Turkish banks are also likely to suffer, but as this is not for definite, the answer is not 'True' but probably true."
+    },
+    {
+        "Statement": "Turkey is a surprising addition to the list of rapidly developing economies; with a GDP increase of 8.5% in the year 2011 alone. However, such rapid growth leaves worries regarding possible side-effects. For instance, in 2011 Turkey's rate of inflation was well above that of its peers. Secondly, there is increasing concern regarding Turkey's growing dependency on foreign capital. A large portion of the Turkish banking system is part-owned by banks within the Eurozone. As the single currency falters, such a dependency raises questions about the stability of Turkish growth.",
+        "Inference": "The Turkish banks are part-owned by European banks as this provides greater variation to the market and extra finance to the economy.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "More Information Required",
+        "Explanation": "The passage fails to mention why the Turkish banks are part owned by European banks. We therefore require further information on this point before making this inference."
+    },
+    {
+        "Statement": "Turkey is a surprising addition to the list of rapidly developing economies; with a GDP increase of 8.5% in the year 2011 alone. However, such rapid growth leaves worries regarding possible side-effects. For instance, in 2011 Turkey's rate of inflation was well above that of its peers. Secondly, there is increasing concern regarding Turkey's growing dependency on foreign capital. A large portion of the Turkish banking system is part-owned by banks within the Eurozone. As the single currency falters, such a dependency raises questions about the stability of Turkish growth.",
+        "Inference": "Turkish banks are part-owned by European banks as this provides greater economic links with the Eurozone, helping their ascension into the European Union.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "More Information Required",
+        "Explanation": "The passage fails to mention why the Turkish banks are part owned by European banks. We would therefore require more information before making this inference."
+    },
+    {
+        "Statement": "Turkey is a surprising addition to the list of rapidly developing economies; with a GDP increase of 8.5% in the year 2011 alone. However, such rapid growth leaves worries regarding possible side-effects. For instance, in 2011 Turkey's rate of inflation was well above that of its peers. Secondly, there is increasing concern regarding Turkey's growing dependency on foreign capital. A large portion of the Turkish banking system is part-owned by banks within the Eurozone. As the single currency falters, such a dependency raises questions about the stability of Turkish growth.",
+        "Inference": "The Turkish economy was surprisingly stagnant in 2011.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "False",
+        "Explanation": "This statement is false. The passage notes that the Turkish economy was performing better than expected during 2011. This suggests it is far from stagnant."
+    },
+    {
+        "Statement": "Some people think that prospective employees should include a photograph with their application form. Such practice has traditionally been criticised for allowing more attractive individuals to get ahead in their career over 'plain' colleagues. However, one study demonstrates that this is, in fact, untrue. Ruffle, the creator of this study, attributes his findings to the 'dumb-blonde hypothesis'- that beautiful women are thought to be unintelligent. Ruffle submits that companies would be better advised adopting the selection model employed by the Belgian public sector, where CVs are anonymous and candidate names, gender and photographs are not allowed to be included on CVs. Such a model allows the candidate to be selected on factors relevant to the role applied for.",
+        "Inference": "The 'dumb-blonde hypothesis' is that people think more attractive women are less intelligent.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "True",
+        "Explanation": "The passage states that Ruffle's ‘dumb-blonde hypothesis' is that people think beautiful women are unintelligent. This is the same as what's implied by this inference, hence the answer is true."
+    },
+    {
+        "Statement": "Some people think that prospective employees should include a photograph with their application form. Such practice has traditionally been criticised for allowing more attractive individuals to get ahead in their career over 'plain' colleagues. However, one study demonstrates that this is, in fact, untrue. Ruffle, the creator of this study, attributes his findings to the 'dumb-blonde hypothesis'- that beautiful women are thought to be unintelligent. Ruffle submits that companies would be better advised adopting the selection model employed by the Belgian public sector, where CVs are anonymous and candidate names, gender and photographs are not allowed to be included on CVs. Such a model allows the candidate to be selected on factors relevant to the role applied for.",
+        "Inference": "The model of selecting future employees adopted by the Belgian public sector aims to reduce discrimination based on appearance and gender.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "Probably True",
+        "Explanation": "This inference is probably true. The passage fails to state why the Belgian public sector has chosen to implement this method of selection; however, we can infer, based on the nature of the information in the passage and the topic discussed, that this is a likely reason behind the method chosen. As we cannot be certain of this, the correct answer is 'probably true'."
+    },
+    {
+        "Statement": "Some people think that prospective employees should include a photograph with their application form. Such practice has traditionally been criticised for allowing more attractive individuals to get ahead in their career over 'plain' colleagues. However, one study demonstrates that this is, in fact, untrue. Ruffle, the creator of this study, attributes his findings to the 'dumb-blonde hypothesis'- that beautiful women are thought to be unintelligent. Ruffle submits that companies would be better advised adopting the selection model employed by the Belgian public sector, where CVs are anonymous and candidate names, gender and photographs are not allowed to be included on CVs. Such a model allows the candidate to be selected on factors relevant to the role applied for.",
+        "Inference": "The method of selecting future employees adopted by the Belgian public sector has helped to eliminate discrimination in the Belgian public sector.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "More Information Required",
+        "Explanation": "The passage fails to provide information on the success rate of this selection method; it simply outlines the method. Therefore, we cannot say whether this model has been successful. For this reason, we require further information before we can make this inference."
+    },
+    {
+        "Statement": "Some people think that prospective employees should include a photograph with their application form. Such practice has traditionally been criticised for allowing more attractive individuals to get ahead in their career over 'plain' colleagues. However, one study demonstrates that this is, in fact, untrue. Ruffle, the creator of this study, attributes his findings to the 'dumb-blonde hypothesis'- that beautiful women are thought to be unintelligent. Ruffle submits that companies would be better advised adopting the selection model employed by the Belgian public sector, where CVs are anonymous and candidate names, gender and photographs are not allowed to be included on CVs. Such a model allows the candidate to be selected on factors relevant to the role applied for.",
+        "Inference": "The method of selecting future employees adopted by the Belgian public sector has had the effect of increasing discrimination based on appearance within the Belgian public sector.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "Probably False",
+        "Explanation": "This inference is probably false. While the passage fails to provide information on the success rate of this model of employee selection, it states that under this model, future employees cannot provide pictures of themselves with their application. This would suggest that discrimination would be reduced, rather than increased. However, based on the information provided, we cannot say this for certain. For example, increased visual discrimination may in fact take place in the interview. For this reason, the correct answer is probably false."
+    }
+]

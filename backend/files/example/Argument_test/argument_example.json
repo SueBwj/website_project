@@ -1,0 +1,274 @@
+[
+    {
+        "Statement": "Should companies downsize their workforces to decrease expenses and maximise profits?",
+        "Argument": "Yes, downsizing will protect the company from bankruptcy in hard economic times.",
+        "options": {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "Weak Argument",
+        "Explanation": "Accepting the argument as true, avoiding bankruptcy is an essential motive for an organisation, however, the statement does not discuss bankruptcy, rather it is discussing profits and expenses. Protection against bankruptcy is not the topic, and is straying from the point, and is, therefore a weak argument."
+    },
+    {
+        "Statement": "Should companies downsize their workforces to decrease expenses and maximise profits?",
+        "Argument": "Yes, companies have no obligation to employ more people than it can handle.",
+        "options": {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "Weak Argument",
+        "Explanation": "Although the point is taken to be true, it does not provide evidence for the benefits of its position, it merely states an irrelevant fact, making this a weak argument."
+    },
+    {
+        "Statement": "Should companies downsize their workforces to decrease expenses and maximise profits?",
+        "Argument": "No, downsizing leads to demoralisation of the workforce and causes a drop in employee productivity.",
+        "options": {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "Strong Argument",
+        "Explanation": "The argument addresses the initial statement directly, providing a clear disadvantage of the statement, making this a strong argument."
+    },
+    {
+        "Statement": "Should companies downsize their workforces to decrease expenses and maximise profits?",
+        "Argument": "Yes, companies which have no control over the size of their workforce will be highly vulnerable to economic climates and market changes.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The initial question does not discuss taking away the company's right to control its own size, only one aspect of it. Therefore, the point is arguing a separate question, rather than the initial one, presenting a weak argument."
+    },
+    {
+        "Statement": "Should university-level education be free to all students?",
+        "Argument": "No, too much education can lead to over-qualification, and therefore unemployment.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument only addresses too much education over qualification, and the statement does not discuss these issues, as a result the argument does not fully address the statement, therefore it is a weak argument."
+    },
+    {
+        "Statement": "Should university-level education be free to all students?",
+        "Argument": "Yes, having a highly qualified workforce ensures high levels of employee productivity in organisations.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "If the argument is to be taken as true, then this provides a very clear and relevant benefit to free university education, presenting a strong argument."
+    },
+    {
+        "Statement": "Should university-level education be free to all students?",
+        "Argument": "No, research has shown that students that are not required to pay tuition fees tend to slack off more and learn less during their degree.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument presents direct evidence for the point put forward, and addresses a serious disadvantage of the initial statement. The statement addresses the initial point directly, and is therefore a strong argument."
+    },
+    {
+        "Statement": "Should employers allow all staff the option of flexi-time working hours?",
+        "Argument": "Yes, giving greater flexibility will improve their work-life balance, and therefore their productivity.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument provides a clear and direct benefit of the initial statement, and directly addresses the statement, making this a strong argument."
+    },
+    {
+        "Statement": "Should employers allow all staff the option of flexi-time working hours?",
+        "Argument": "Yes, organisation that value their staff are on average more productive and show lower staff turnover.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument does not specifically address flexi-time; it argues a separate point regarding valuing staff, which is not directly related to the statement, and is therefore a weak argument."
+    },
+    {
+        "Statement": "Should employers allow all staff the option of flexi-time working hours?",
+        "Argument": "No, flexi-time leads to employees working fewer hours. Working fewer hours will decrease an employee's exposure to the workplace, making career progression harder and leading to a less experienced workforce.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument provides two relevant arguments for its position, and both offer clear disadvantages which directly relate to the initial statement, making this a strong argument."
+    },
+    {
+        "Statement": "Should governments implement a minimum wage, outlining a minimum amount an employee is to be paid per hour?",
+        "Argument": "Yes, the existence of minimum wages is a key part of a civilised society.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument does not present and advantages of a minimum wage; it only presents a statement about minimum wage, not defending its position, thus making this a weak argument."
+    },
+    {
+        "Statement": "Should governments implement a minimum wage, outlining a minimum amount an employee is to be paid per hour?",
+        "Argument": "Yes, countries that do not have a minimum wage are often impoverished and dysfunctional.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument does not state that the absence of a minimum wage is the cause of poverty and dysfunction, it just states that these two things coincide, not addressing the point of the argument, and therefore presenting a weak argument."
+    },
+    {
+        "Statement": "Should governments implement a minimum wage, outlining a minimum amount an employee is to be paid per hour?",
+        "Argument": "No, minimum wage leads to under-employment by forcing companies to take on staff part-time, as they cannot afford to hire them on a full-time basis.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument presents a clear disadvantage of the initial statement, outlining the result and how the result would occur, presenting a strong argument."
+    },
+    {
+        "Statement": "Should banks and financial institutions be obligated to engage in socially-responsible investing?",
+        "Argument": "Yes, engaging in socially responsible investing leads to a happier and more fulfilled workforce compared to banks which do not engage in socially-responsible investing.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument addresses the question directly, and offers two clear advantages of the premise described in the statement, directly addressing the question and presenting a strong argument."
+    },
+    {
+        "Statement": "Should banks and financial institutions be obligated to engage in socially-responsible investing?",
+        "Argument": "No, banks are for-profit institutions and have no obligation to social issues",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument does not provide any benefits of its position or advantageous outcomes; it merely describes its position. This is a weak argument as it does not provide a strong basis for its point, only providing an explanation of its point."
+    },
+    {
+        "Statement": "Should banks and financial institutions be obligated to engage in socially-responsible investing?",
+        "Argument": "No, focusing on social responsibility detracts from the aim of making money, which is the most important endeavour for banks, and leads to a decrease in revenue and profit.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument presents a clear disadvantage of the premise in the statement, directly addressing the question and providing evidence for its claim. This is, therefore, a strong argument."
+    },
+    {
+        "Statement": "Should banks and financial institutions be obligated to engage in socially-responsible investing?",
+        "Argument": "No, over-regulation in the financial sector leads to decreased opportunities and therefore lower profits.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The initial question does not discuss regulation of the financial services sector, so the argument is not addressing the initial point, making it a weak argument."
+    },
+    {
+        "Statement": "Should all members of the European Union join the Eurozone and adopt the euro?",
+        "Argument": "No, countries may find it difficult to adapt to a new currency.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The passage does not provide any evidence for its claim by describing the outcome of its position, and it only states that countries “may” find it difficult, suggesting there is no guarantee, making this a weak argument."
+    },
+    {
+        "Statement": "Should all members of the European Union join the Eurozone and adopt the euro?",
+        "Argument": "Yes, the function of the European Union is to form a single currency union.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument does not provide evidence for an advantage of a currency union; it merely states the function of the European Union, which does not support its claim. This is, therefore, a weak argument."
+    },
+    {
+        "Statement": "Should all members of the European Union join the Eurozone and adopt the euro?",
+        "Argument": "Yes, greater economic unity between countries improves foreign relations between those member countries, which in turn makes each country stronger.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument directly answers the question in the initial statement, provides an explanation for its opinion and describes a positive outcome of its premise. This is, therefore, a strong argument."
+    },
+    {
+        "Statement": "Should all members of the European Union join the Eurozone and adopt the euro?",
+        "Argument": "No, instability in one Eurozone country could cause the whole Eurozone to become unstable, disrupting the economies of all countries that use the euro.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument presents a serious problem with the Eurozone concept, and is directly related to the initial question. The argument explains its point and states the outcome, presenting a strong argument."
+    },
+    {
+        "Statement": "Should governments be engaging in space exploration research?",
+        "Argument": "No, the money spent on these programs could be used to increase funding for education and healthcare, which would lead to increasing the quality of life for a country's people.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument addresses the initial question, provides an explanation of its point and provides the outcome of its stated point. This suggests that this is a strong argument."
+    },
+    {
+        "Statement": "Should governments be engaging in space exploration research?",
+        "Argument": "No, countries have collectively spent trillions of dollars on space exploration research already.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "This argument does not provide an explanation for why space exploration should not be funded, it simply states that trillions of dollars have already been spent, not explaining its position, making it a weak argument."
+    },
+    {
+        "Statement": "Should governments be engaging in space exploration research?",
+        "Argument": "Yes, space exploration has led to numerous discoveries and ushered in the space age.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "Although the agreement states that discoveries have been made, it does not go into detail about the benefits of those discoveries, and the reference to the space age does not imply a benefit. Therefore, this is a weak argument."
+    },
+    {
+        "Statement": "Should governments be engaging in space exploration research?",
+        "Argument": "Yes, the findings of these space exploration research and development programmes have been successfully applied to industry, boosting the economies of the host country.",
+        "options":
+        {
+        "a": "Strong Argument",
+        "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument directly addresses the initial question, and provides a detailed practical benefit of the initial premise, making this a strong argument."
+    }
+]

@@ -1,0 +1,122 @@
+[
+    {
+      "Statement": "The Tapoloa Club is a Hawaiian-themed night club in central London. Its most popular drink is the Volcano, which emits sparks and flames. The Tapoloa Club also offers a range of cocktails in perverse containers such as pineapples and coconuts, such as the 'coconut express' and the 'pineapple pick-up' respectively. Therefore:",
+      "Conclusion": "The 'coconut express' is the second most popular drink sold by the Tapoloa Club.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "The statement does not state the popularity of the 'coconut express', it just mentions its name, so we cannot therefore make a conclusion of its popularity, the conclusion therefore does not follow."
+    },
+    {
+      "Statement": "The Tapoloa Club is a Hawaiian-themed night club in central London. Its most popular drink is the Volcano, which emits sparks and flames. The Tapoloa Club also offers a range of cocktails in perverse containers such as pineapples and coconuts, such as the 'coconut express' and the 'pineapple pick-up' respectively. Therefore:",
+      "Conclusion": "All themed clubs in London sell unusual drinks.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "Based on the information in the statement alone, we are unable to say whether or not all themed clubs in London sell unusual drinks. The statement is based on one club alone and does not mention others. For this reason, we are unable to deduce this conclusion. The correct answer is therefore, conclusion does not follow."
+    },
+    {
+      "Statement": "The Tapoloa Club is a Hawaiian-themed night club in central London. Its most popular drink is the Volcano, which emits sparks and flames. The Tapoloa Club also offers a range of cocktails in perverse containers such as pineapples and coconuts, such as the 'coconut express' and the 'pineapple pick-up' respectively. Therefore:",
+      "Conclusion": "The 'coconut express' is contained in a pineapple, and the 'pineapple pick up' is contained in a coconut.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "a",
+      "Explanation": "The passage states 'cocktails in containers such as Pineapples and coconuts, such as the 'coconut express' and the 'pineapple pick-up' respectivel' informing us that pineapples are the container for the coconut express, and pineapples are the container for the pineapple pick up, so therefore the conclusion follows. It was an incorrect conclusion to assume because the fruit was mentioned in the drinks name, that the container would therefore be that fruit."
+    },
+    {
+      "Statement": "The British National Library has the largest collection of publicly-owned books in the United Kingdom. Therefore:",
+      "Conclusion": "There might be a larger collection of books in the United Kingdom.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "a",
+      "Explanation": "The statement notes that the British National Library is the largest collection of publicly owned books. However, it is possible that there are larger collections of privately owned books. For this reason the correct answer is conclusion follows."
+    },
+    {
+      "Statement": "The British National Library has the largest collection of publicly-owned books in the United Kingdom. Therefore:",
+      "Conclusion": "There might be a larger collection of publicly-owned books in the United Kingdom.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "The statement notes that the British National Library is the largest collection of publicly owned books. For this reason, it is not possible for there to be a larger publicly owned collection in the UK. The correct answer is therefore conclusion does not follow."
+    },
+    {
+      "Statement": "The British National Library has the largest collection of publicly-owned books in the United Kingdom. Therefore:",
+      "Conclusion": "The British National Library is in the United Kingdom.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "a",
+      "Explanation": "The statement notes that the British National Library has the largest collection of publicly owned books in the United Kingdom. For this reason we can deduce that the British National Library is itself within the United Kingdom. The correct answer therefore is conclusion follows."
+    },
+    {
+      "Statement": "People with a master's degree in business administration (MBA) earn an income on average 70% higher than people with just an undergraduate degree. MBA students from top business schools earn an income on average 50% higher than the average income of people with MBAs.",
+      "Conclusion": "If a person obtains an MBA, their income will increase.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "The statement does not say that obtaining an MBA is the cause for the increase in income, and therefore it is fallacious to conclude that obtaining an MBA will increase your income based purely on the statement above. Just because average incomes for an MBA graduate are higher does not imply that these are the cause of the increase, and therefore it is no guarantee to increase income."
+    },
+    {
+      "Statement": "People with a master's degree in business administration (MBA) earn an income on average 70% higher than people with just an undergraduate degree. MBA students from top business schools earn an income on average 50% higher than the average income of people with MBAs.",
+      "Conclusion": "If a person obtains an MBA from a top business school, their income will be higher than that of the average MBA graduate.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "The statement does not say that obtaining a top MBA is the cause of the increase in income between top and average MBA recipient incomes. Because correlation does not imply causation, we cannot conclude that the achievement of a top school MBA is the cause of this income difference, based on the information provided."
+    },
+    {
+      "Statement": "People with a master's degree in business administration (MBA) earn an income on average 70% higher than people with just an undergraduate degree. MBA students from top business schools earn an income on average 50% higher than the average income of people with MBAs.",
+      "Conclusion": "The average income of an MBA graduate from a top business school is over double that of the average income of a person holding only an undergraduate degree.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "a",
+      "Explanation": "Because the income of an average MBA students is 70% larger than that of an undergraduate, and a top MBA graduate's income is 50% greater than the average MBA income. We can therefore conclude that the average income of a top MBA graduate is more than double the average person holding only an undergraduate degree."
+    },
+    {
+      "Statement": "Hannah has been a solicitor for three years. She works for a law firm in central London and has hopes of being promoted. To be promoted in Hannah's firm, employees must have at least four years' experience practising as a solicitor. Therefore:",
+      "Conclusion": "Hannah cannot be promoted because she doesn't have enough experience.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "a",
+      "Explanation": "The statement notes that to be promoted, members of staff must have at least four years' experience practising as a solicitor. We are also aware that Hannah only has three years of experience practising as a solicitor. Therefore, she does not meet the required number of years' experience. For this reason, the correct answer is conclusion follows."
+    },
+    {
+      "Statement": "Hannah has been a solicitor for three years. She works for a law firm in central London and has hopes of being promoted. To be promoted in Hannah's firm, employees must have at least four years' experience practising as a solicitor. Therefore:",
+      "Conclusion": "We cannot know whether Hannah can be promoted or not.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "The statement notes that to be promoted, members of staff must have at least four years' experience practising as a solicitor. We are told that Hannah only has three years of experience practising as a solicitor. Therefore, she does not meet the required number of years of experience. With this in mind, we are able to say that she cannot be promoted. For this reason, the correct answer is conclusion does not follow."
+    },
+    {
+      "Statement": "Hannah has been a solicitor for three years. She works for a law firm in central London and has hopes of being promoted. To be promoted in Hannah's firm, employees must have at least four years' experience practising as a solicitor. Therefore:",
+      "Conclusion": "In 3 years' time, assuming Hannah has not been promoted, she will be over qualified for her current position.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "b",
+      "Explanation": "The passage does not refer to over qualification, and we cannot therefore conclude that she will be over qualified. The passage states that 4 years is the minimum requirement for promotion, but does not state that she will be guaranteed a promotion, or that her current role will be unsuitable to her after her four years as a solicitor."
+    }
+  ]

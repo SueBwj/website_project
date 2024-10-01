@@ -3,9 +3,10 @@
 """
 
 from flask_restful import Resource
-from services.roleplay_services import RoleplayService, RoleplayPromptService
+from services.roleplay_services import RoleplayService, RoleplayPromptService, CriticalThinkingService
 from flask import make_response, request
-from common.cookies import setUserId
+from common.cookies import setUserId,getUserId
+
 
 class RoleplayResources(Resource):
     
@@ -73,14 +74,12 @@ class CriticalThinkingExerciseResources(Resource):
         第一次请求时, 会生成一组新的习题并存储用户 ID 和习题信息.
         后续请求时, 会返回之前生成的习题.
         """
-        user_cookie = request.cookies.get('user_id')
+        user_cookie = getUserId()  # 使用 getUserId() 获取或设置用户 ID
 
         if not user_cookie or not CriticalThinkingService.exercise_exists(user_cookie):
             # 第一次进入训练
-            response = setUserId()
             exercises = CriticalThinkingService.generate_exercises(user_cookie)
-            response.set_data({'exercises': exercises})
-            return response
+            return {'exercises': exercises}, 200  # 设置 Cookie 在 getUserId() 中完成
 
         # 返回之前生成的习题
         exercises = CriticalThinkingService.get_exercises(user_cookie)
@@ -92,9 +91,10 @@ class CriticalThinkingExerciseResources(Resource):
 
         如果用户回答错误, 使用苏格拉底式提问引导用户找到正确答案.
         """
-        user_cookie = request.cookies.get('user_id')
+        user_cookie = getUserId()  # 使用 getUserId() 获取用户 ID
         if not user_cookie:
             return {'error': 'user_id not found'}, 400
+
 
         data = request.get_json()
         exercise_id = data.get('exercise_id')
