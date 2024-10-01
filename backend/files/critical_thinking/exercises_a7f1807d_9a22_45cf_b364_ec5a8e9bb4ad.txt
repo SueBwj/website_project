@@ -1,0 +1,77 @@
+[
+    {
+        "Statement": "Is the policy that incentivizes death at 75 beneficial?",
+        "Argument": "No, it creates an incentive for both the government and families to potentially wish harm upon older individuals for financial and logistical convenience.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument leverages the ethical issue of incentivizing harm and potential conflicts of interest that arise, making it a strong argument against such a policy.",
+        "type": "choice",
+        "id": 1
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on *incentive*. Any decision you basically ever make in politics and government, the first thing you need to look at is what incentives does this create and what incentive can I foresee it creating. So what incentive does this create? It creates an incentive that the government *wants you to die* at 75 years old.",
+        "Assumption": "Incentives are the only factor influencing government decisions.",
+        "options": {
+            "a": "Assumption Made",
+            "b": "Assumption Not Made"
+        },
+        "Correct": "Assumption Made",
+        "Explanation": "The statement suggests that incentives are the primary or sole considerations for decisions, assuming they critically influence government actions. This assumption may overlook other factors such as ethical considerations or public opinion.",
+        "type": "choice",
+        "id": 2
+    },
+    {
+        "Statement": "The discussion suggests that government policies and societal attitudes might create an incentive for individuals to die at a certain age.",
+        "Conclusion": "Societal and governmental structures aim to reduce the population of people over 75.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "Conclusion Does Not Follow",
+        "Explanation": "While the discussion outlines potential incentives, it does not demonstrate a purposeful aim or directive by society or government to reduce the population over 75.",
+        "type": "choice",
+        "id": 3
+    },
+    {
+        "Statement": "The comment suggests that certain organizational and familial structures may create incentives for undesirable outcomes, specifically encouraging early mortality.",
+        "Inference": "The passage suggests that both governments and families might have incentives that could contribute to wanting individuals to die by the age of 75.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "True",
+        "Explanation": "The passage explicitly mentions that both government and family structures could have motivations that align with wanting individuals to die at 75, indicating that this inference is true.",
+        "type": "choice",
+        "id": 4
+    },
+    {
+        "Statement": "The comment argues that decisions in politics and government are mostly driven by incentives, and proposes that there is an incentive for the government and families for people to die at 75 years old.",
+        "Conclusion": "The government and families are actively trying to prevent people from living past 75 years.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "b",
+        "Explanation": "While the comment indicates that such incentives might exist, it does not provide evidence to conclude that there is an active effort to prevent people from living past 75. The argument discusses potential incentives rather than actions or policies.",
+        "type": "choice",
+        "id": 5
+    },
+    {
+        "Statement": "Is it ethical for the government to implement policies that encourage people to die at a certain age?",
+        "Argument": "No, encouraging people to die at 75 undermines the basic human right to life and could lead to coercive behaviors by both the government and family members.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument addresses a serious ethical concern directly related to the initial statement and explains the negative consequences clearly, making it a strong argument.",
+        "type": "write",
+        "id": 6
+    }
+]

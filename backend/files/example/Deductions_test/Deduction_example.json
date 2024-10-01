@@ -1,0 +1,212 @@
+[
+    {
+      "Statement": "In an attempt to cut expenses, an organisation disbanded its IT department and outsourced its IT function to a business process outsourcing company. In doing so the company has managed to save 20% on its IT function expenditure.",
+      "Conclusion": "Outsourcing functions to business process outsourcing companies will cut expenses.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: Although this company saved money on their IT function, it does not state that other companies will also save money, or that other functions if outsourced would save companies money."
+    },
+    {
+      "Statement": "In an attempt to cut expenses, an organisation disbanded its IT department and outsourced its IT function to a business process outsourcing company. In doing so the company has managed to save 20% on its IT function expenditure.",
+      "Conclusion": "The aim of this company's outsourcing was to make the organisation more profitable.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The statement does not say that the organisation is a for-profit organisation, and does not mention profitability in the statement, the aim of the outsourcing was to cut expenses. Who is to say what their aim was regarding income (and therefore profit)?"
+    },
+    {
+      "Statement": "In an attempt to cut expenses, an organisation disbanded its IT department and outsourced its IT function to a business process outsourcing company. In doing so the company has managed to save 20% on its IT function expenditure.",
+      "Conclusion": "The outsourced IT function has saved the organisation 1/5th on their IT function expenditure compared to the in-house IT function.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: The statement notes that by outsourcing its IT function the company has cut its IT expenses by 20%, suggesting that the previous function was 1/5th (20%) more expensive, and therefore outsourcing has saved 1/5th of the IT expenditure."
+    },
+    {
+      "Statement": "Sarah owns a new company. New companies are more likely to fail than well-established companies. Therefore:",
+      "Conclusion": "Sarah's company will fail.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The statement notes that new companies are more likely to fail. This does not mean that all new companies will fail. The correct answer is, therefore, conclusion does not follow."
+    },
+    {
+      "Statement": "Sarah owns a new company. New companies are more likely to fail than well-established companies. Therefore:",
+      "Conclusion": "Sarah's company is more likely to fail than a well-established company.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: The statement notes that new companies are more likely to fail. As a new company, Sarah's company is therefore more likely to fail. The correct answer is therefore conclusion follows."
+    },
+    {
+      "Statement": "Sarah owns a new company. New companies are more likely to fail than well-established companies. Therefore:",
+      "Conclusion": "Well-established companies are more likely to succeed than new companies.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: The statement notes that new companies are more likely to fail than well-established companies. Well-established companies are therefore more likely to succeed, by comparison to new companies. The correct answer is therefore conclusion follows."
+    },
+    {
+      "Statement": "Statistics have shown that companies selling baked goods, such as cakes and pastries, are more likely to be successful if they are advertised as French or Belgian. Therefore:",
+      "Conclusion": "French and Belgian products are more expensive.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: There are other reasons why such companies may be more successful, for example the goods may be of a better quality or the type of goods may have a specific taste which is popular, or they may prove better value. Therefore, we cannot say that these companies are more successful because their goods are more expensive."
+    },
+    {
+      "Statement": "Statistics have shown that companies selling baked goods, such as cakes and pastries, are more likely to be successful if they are advertised as French or Belgian. Therefore:",
+      "Conclusion": "French and Belgian baked goods must taste better.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: There are many reasons why such companies may be more successful, taste is only one option. Therefore we cannot make this deduction without further information."
+    },
+    {
+      "Statement": "Statistics have shown that companies selling baked goods, such as cakes and pastries, are more likely to be successful if they are advertised as French or Belgian. Therefore:",
+      "Conclusion": "It is a sound business model to advertise baked goods as French or Belgian as it is more likely to result in successful sales.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: The statement notes that companies selling these types of goods are more successful. Therefore, we can state that it is a good business model to advertise items on this basis."
+    },
+    {
+      "Statement": "May 2012 had the highest level of rainfall on record for the preceding fifty years. Predictions of rainfall are rarely accurate. Therefore:",
+      "Conclusion": "It rained more than expected in May 2012.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The information in the statement does not offer a prediction to the amount of rainfall; it only states that predictions of rainfall are rarely accurate. We cannot deduce what the prediction was based on the statement, therefore the conclusion does not follow."
+    },
+    {
+      "Statement": "May 2012 had the highest level of rainfall on record for the preceding fifty years. Predictions of rainfall are rarely accurate. Therefore:",
+      "Conclusion": "The rainfall in May 2012 was greater than in May 2011.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "The rainfall in May 2012 was the highest on record for the past 50 years; therefore it must have been higher than the May 2011 levels."
+    },
+    {
+      "Statement": "May 2012 had the highest level of rainfall on record for the preceding fifty years. Predictions of rainfall are rarely accurate. Therefore:",
+      "Conclusion": "May is usually dry.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The statement refers to the rainfall in May 2012 being higher than usual. The statement makes no reference to May being usually dry. Based on the information in the statement alone, the correct answer is conclusion does not follow."
+    },
+    {
+      "Statement": "Facebook was launched on the American stock market in May 2012. However, statistics suggest that other several previously high-performing companies, such as Pandora, Groupon and LinkedIn fell in value after they were launched on the American stock market. Therefore:",
+      "Conclusion": "It is possible that Facebook will also drop in value after May 2012.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: Based on the information provided about similarly high performing companies, we are able to make the conclusion that Facebook may meet a similar fate after May 2012. The word 'other' means that Facebook is similarly high-performing as a company. The other key word here is 'may', as we are unable to say for certain, based on the information provided that this will definitely happen. Based on the information in the statement and the use of the word 'may' in the conclusion, the correct answer is conclusion follows."
+    },
+    {
+      "Statement": "Facebook was launched on the American stock market in May 2012. However, statistics suggest that other several previously high-performing companies, such as Pandora, Groupon and LinkedIn fell in value after they were launched on the American stock market. Therefore:",
+      "Conclusion": "Social networking sites perform badly once they become publicly listed on the stock market.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The passage does not state that social networking sights perform badly once they become publicly listed. We cannot deduce this from the passage, and therefore the conclusion does not follow."
+    },
+    {
+      "Statement": "Facebook was launched on the American stock market in May 2012. However, statistics suggest that other several previously high-performing companies, such as Pandora, Groupon and LinkedIn fell in value after they were launched on the American stock market. Therefore:",
+      "Conclusion": "All companies decrease in value when first launched on the American stock market.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: Based on the information in the above statement we are unable to say that all companies drop in value. The statement notes three companies that have decreased in value, however we cannot apply this to all companies. The correct answer is therefore conclusion does not follow."
+    },
+    {
+      "Statement": "There are currently three problems facing the financial sector. Firstly, bankers are no longer seen as reliable or trustworthy. Secondly, executives of financial institutions are seen by the general public as being overpaid. Finally, it is difficult to regulate the financial sector. Therefore:",
+      "Conclusion": "Banks have never been trusted by the general public.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: Based on the information contained in the statement, we are also told that bankers are “no longer” seen as reliable or trustworthy. For this reason, we are unable to say that banks have never been trusted. For this reason, the correct answer is conclusion does not follow."
+    },
+    {
+      "Statement": "There are currently three problems facing the financial sector. Firstly, bankers are no longer seen as reliable or trustworthy. Secondly, executives of financial institutions are seen by the general public as being overpaid. Finally, it is difficult to regulate the financial sector. Therefore:",
+      "Conclusion": "Reliability is no longer an issue when considering the failings of the financial sector.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The statement notes that 'reliability' is one of the key problems facing the financial sector. For this reason, we are unable to conclude that 'reliability' is no longer an issue. The correct answer is therefore conclusion does not follow."
+    },
+    {
+      "Statement": "There are currently three problems facing the financial sector. Firstly, bankers are no longer seen as reliable or trustworthy. Secondly, executives of financial institutions are seen by the general public as being overpaid. Finally, it is difficult to regulate the financial sector. Therefore:",
+      "Conclusion": "Overpaying financial executives may contribute to problems facing the financial sector.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: The passage states that one of the reasons for the problems facing the financial sector is that executives are seen as overpaid. Overpaying executives will lead to the public seeing executives as over paid. This conclusion therefore follows."
+    },
+    {
+      "Statement": "Coley is a company that produces scented candles, using only natural products. Coley is against testing on animals and does not use pesticides in any of its products. Therefore:",
+      "Conclusion": "The scent from Coley's candles is made from fruits and berries.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: Although the ingredients are said to be natural, it does not specifically state what those ingredients are, and therefore we cannot deduce that fruits and berries are the ingredients, therefore the conclusion does not follow."
+    },
+    {
+      "Statement": "Coley is a company that produces scented candles, using only natural products. Coley is against testing on animals and does not use pesticides in any of its products. Therefore:",
+      "Conclusion": "Coley's products are unlikely to contain man-made setting agents.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Follows",
+      "Explanation": "Explanation: Based on the description of the products made by Coley's and the ingredients they use, we can conclude that these products are unlikely to include manmade setting agents as this would not be a “natural product”. For this reason, the correct answer is conclusion follows."
+    },
+    {
+      "Statement": "Coley is a company that produces scented candles, using only natural products. Coley is against testing on animals and does not use pesticides in any of its products. Therefore:",
+      "Conclusion": "Coley's products are likely to be more expensive.",
+      "options": {
+        "a": "Conclusion Follows",
+        "b": "Conclusion Does Not Follow"
+      },
+      "Correct": "Conclusion Does Not Follow",
+      "Explanation": "Explanation: The statement fails to make reference to the price of these items. Therefore, we are unable to conclude that they are more expensive. For this reason the correct answer is conclusion does not follow."
+    }
+  ]

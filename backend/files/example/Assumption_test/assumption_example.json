@@ -1,0 +1,142 @@
+[
+    {
+      "Statement": "Monarchic nations, i.e. those with royal families, differ from republic nations in several ways. An example of this difference is that citizens of monarchic nations pay more tax than citizens of republican nations.",
+      "Assumption": "The government of monarchic nations are responsible for setting tax rates on their citizens",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The statement does not rely on the fact (or assumption) that governments set tax rates for their citizens. The statement doesn't attempt to explain what causes the difference in tax payments, merely that there is a difference."
+    },
+    {
+      "Statement": "Monarchic nations, i.e. those with royal families, differ from republic nations in several ways. An example of this difference is that citizens of monarchic nations pay more tax than citizens of republican nations.",
+      "Assumption": "Republican nations do not have a royal family.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Made",
+      "Explanation": "Explanation: The statement says that monarchic nations are those with a royal family. The statement is assuming that this is one aspect which differentiates monarchic nations from republican nations."
+    },
+    {
+      "Statement": "Monarchic nations, i.e. those with royal families, differ from republic nations in several ways. An example of this difference is that citizens of monarchic nations pay more tax than citizens of republican nations.",
+      "Assumption": "The only types of nation are monarchic and republican.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The statement is just talking about the differences between two types of nation; it does not imply that these are the only two nor does the statement rely on there being just two types."
+    },
+    {
+      "Statement": "Monarchic nations, i.e. those with royal families, differ from republic nations in several ways. An example of this difference is that citizens of monarchic nations pay more tax than citizens of republican nations.",
+      "Assumption": "A monarchic nation cannot be a republican nation.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Made",
+      "Explanation": "Explanation: The statement relies on the two types of nation being different in order to describe their differences. The statement also talks about the tax rate paid by citizens of a monarchic nation with the implication that citizens of republican nations pay different tax."
+    },
+    {
+      "Statement": "In 2008, the President of the USA promised to prevent the country entering economic depression, but he failed because at the beginning of 2012, over 12 million USA citizens were unemployed.",
+      "Assumption": "Unemployment is an indicator of economic depression.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Made",
+      "Explanation": "Explanation: The statement says that the promise of not entering economic depression was not met due to unemployment figures. So, the statement has made an assumption that unemployment is indicative of economic depression."
+    },
+    {
+      "Statement": "In 2008, the President of the USA promised to prevent the country entering economic depression, but he failed because at the beginning of 2012, over 12 million USA citizens were unemployed.",
+      "Assumption": "The number of USA citizens out of work ought to be less than 12 million.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Made",
+      "Explanation": "Explanation: The statement uses the level of unemployment as a justification for declaring that the promise of avoiding economic depression had not been met. Regardless of whether unemployment is or isn't a fair measure of economic depression, the statement is assuming that this level of unemployment is worse than what would be considered acceptable."
+    },
+    {
+      "Statement": "In 2008, the President of the USA promised to prevent the country entering economic depression, but he failed because at the beginning of 2012, over 12 million USA citizens were unemployed.",
+      "Assumption": "Presidents should stick to their promises.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The statement does not assume that the President of the USA should or should not stick to his promises; it merely claims that the promise was not met on this occasion. The statement doesn't imply that breaking of promises is right or wrong, and so does not make the assumption that presidents should stick to their promises."
+    },
+    {
+      "Statement": "Chilean students were right in 2012 to stage protests demanding that university education in Chile should be made free.",
+      "Assumption": "Some Universities outside of Chile are free.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The statement does not make reference to what universities in other countries are charging, or that Chile should adopt practices of other countries. The assumption that there are free universities in other countries is not a prerequisite for this statement to be made."
+    },
+    {
+      "Statement": "Chilean students were right in 2012 to stage protests demanding that university education in Chile should be made free.",
+      "Assumption": "Staging protests will influence the costs of Chilean university education.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: This is a subtle one. The statement says that students were right to stage protests, but it does not assume that the outcome will be influenced by the protests. The statement might be supporting protests despite the possible effect it will have, for example the statement could simply be sympathetic towards the protests and be saying that it is understandable the students staged protests."
+    },
+    {
+      "Statement": "Chilean students were right in 2012 to stage protests demanding that university education in Chile should be made free.",
+      "Assumption": "Chilean students cannot afford to pay fees for university education.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The statement makes no reference to what the students can or cannot afford. The statement is not using the affordability of university education as the justification for protests."
+    },
+    {
+      "Statement": "Chilean students were right in 2012 to stage protests demanding that university education in Chile should be made free.",
+      "Assumption": "Chilean students want to attend university.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The passage does not suggest that the students protested because they want to attend university and their actions of protest might help this outcome. The statement is simply that students were right to protest. In supporting the students' protests the statement is not assuming the students want to attend university."
+    },
+    {
+      "Statement": "Charities don't have to charge VAT to customers, which means charity bookshops can charge lower prices than those charged by second-hand bookshops which are not registered as a charity.",
+      "Assumption": "Charities pay less tax than non-charities",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The statement claims that non-charities have to pay VAT, whereas charities do not. This is one type of tax, but the statement is not saying that charities enjoy an overall more favourable tax regime; it refers to just VAT. The statement is not coming from the angle that overall the level of tax paid by charities is less than that paid by non-charities; it has not made this assumption."
+    },
+    {
+      "Statement": "Charities don't have to charge VAT to customers, which means charity bookshops can charge lower prices than those charged by second-hand bookshops which are not registered as a charity.",
+      "Assumption": "Customers prefer to pay lower prices.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Not Made",
+      "Explanation": "Explanation: The passage says that charities can charge lower prices, but it does not talk about customers preferring one or the other. The statement has not assumed that customers prefer to pay lower prices."
+    },
+    {
+      "Statement": "Charities don't have to charge VAT to customers, which means charity bookshops can charge lower prices than those charged by second-hand bookshops which are not registered as a charity.",
+      "Assumption": "VAT increases the price customers pay for things.",
+      "options": {
+        "a": "Assumption Made",
+        "b": "Assumption Not Made"
+      },
+      "Correct": "Assumption Made",
+      "Explanation": "Explanation: The statement says that because VAT has to be charged by non-charities, the prices they charge customers have to be higher. The statement assumes that the charging of VAT increases the cost to customers."
+    }
+  ]

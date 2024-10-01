@@ -5,96 +5,52 @@ from common.cookies import generate_uid
 class TreeServices:
 
     @staticmethod
-    def get_subcomments_tree_structure(subcomments):
-        sub_children = []
-        for subcomment in subcomments:
-            sub_claim = subcomment['claim']
-            if sub_claim is None or sub_claim == '':
-                continue
-            sub_comment = subcomment['comment']
-            if sub_comment is None or sub_comment == '':
-                continue
-            sub_evidences = subcomment['evidence']
-            sub_objections = subcomment['objections']
-            nested_subcomments = subcomment.get('subcomments', [])
+    def get_claims_tree_structure(claims):
+        children = []
+        for claim in claims:
+            content = claim['content']
+            premises = claim['premises']
+            attitude = claim.get('attitude', None)
 
-            subcomment_children = [
-                {'data':{'text':sub_comment},'children':[], 'class':'comment'}
+            # 根据 attitude 设置颜色
+            line_color = "#333333"  # 默认黑色
+            if attitude == "objection":
+                line_color = "#FF0000"  # 红色
+            elif attitude == "support":
+                line_color = "#008000"  # 绿色
+
+            premises_children = [
+                {'data': {'text': premise}, 'children': [], 'class': 'premise'} for premise in premises
             ]
 
-            subevidences_children = [
-                {'data':{'text':evidence}, 'children':[], 'class':'evidence'} for evidence in sub_evidences
-            ]
+            children.append(
+                {
+                    'data': {'text': content, 'lineColor': line_color},  # 添加 lineColor 属性
+                    'children': premises_children
+                }
+            )
+        return children
 
-            sub_objections_children = [
-                {'data':{'text':objection['content'], 'class':'objectionContent'},
-                  'children':[{'data':{'text':objection['response'], 'class':'objectionResponse'}, 'children':[]}]}  for objection in sub_objections
-            ]
-
-            sub_children.append(
-                    {
-                    'data':{'text':"Claim"},
-                    'children': [{
-                        'data':{'text':sub_claim}, 
-                        'children':[
-                            {'data':{'text':"Comment", 'class':'commentClass'},'children':subcomment_children},
-                            {'data':{'text':'Evidence', 'class':'evidenceClass'},'children':subevidences_children},
-                            {'data':{'text':'Objections', 'class':'objectionClass'},'children':sub_objections_children}
-                            ]
-                        }]
-                    }
-                )
-            
-            if nested_subcomments:
-                sub_children.extend(TreeServices.get_subcomments_tree_structure(nested_subcomments))
-
-
-        return sub_children
 
     @staticmethod
     def get_tree_structure(topic_id):
         print('processing tree structure')
         file = topic_summary_dir.joinpath(f'{topic_id}.json')
         data = load_json(file)
-        
-        children = []
+
+        tree_data = []
 
         for item in data:
-            claim = item['claim']
-            if claim is None or claim == '':
-                continue
-            # comment 就是一个字符串
-            comment = item['comment']
-            if comment is None or comment == '':
-                continue
-            evidences = item['evidence']
-            objections = item['objections']
-            subcomments = item['subcomments']
-            sub_children = TreeServices.get_subcomments_tree_structure(subcomments)
+            major_claim_content = item['major_claim']['content']
+            claims = item['major_claim']['claims']
 
-            comment_children = [
-                {'data':{'text':comment},'children':sub_children, 'class':'comment'}
-            ]
+            claims_children = TreeServices.get_claims_tree_structure(claims)
 
-            evidences_children = [
-                {'data':{'text':evidence}, 'children':[], 'class':'evidence'} for evidence in evidences
-            ]
+            tree_data.append(
+                {
+                    'data': {'text': major_claim_content},
+                    'children': claims_children
+                }
+            )
 
-            objections_children = [
-                {'data':{'text':objection['content'], 'class':'objectionContent'}, 
-                 'children':[{'data':{'text':objection['response'], 'class':'objectionResponse'}, 'children':[]}]}  for objection in objections
-            ]
-            children.append(
-                {'data':{'text':claim},
-                 'children':[
-                    {'data':{'text':"Comment"},'children':comment_children, 'class':'commentClass'},
-                    {'data':{'text':'Evidence'},'children':evidences_children, 'class':'evidenceClass'},
-                    {'data':{'text':'Objections'},'children':objections_children, 'class':'objectionClass'}
-                    ]
-                 }
-                )
-
-        return children
-
-
-        
+        return tree_data
