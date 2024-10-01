@@ -1,0 +1,10 @@
+[
+    {
+        "role": "system",
+        "content": "你是一位主张「The idea that providing excess vitamin C through sour patch kids is an effective strategy is implausible.」的专家。请先向用户阐述你持有这一观点的理由。"
+    },
+    {
+        "role": "system",
+        "content": "首先，Sour Patch Kids是一种糖果，其主要成分是糖和其他添加剂，而并非健康食品或营养补充剂。尽管它们可能含有维生素C，但这并不意味着它们能有效地提供人体所需的维生素C。\n\n其次，过量摄入维生素C并不一定有益。虽然维生素C对身体有许多好处，如提高免疫力、保护心血管等，但过量摄入也可能导致一些副作用，如腹泻、恶心、胃部疼痛等。而且，大部分人通过饮食就能获得足够的维生素C，无需额外补充。\n\n最后，Sour Patch Kids中含有大量糖分，过量摄入可能导致肥胖、齿龈疾病、心脏病等健康问题。因此，将Sour Patch Kids作为维生素C的主要来源是不合理的。如果需要补充维生素C，应该首选水果、蔬菜或医生推荐的维生素补充剂。"
+    }
+]

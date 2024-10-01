@@ -1,0 +1,577 @@
+[
+    {
+        "claim": "Manufacturers of sour candy should be required to reintroduce vitamin C back into their products to benefit opiate users.",
+        "evidence": [
+            "A growing body of research shows vitamin C is an effective treatment for pain, reduces cravings for opioid painkillers, suppresses the development of tolerance, and alleviates withdrawal symptoms in habitual users.",
+            "Sour Patch Kids and other sour candies mimic the flavor of fruits that are high in vitamin C.",
+            "Estimated 8,806 opioid-involved deaths were reported in the U.S. in 2022 alone, implying a significant number of people teetering on addiction or recovery.",
+            "YumEarth and other similar products have already fortified candies with vitamin C without changing the taste.",
+            "School lunchbox staples like Scooby-Doo Fruit Flavored Snacks and Gushers are fortified with vitamin C, proving the will and ability to do so exist."
+        ],
+        "objections": [],
+        "comment": "A growing body of research has shown that vitamin C is an effective treatment for pain, reduces cravings for opioid painkillers, suppresses the development of tolerance, and alleviates withdrawal symptoms in habitual users. A good aggregation of this research can be found at the bottom of this post.\n\nSomething that occurred to me is that opiate users are stereotypically into Sour Patch Kids and other sour candies, and these candies mimic the flavor of fruits that are generally high in vitamin C. It\u2019s harmful to have a product that displaces natural sources of vitamin C popular among a group that would uniquely benefit from more of the nutrient to the extent that it could prevent some users from becoming addicted or enable some addicts to successfully recover. At that point, it seems reasonable to require manufacturers of sour candy to reintroduce this nutritional asset back into the taste they are emulating.\n\nThere are some \u201cnaturalistic\u201d knockoffs of these confections that have already taken this step. Having tried YumEarth products, they're pretty comparable to the name-brand analogs; I don\u2019t think the addition of ascorbic acid changes the taste at all. Hell, Scooby-Doo Fruit Flavored Snacks, Gushers, and other similar products are fortified with vitamin C as well, so it seems like there is already a will/ability to do this for school lunchbox staples.\n\nThere were an estimated 8,806 opioid-involved deaths reported in the U.S. in 2022 alone. It\u2019s fair to assume that there are a significant number of people teetering on the edge of addiction or recovery. Based on the evidence, fortifying snacks opioid users are known to enjoy with a nutrient that intuitively belongs in that context anyway could increase that chance of recovery or reduce the risk of addiction for some people. It\u2019s something these candy makers should be required to do. Change my view.\n\nEdit: Back in a bit.",
+        "name": "nekro_mantis",
+        "subcomments": [
+            {
+                "claim": "Requiring sour candy manufacturers to add vitamin C to their products for alleviating opioid withdrawal symptoms is impractical.",
+                "evidence": [
+                    "Anytime something is suggested to be 'required' for a small minority of users, it seems ridiculous.",
+                    "It would involve passing laws, forming regulatory committees, and instituting product check audits."
+                ],
+                "objections": [
+                    {
+                        "content": "There are already similar products with vitamin C available.",
+                        "response": "Create a public awareness campaign to inform opioid users of these products or advise them to take vitamin C supplements."
+                    }
+                ],
+                "comment": "I'm not a nutritionist, so I can't speak to whether this idea would work or not. But I feel like any time someone suggests something should be 'required' in order to appease or help a very small minority of product users, it kind of just comes off ridiculous. Like, you want to pass laws and form regulatory committees and institute product check audits in order to force all manufacturers of sour candies everywhere to introduce vitamin C into their product in the hopes that it might help mildly alleviate some symptoms of opioid withdrawal? I think you're highly underestimating the amount of work this would involve. And on top of that, as you pointed out, there are already similar products with vitamin C in them. If all the science checks out, it seems to me that it would be much more effective to create a public awareness campaign to inform habitual opioid users of these existing products. Or even better, let them know they should be taking vitamin c supplements. That way they can better track the amount of vitamin c they're ingesting, since too much isn't good for you anyway.",
+                "name": "premiumPLUM",
+                "subcomments": [
+                    {
+                        "claim": "Vitamin C toxicity is uncommon and not all that harmful.",
+                        "evidence": [
+                            "Vitamin C deficiency is on the rise."
+                        ],
+                        "objections": [],
+                        "comment": "Vitamin C toxicity is uncommon and not all that harmful. [Plus, vitamin C deficiency is on the rise.](https://www.news-medical.net/news/20240719/Scurvy-on-the-rise-in-the-United-States-Pediatric-cases-triple-in-five-years.aspx) I'm sure you don't have that concern with eating fruit rather than imitations of fruit, right?",
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "claim": "Vitamin C toxicity is not common because we don\u2019t excessively supplement everything with vitamin C.",
+                                "evidence": [],
+                                "objections": [
+                                    {
+                                        "content": "You want all candy eaters to get diarrhea?",
+                                        "response": "If candy is excessively supplemented with Vitamin C, it may cause diarrhea."
+                                    }
+                                ],
+                                "comment": "Vitamin C toxicity is not common because we don\u2019t excessively supplement everything with vitamin C. You want all candy eaters to get diarrhea? You might as well ban candy.",
+                                "name": "Apprehensive_Song490",
+                                "subcomments": [],
+                                "attitude": "objection"
+                            },
+                            {
+                                "comment": "",
+                                "claim": "",
+                                "evidence": [],
+                                "objections": [],
+                                "name": "premiumPLUM",
+                                "subcomments": [
+                                    {
+                                        "claim": "It could be a significant initial expense to get such a regulatory framework in place.",
+                                        "evidence": [
+                                            "Vitamin C fortification can be cheap, but there are shelf stability concerns.",
+                                            "Unclear how economical methods that are on the horizon to remedy the shelf stability concerns will ultimately be. (Evidence from: https://doi.org/10.3389/fnut.2023.1229243 and https://www.nutraingredients.com/Article/2008/01/09/vitamin-c-fortification-coming-to-dairy)"
+                                        ],
+                                        "objections": [],
+                                        "comment": "You're right. !delta for the point that it could be a significant initial expense to get such a regulatory framework in place. Plus, while vitamin C fortification can be cheap, there are shelf stability concerns, and it's unclear how economical [methods that are on the horizon](https://doi.org/10.3389/fnut.2023.1229243) [to remedy this will ultimately be.](https://www.nutraingredients.com/Article/2008/01/09/vitamin-c-fortification-coming-to-dairy)",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [],
+                                        "attitude": "support"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "There is insufficient evidence for your proposed solution involving vitamin C candy for opioid withdrawal.",
+                "evidence": [
+                    "The research concerns high dose vitamin C as a potential treatment for those who are in withdrawal from opioids.",
+                    "There is zero evidence that routine supplemental doses of vitamin C at RDA levels via candy does anything at all to achieve population-level impacts."
+                ],
+                "objections": [],
+                "comment": "I looked at your post history and reviewed the research discussion on the opioid sub that apparently prompted this idea. The research is limited and it concerns high dose vitamin C as a potential treatment for those who are in withdrawal from opioids. There is zero evidence that routine supplemental doses of vitamin C at RDA levels via candy does anything at all to achieve population-level impacts. Therefore there is insufficient evidence for your proposed solution. At best you have an indication for future research.",
+                "name": "Apprehensive_Song490",
+                "subcomments": [
+                    {
+                        "claim": "The impact of vitamin C wouldn't necessarily be confined to alleviating withdrawal in people who are already full-blown addicts.",
+                        "evidence": [
+                            "A study where 97 patients were involved, with half given high dose 50 mg/kg vitamin C and the other half a placebo. Both groups were given morphine before the operation.",
+                            "2 hours after surgery, the Vitamin C group self-administered significantly lower morphine consumption and reported lower pain after 24 hours than the placebo group."
+                        ],
+                        "objections": [],
+                        "comment": "The impact of this wouldn't necessarily be confined to alleviating withdrawal in people who are already full-blown addicts. One of the studies discussed in the post I linked:\n\n>[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5107231/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5107231/)\n\n>TLDR: 97 patients, half given high dose 50 mg/kg vitamin C, the other half placebo. Both groups given morphine before operation. 2 hours after surgery the VitC group self administered significantly lower morphine consumption and reported LOWER pain after 24 hours than the placebo group (only morphine group)",
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "claim": "An average woman would need 3000 mg of vitamin C to achieve this dosage level.",
+                                "evidence": [
+                                    "An average woman is 60 kg, while an average man is 90 kg.",
+                                    "The recommended daily limit for vitamin C supplements for all adults is 2000 mg."
+                                ],
+                                "objections": [
+                                    {
+                                        "content": "The recommended daily limit for vitamin C supplements for all adults is 2000 mg.",
+                                        "response": ""
+                                    }
+                                ],
+                                "comment": "An average woman is 60 kg, an average man is 90 kg. So on the lower end, an average woman would need 3000 mg of vitamin c to achieve this dosage level. The recommended daily limit for vitamin C supplements for all adults is 2000 mg.",
+                                "name": "KnifeyMcStab",
+                                "subcomments": [
+                                    {
+                                        "claim": "Vitamin C is depleted by oxidative stress, particularly in surgery patients.",
+                                        "evidence": [],
+                                        "objections": [],
+                                        "comment": "Yes, but we're also talking about surgery patients and vitamin C is depleted by oxidative stress.",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [
+                                            {
+                                                "claim": "Someone may need to take more vitamin C to compensate for oxidative stress.",
+                                                "evidence": [],
+                                                "objections": [
+                                                    {
+                                                        "content": "This is empty speculation without knowing the exact amount needed.",
+                                                        "response": ""
+                                                    }
+                                                ],
+                                                "comment": "Do you actually know how much more vitamin C someone should take to compensate for oxidative stress? If not, this is empty speculation.",
+                                                "name": "KnifeyMcStab",
+                                                "subcomments": [],
+                                                "attitude": "objection"
+                                            }
+                                        ],
+                                        "attitude": "support"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            },
+                            {
+                                "claim": "Nonessential food additives should not be legally mandated for minor benefits to a small portion of the population.",
+                                "evidence": [
+                                    "Many of those who might benefit from the removal of nonessential food additives do not consume those foods."
+                                ],
+                                "objections": [
+                                    {
+                                        "content": "Some might argue that legal mandates ensure public health and safety even with minor benefits.",
+                                        "response": "The benefits are minor and affect only a small portion of the population, making it disproportionate to use legal mandates."
+                                    }
+                                ],
+                                "comment": "So nonessential food additives should be legally mandated so that a small portion of the population - many of whom don\u2019t eat those foods in the first place - might see a minor benefit? Why should that be a law?",
+                                "name": "AlwaysTheNoob",
+                                "subcomments": [],
+                                "attitude": "objection"
+                            },
+                            {
+                                "claim": "High dose vitamin C helps with pain and reduces the need for opioids in a clinical setting.",
+                                "evidence": [
+                                    "One study of 97 patients found that high dose vitamin C helps with pain and reduces the need for opioids."
+                                ],
+                                "objections": [
+                                    {
+                                        "content": "The study involves a high dose and a limited number of patients, and it recommends more research.",
+                                        "response": "There is a need for more research before making drastic changes."
+                                    },
+                                    {
+                                        "content": "There is no evidence that standard recommended daily allowance doses via candy would achieve significant population-level declines in opioid deaths.",
+                                        "response": "This isn't enough to require what is being proposed; further research is necessary."
+                                    }
+                                ],
+                                "comment": "So high dose vitamin C helps with pain and reduces the need for opioids in a clinical setting in one study of 97 patients. This is still a high dose study with a limited number of patients. The study itself recommends more research and you are recommending this drastic change? There is still no evidence that giving standard recommended daily allowance doses via candy would achieve any significant population level declines in opioid deaths. Again, cause for more research but this isn\u2019t enough to require what you propose.",
+                                "name": "Apprehensive_Song490",
+                                "subcomments": [
+                                    {
+                                        "claim": "Widespread fortification with vitamin C that decreases pain levels could plausibly have a significant effect on reducing habitual drug use.",
+                                        "evidence": [
+                                            "Many people use drugs to self-medicate for pain."
+                                        ],
+                                        "objections": [
+                                            {
+                                                "content": "The research looks at megadoses of vitamin C, which may not be applicable to general use.",
+                                                "response": "While megadoses are the focus, using vitamin C to decrease pain levels overall could still have a significant effect."
+                                            }
+                                        ],
+                                        "comment": "What I would say, though, is that at the point that many people use these drugs to self-medicate for pain, it seems like widespread fortification with a vitamin that decreases pain levels overall could plausibly have a significant effect in terms of how many people ever end up becoming habitual users in the first place. It would always be nice to have more research, but overbearingly high standards of evidence can also be a case of the perfect being the enemy of the good.",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [
+                                            {
+                                                "claim": "There isn\u2019t anything that shows C helps at regular levels.",
+                                                "evidence": [],
+                                                "objections": [
+                                                    {
+                                                        "content": "Regular amount of C will work.",
+                                                        "response": "I'm just not convinced."
+                                                    }
+                                                ],
+                                                "comment": "As far as I know, and I don\u2019t follow it as closely as you do, there isn\u2019t anything that shows C helps at regular levels.",
+                                                "name": "Apprehensive_Song490",
+                                                "subcomments": [],
+                                                "attitude": "objection"
+                                            }
+                                        ],
+                                        "attitude": "unknown"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Sour Patch Kids are awesome.",
+                "evidence": [],
+                "objections": [
+                    {
+                        "content": "Why do you assume they're seeking vitamin C and not a bag of candy?",
+                        "response": ""
+                    }
+                ],
+                "comment": "Why do you assume they're seeking vitamin C and not a bag of candy? Sour Patch Kids are awesome.",
+                "name": "simplyintentional",
+                "subcomments": [
+                    {
+                        "claim": "The idea that providing excess vitamin C through sour patch kids is an effective strategy is implausible.",
+                        "evidence": [],
+                        "objections": [
+                            {
+                                "content": "Some addicts might actually consume sour patch kids and benefit from the vitamin C.",
+                                "response": "The strategy remains highly unlikely and far-fetched due to the nature of this approach."
+                            }
+                        ],
+                        "comment": "They\u2019re not, they\u2019re just trying trick addicts into getting excess vitamin C from eating too many sour patch kids lol cuz they all love those apparently. This is the longest of long shots Ive even read",
+                        "name": "scoot3200",
+                        "subcomments": [],
+                        "attitude": "objection"
+                    },
+                    {
+                        "comment": "",
+                        "claim": "",
+                        "evidence": [],
+                        "objections": [],
+                        "name": "nekro_mantis",
+                        "subcomments": [],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "It should be required by law for manufacturers to include certain additives in candy.",
+                "evidence": [],
+                "objections": [
+                    {
+                        "content": "Why do you believe that rises to the level of the government dictating nonessential additives that a candy manufacturer has to include?",
+                        "response": "You\u2019ve said why you think manufacturers should do it, but why should it be required by law?"
+                    }
+                ],
+                "comment": "You\u2019ve said why you think manufacturers should do it, but why do you believe that rises to the level of the government dictating nonessential additives that a candy manufacturer has to include?",
+                "name": "AlwaysTheNoob",
+                "subcomments": [
+                    {
+                        "claim": "Requiring manufacturers to take a modest step is fair due to their contribution to a public health crisis.",
+                        "evidence": [
+                            "These kinds of products are very harmful to public health in general."
+                        ],
+                        "objections": [],
+                        "comment": "Well, these kinds of products are very harmful to public health in general, so the idea of requiring manufacturers to take a modest step for the sake of a pressing public health crisis they are contributing to seems fair.",
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "comment": "",
+                                "claim": "",
+                                "evidence": [],
+                                "objections": [],
+                                "name": "ProDavid_",
+                                "subcomments": [
+                                    {
+                                        "claim": "Vitamin C intake may aid in fat loss and have beneficial effects on obesity-related mechanisms.",
+                                        "evidence": [
+                                            "Vitamin C status is inversely related to body mass, and individuals with adequate vitamin C status oxidize 30% more fat during moderate exercise than those with low vitamin C status, making vitamin C depleted individuals possibly more resistant to fat mass loss.",
+                                            "Mice that received vitamin C supplementation had reduced body weight, mesenteric fat mass, and adipocyte size compared to high-fat diet mice. Vitamin C also decreased lipogenesis-related genes and improved glucose tolerance.",
+                                            "Vitamin C intake (ascorbic acid) is negatively associated with the occurrence of conditions such as obesity, and it may modulate adipocyte lipolysis, regulate glucocorticoid release, inhibit glucose metabolism, and reduce the inflammatory response."
+                                        ],
+                                        "objections": [],
+                                        "comment": "Vitamin C status is inversely related to body mass. Individuals with adequate vitamin C status oxidize 30% more fat during a moderate exercise bout than individuals with low vitamin C status; thus, vitamin C depleted individuals may be more resistant to fat mass loss. Mice in the HFD-VC supplementation group had reduced body weight, mesenteric fat mass, and mesenteric adipocyte size compared with HFD-fed mice. Vitamin C intake in obese mice also decreased the mRNA levels of lipogenesis-related genes (i.e., stearoyl-CoA desaturase 1 and sterol... diseases.",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [
+                                            {
+                                                "claim": "A federal mandate for this, plus enforcement, plus the slew of lawsuits, all for 'probably wouldn\u2019t hurt' without hard scientific evidence, based on informal studies and gut feelings is simply put ridiculous.",
+                                                "evidence": [
+                                                    "Every law is an infringement on someone\u2019s liberty.",
+                                                    "There is no hard scientific evidence, only informal studies and gut feelings."
+                                                ],
+                                                "objections": [],
+                                                "comment": "We don\u2019t make laws because they \u201cwouldn\u2019t hurt,\u201d unless your proposal remains somewhere around the county/city level. Every law is an infringement on someone\u2019s liberty. A federal mandate for this, plus enforcement, plus the slew of lawsuits, all for \u201cprobably wouldn\u2019t hurt\u201d without hard scientific evidence, based on informal studies and gut feelings is simply put ridiculous.",
+                                                "name": "kentuckydango",
+                                                "subcomments": [],
+                                                "attitude": "objection"
+                                            }
+                                        ],
+                                        "attitude": "support"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            },
+                            {
+                                "claim": "Everything is harmful to one extent or another, and personal responsibility should be considered when consuming products like sour candy.",
+                                "evidence": [
+                                    "\"Nobody is forcing you to eat sour candy\"",
+                                    "\"We\u2019re talking about *candy* \u2014 i.e. a product not all intended to be a significant part of your diet.\""
+                                ],
+                                "objections": [],
+                                "comment": "Everything is harmful to one extent or another. Nobody is forcing you to eat sour candy and if you choose to eat it to such an extent that you suffer poor health than you have only yourself to blame \u2014 especially since we\u2019re talking about *candy* \u2014 i.e. a product not all intended to be a significant part of your diet.",
+                                "name": "Critical_Boat_5193",
+                                "subcomments": [],
+                                "attitude": "objection"
+                            },
+                            {
+                                "claim": "",
+                                "evidence": [],
+                                "objections": [],
+                                "comment": "How so? Does vitamin c cause weight loss in small doses? Does it prevent diabetes? How would it counter the effects of excessive candy consumption?",
+                                "name": "AlwaysTheNoob",
+                                "subcomments": [],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Opiate users are stereotypically into Sour Patch Kids and other sour candies, which mimic the flavor of fruits that are generally high in vitamin C.",
+                "evidence": [],
+                "objections": [
+                    {
+                        "content": "Most opioid users prefer beer and weed over sour candies.",
+                        "response": "The stereotypical preference does not necessarily hold true for all individuals."
+                    },
+                    {
+                        "content": "Suggestion that people addicted to opioids don't or won't eat fruit is confusing.",
+                        "response": "The link between sour candy consumption and vitamin C is only a hypothesis, not a claim that opioid users avoid fruit."
+                    },
+                    {
+                        "content": "Confusion over whether opioid users crave sour fruit candies.",
+                        "response": "The post is highlighting a stereotype, not an established fact."
+                    },
+                    {
+                        "content": "Query on why vitamins aren't added to all candies for general benefit instead of focusing on opioid users.",
+                        "response": "The comment is not proposing a solution but rather exploring a stereotype."
+                    }
+                ],
+                "comment": "Something that occurred to me is that opiate users are stereotypically into Sour Patch Kids and other sour candies, and these candies mimic the flavor of fruits that are generally high in vitamin C.",
+                "name": "eggs-benedryl",
+                "subcomments": [],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Consuming too much vitamin C can cause diarrhea.",
+                "evidence": [
+                    "Personal experience with a fortified tea that caused diarrhea.",
+                    "People are more likely to consume large quantities of vitamin C in candy, which can lead to issues."
+                ],
+                "objections": [],
+                "comment": "Consuming too much vitamin C can cause diarrhea. I\u2019ve had this happen with a fortified tea I like a lot. In candy, people are even more likely to consume large quantities and have issues.",
+                "name": "Ceylonna",
+                "subcomments": [],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Opioid users may consume candy in regular amounts.",
+                "evidence": [],
+                "objections": [],
+                "comment": "Do we have any level of data that shows that opioid users eat that candy in regular amounts?",
+                "name": "anewleaf1234",
+                "subcomments": [
+                    {
+                        "comment": "",
+                        "claim": "",
+                        "evidence": [],
+                        "objections": [],
+                        "name": "nekro_mantis",
+                        "subcomments": [],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "The presupposition that diets of strangers are yours to tinker with is disturbing.",
+                "evidence": [],
+                "objections": [],
+                "comment": "I find the presupposition of your question disturbing, that the diets of complete strangers, even hypothetical people you've made up in your mind, are properly yours to tinker with.",
+                "name": "npchunter",
+                "subcomments": [
+                    {
+                        "claim": "Everyone's diets are already more than 'tinkered with' by industrial food manufacturing.",
+                        "evidence": [
+                            "Food fortification already occurs on a massive scale to address a plethora of public health concerns."
+                        ],
+                        "objections": [],
+                        "comment": "That presupposition is non-unique. Everyone's diets are already more than 'tinkered with' by industrial food manufacturing. Furthermore, food fortification already occurs on a massive scale to address a plethora of public health concerns.",
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "claim": "Chronic disease is everywhere.",
+                                "evidence": [],
+                                "objections": [],
+                                "comment": "And chronic disease is everywhere.",
+                                "name": "npchunter",
+                                "subcomments": [
+                                    {
+                                        "claim": "We are currently at maximum levels of chronic disease.",
+                                        "evidence": [],
+                                        "objections": [
+                                            {
+                                                "content": "Are you saying that we're currently at maximum levels of chronic disease?",
+                                                "response": ""
+                                            }
+                                        ],
+                                        "comment": "Are you saying that we're currently at maximum levels of chronic disease?",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [
+                                            {
+                                                "comment": "",
+                                                "claim": "",
+                                                "evidence": [],
+                                                "objections": [],
+                                                "name": "npchunter",
+                                                "subcomments": [],
+                                                "attitude": "objection"
+                                            }
+                                        ],
+                                        "attitude": "objection"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "If someone's eating candy, nutrition is not a high priority to them.",
+                "evidence": [
+                    "They just wanted candy."
+                ],
+                "objections": [],
+                "comment": "if someone's eating candy, it doesn't sound like nutrition is a high priority to them. they just wanted candy",
+                "name": "BSye-34",
+                "subcomments": [],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Vitamin gummies are worse for your teeth than normal candy due to their combination of sugar and vitamin C.",
+                "evidence": [
+                    "Vitamin C eats away at your enamel.",
+                    "Gummies get stuck to your teeth unlike fruit which has similar vitamin C content.",
+                    "Sugar in candy weakens your enamel.",
+                    "Pairing sugar with vitamin C in a form that gets stuck in your teeth is harmful."
+                ],
+                "objections": [],
+                "comment": "As a dental hygienist I\u2019d be completely against the idea. Did you know vitamin gummies are actually worse for your teeth than normal candy? Vitamin C eats away at your enamel, which is perfectly okay in fruit because it doesn\u2019t get stuck to your teeth like gummies do. Sugar in candy weakens your enamel, so pairing sugar with vitamin C is in a form that will get stuck in your teeth is probably one of the worst things they could do for the general population\u2019s overall oral health. I\u2019m not against vitamin gummies because you eat like 2 gummies once a day and the pros outweigh the cons, but that isn\u2019t the case for candy.",
+                "name": "Routine_Log8315",
+                "subcomments": [
+                    {
+                        "comment": "",
+                        "claim": "",
+                        "evidence": [],
+                        "objections": [],
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "claim": "Citric acid in conjunction with absorbic acid causes significant damage to teeth enamel.",
+                                "evidence": [
+                                    "Citric acid weakens the enamel.",
+                                    "Absorbic acid dissolves the enamel.",
+                                    "American Smarties or Flinstone vitamins are less harmful because they don\u2019t get stuck."
+                                ],
+                                "objections": [],
+                                "comment": "The citric acid is already bad, but what essentially happens is in conjunction it not only weakens the enamel (due to citric acid in any regular candy) but the absorbic acid itself essentially dissolves the enamel. Neither are great on their own, but together they cause significant damage. The bigger issue is the exposure, a candy such as American Smarties (or Flinstone vitamins) are far less harmful for your teeth because they don\u2019t get stuck.",
+                                "name": "Routine_Log8315",
+                                "subcomments": [
+                                    {
+                                        "claim": "Ascorbic acid, citric acid, and malic acid have different effects on teeth enamel.",
+                                        "evidence": [],
+                                        "objections": [
+                                            {
+                                                "content": "The effects of ascorbic acid on dissolving enamel should be similar to citric and malic acid.",
+                                                "response": "The assumption is that all acidic compounds have interchangeable effects on teeth, but this is not necessarily true."
+                                            }
+                                        ],
+                                        "comment": "Ok, so ascorbic acid dissolves enamel, but citric and malic acid don't? I figured the effects in that respect would be interchangeable, like any of these acidic compounds would essentially do the same thing to teeth.",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [],
+                                        "attitude": "objection"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Candy is not a viable source of nutrition, especially vitamin C.",
+                "evidence": [
+                    "Candy is artificially flavored.",
+                    "There are healthier sources of vitamin C than candy."
+                ],
+                "objections": [
+                    {
+                        "content": "Candy infused with Vitamin C can be a source of vitamin C.",
+                        "response": "A grown adult would benefit more from a course on nutrition than relying on candy for vitamin C."
+                    }
+                ],
+                "comment": "Nobody expects candy to have any nutritional value and it is well-known that candy is usually artificially flavored. Any grown adult who believes citrus flavored candy is a viable source of vitamin c would do better with a course on nutrition than candy infused with Vitamin C. If you live in a developed country, there are numerous sources of vitamin c that are healthier than a piece of processed sugar covered in food coloring.",
+                "name": "Critical_Boat_5193",
+                "subcomments": [],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Candy should include naloxone instead of vitamin C.",
+                "evidence": [],
+                "objections": [],
+                "comment": "I mean, if we're loading up candy with random stuff, why not skip the vitamin C and go straight to requiring them to include naloxone?",
+                "name": "a_sentient_cicada",
+                "subcomments": [
+                    {
+                        "claim": "Vitamin C is normally present in sour or tangy fruits.",
+                        "evidence": [
+                            "Sour or tangy fruits naturally contain vitamin C, which is why it is not considered random."
+                        ],
+                        "objections": [],
+                        "comment": "How is it 'random stuff' when vitamin C is normally present in sour or tangy fruits in the first place?",
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "claim": "All those flavors are synthetic nowadays anyways.",
+                                "evidence": [
+                                    "Naloxone is as natural as any generic citric acid."
+                                ],
+                                "objections": [],
+                                "comment": "Why does it need to be in the fruit? All those flavors are synthetic nowadays anyways. Naloxone is as natural as any generic citric acid you're going to find I bet.",
+                                "name": "a_sentient_cicada",
+                                "subcomments": [],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            },
+            {
+                "claim": "Candy, by definition, cannot be healthy.",
+                "evidence": [],
+                "objections": [],
+                "comment": "What if candy was healthy? Then it wouldn't be candy",
+                "name": "Sweet-Illustrator-27",
+                "subcomments": [],
+                "attitude": "objection"
+            }
+        ]
+    }
+]
