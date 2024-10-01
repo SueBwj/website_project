@@ -1,0 +1,151 @@
+[
+    {
+        "major_claim": {
+            "content": "Vitamin C should be reintroduced into sour candies to help opioid users.",
+            "claims": [
+                {
+                    "content": "Vitamin C is an effective treatment for pain, reduces cravings for opioid painkillers, suppresses the development of tolerance, and alleviates withdrawal symptoms.",
+                    "premises": [
+                        "A growing body of research supports this.",
+                        "An aggregation of research is available."
+                    ],
+                    "attitude": "support"
+                },
+                {
+                    "content": "Opiate users tend to like sour candies which mimic the flavor of high vitamin C fruits.",
+                    "premises": [
+                        "Sour candies displace natural vitamin C sources.",
+                        "Candy without natural vitamin C denies benefits to users."
+                    ],
+                    "attitude": "support"
+                },
+                {
+                    "content": "Some 'naturalistic' candies already have vitamin C and are comparable to name-brand candy in taste.",
+                    "premises": [
+                        "Products like YumEarth are vitamin C fortified.",
+                        "Addition of ascorbic acid does not change the taste."
+                    ],
+                    "attitude": "support"
+                },
+                {
+                    "content": "Fortifying candies with vitamin C could aid in recovery or reduce addiction risks.",
+                    "premises": [
+                        "Estimated 8,806 opioid-involved deaths in 2022.",
+                        "Vitamin C fortification already exists in school snacks."
+                    ],
+                    "attitude": "support"
+                }
+            ]
+        },
+        "comment": "A growing body of research has shown that vitamin C is an effective treatment for pain, reduces cravings for opioid painkillers, suppresses the development of tolerance, and alleviates withdrawal symptoms in habitual users. A good aggregation of this research can be found at [the bottom of this post.](https://www.reddit.com/r/opiates/comments/1bug6uc/attenuation_of_opioid_withdrawal_with_high_dose/?utm_source=share&utm_medium=web3xutm_name=web3xcssutm_term=1&utm_content=share_button)\n\nSomething that occurred to me is that opiate users are stereotypically into Sour Patch Kids and other sour candies, and these candies mimic the flavor of fruits that are generally high in vitamin C. It\u2019s harmful to have a product that displaces natural sources of vitamin C popular among a group that would uniquely benefit from more of the nutrient to the extent that it could prevent some users from becoming addicted or enable some addicts to successfully recover. At that point, it seems reasonable to require manufacturers of sour candy to reintroduce this nutritional asset back into the taste they are emulating.\n\nThere are some [\u201cnaturalistic\u201d knockoffs](https://www.iherb.com/pr/yumearth-gluten-free-gummy-bears-strawberry-cherry-mango-peach-10-snack-packs-0-7-oz-198-g-each/78476?gad_source=1&gclid=CjwKCAjwl6-3BhBWEiwApN6_kjmOup6Q-KQZyVBog7vDHGKqDkgRW8tXW9wtIqOOvZw_OG-4ubIRCBoCDIQQAvD_BwE) of these confections that have already taken this step. Having tried YumEarth products, they're pretty comparable to the name-brand analogs; I don\u2019t think the addition of ascorbic acid changes the taste at all. Hell, Scooby-Doo Fruit Flavored Snacks, Gushers, and other similar products are fortified with vitamin C as well, so it seems like there is already a will/ability to do this for school lunchbox staples. \n\nThere were an estimated 8,806 opioid-involved deaths reported in the U.S. in 2022 alone. It\u2019s fair to assume that there are a significant number of people teetering on the edge of addiction or recovery. Based on the evidence, fortifying snacks opioid users are known to enjoy with a nutrient that intuitively belongs in that context anyway could increase that chance of recovery or reduce the risk of addiction for some people. It\u2019s something these candy makers should be required to do. Change my view.",
+        "name": "nekro_mantis",
+        "subcomments": [
+            {
+                "major_claim": {
+                    "content": "Introducing vitamin C into products like sour candies to help alleviate opioid withdrawal symptoms is not practical.",
+                    "claims": [
+                        {
+                            "content": "Requiring manufacturers to add vitamin C to products for a small minority of users is impractical.",
+                            "premises": [
+                                "The effort to pass laws, form regulatory committees, and institute product check audits is excessive.",
+                                "It is ridiculous to force all manufacturers of sour candies to change their products for this reason."
+                            ],
+                            "attitude": "support"
+                        },
+                        {
+                            "content": "There are already similar products with vitamin C available.",
+                            "premises": [
+                                "Public awareness campaigns could inform opioid users of existing products with vitamin C.",
+                                "Users should be encouraged to take vitamin C supplements for better dosage control."
+                            ],
+                            "attitude": "support"
+                        }
+                    ]
+                },
+                "comment": "I'm not a nutritionist, so I can't speak to whether this idea would work or not. But I feel like any time someone suggests something should be 'required' in order to appease or help a very small minority of product users, it kind of just comes off ridiculous. Like, you want to pass laws and form regulatory committees and institute product check audits in order to force all manufacturers of sour candies everywhere to introduce vitamin C into their product in the hopes that it might help mildly alleviate some symptoms of opioid withdrawal? I think you're highly underestimating the amount of work this would involve. And on top of that, as you pointed out, there are already similar products with vitamin C in them. If all the science checks out, it seems to me that it would be much more effective to create a public awareness campaign to inform habitual opioid users of these existing products. Or even better, let them know they should be taking vitamin c supplements. That way they can better track the amount of vitamin c they're ingesting, since too much isn't good for you anyway.",
+                "name": "premiumPLUM",
+                "subcomments": [
+                    {
+                        "major_claim": {
+                            "content": "Vitamin C toxicity is uncommon and not all that harmful.",
+                            "claims": [
+                                {
+                                    "content": "Vitamin C deficiency is on the rise.",
+                                    "premises": [
+                                        "Source: https://www.news-medical.net/news/20240719/Scurvy-on-the-rise-in-the-United-States-Pediatric-cases-triple-in-five-years.aspx"
+                                    ],
+                                    "attitude": "support"
+                                },
+                                {
+                                    "content": "Eating fruit rather than imitations of fruit is safer regarding vitamin C intake.",
+                                    "premises": [],
+                                    "attitude": "support"
+                                }
+                            ]
+                        },
+                        "comment": "Vitamin C toxicity is uncommon and not all that harmful. [Plus, vitamin C deficiency is on the rise.](https://www.news-medical.net/news/20240719/Scurvy-on-the-rise-in-the-United-States-Pediatric-cases-triple-in-five-years.aspx) I'm sure you don't have that concern with eating fruit rather than imitations of fruit, right?",
+                        "name": "nekro_mantis",
+                        "subcomments": [
+                            {
+                                "major_claim": {
+                                    "content": "Vitamin C toxicity is not common because we don\u2019t excessively supplement everything with vitamin C.",
+                                    "claims": []
+                                },
+                                "comment": "<original comment text for the claim (optional)>",
+                                "name": "Apprehensive_Song490",
+                                "subcomments": [],
+                                "attitude": "objection"
+                            },
+                            {
+                                "major_claim": {
+                                    "content": "That's such a small part of what I said...",
+                                    "claims": []
+                                },
+                                "comment": "That's such a small part of what I said...",
+                                "name": "premiumPLUM",
+                                "subcomments": [
+                                    {
+                                        "major_claim": {
+                                            "content": "It could be a significant initial expense to get such a regulatory framework in place.",
+                                            "claims": [
+                                                {
+                                                    "content": "Vitamin C fortification can be cheap.",
+                                                    "premises": [
+                                                        "Vitamin C is an inexpensive nutrient."
+                                                    ],
+                                                    "attitude": "support"
+                                                },
+                                                {
+                                                    "content": "There are shelf stability concerns with vitamin C fortification.",
+                                                    "premises": [
+                                                        "Vitamin C degrades over time, especially when exposed to light and heat."
+                                                    ],
+                                                    "attitude": "objection"
+                                                },
+                                                {
+                                                    "content": "It's unclear how economical new methods to remedy shelf stability concerns will ultimately be.",
+                                                    "premises": [
+                                                        "Methods to improve vitamin C stability are still in development.",
+                                                        "It's uncertain if these methods will be cost-effective in the long run."
+                                                    ],
+                                                    "attitude": "objection"
+                                                }
+                                            ]
+                                        },
+                                        "comment": "You're right. !delta for the point that it could be a significant initial expense to get such a regulatory framework in place. Plus, while vitamin C fortification can be cheap, there are shelf stability concerns, and it's unclear how economical [methods that are on the horizon](https://doi.org/10.3389/fnut.2023.1229243) [to remedy this will ultimately be.](https://www.nutraingredients.com/Article/2008/01/09/vitamin-c-fortification-coming-to-dairy)",
+                                        "name": "nekro_mantis",
+                                        "subcomments": [],
+                                        "attitude": "objection"
+                                    }
+                                ],
+                                "attitude": "objection"
+                            }
+                        ],
+                        "attitude": "objection"
+                    }
+                ],
+                "attitude": "objection"
+            }
+        ]
+    }
+]

@@ -54,3 +54,61 @@ class RoleplayPromptResources(Resource):
         # 根据 claim 生成 2-3 个问题, 返回一个列表包含三个问题
         question_list = RoleplayPromptService.generate_question(claim,user_cookie)
         return {'question_list': question_list}, 200
+    
+
+class CriticalThinkingExerciseResources(Resource):
+    """
+    提供批判性思维习题训练的资源类.
+
+    该类提供以下功能:
+    1. 获取一组批判性思维习题.
+    2. 提交用户对习题的答案并获取反馈.
+    3. 如果用户回答错误, 使用苏格拉底式提问引导用户找到正确答案.
+    """
+
+    def get(self):
+        """
+        获取一组批判性思维习题.
+
+        第一次请求时, 会生成一组新的习题并存储用户 ID 和习题信息.
+        后续请求时, 会返回之前生成的习题.
+        """
+        user_cookie = request.cookies.get('user_id')
+
+        if not user_cookie or not CriticalThinkingService.exercise_exists(user_cookie):
+            # 第一次进入训练
+            response = setUserId()
+            exercises = CriticalThinkingService.generate_exercises(user_cookie)
+            response.set_data({'exercises': exercises})
+            return response
+
+        # 返回之前生成的习题
+        exercises = CriticalThinkingService.get_exercises(user_cookie)
+        return {'exercises': exercises}, 200
+
+    def post(self):
+        """
+        提交用户对习题的答案并获取反馈.
+
+        如果用户回答错误, 使用苏格拉底式提问引导用户找到正确答案.
+        """
+        user_cookie = request.cookies.get('user_id')
+        if not user_cookie:
+            return {'error': 'user_id not found'}, 400
+
+        data = request.get_json()
+        exercise_id = data.get('exercise_id')
+        answer = data.get('answer')
+
+        if not exercise_id or not answer:
+            return {'error': 'missing exercise_id or answer'}, 400
+
+        # 检查答案是否正确
+        is_correct, feedback = CriticalThinkingService.check_answer(user_cookie, exercise_id, answer)
+
+        if is_correct:
+            return {'feedback': feedback}, 200
+        else:
+            # 使用苏格拉底式提问引导用户
+            guiding_question = CriticalThinkingService.generate_guiding_question(user_cookie, exercise_id)
+            return {'feedback': feedback, 'guiding_question': guiding_question}, 200
