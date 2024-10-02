@@ -2,6 +2,7 @@ from common.file_process import load_json, save_json
 from common.dir_path import prompt_summary_dir,roleplay_history_dir
 from common.openai import client
 import os
+import hashlib
 
 class RoleplayService:
 
@@ -23,8 +24,10 @@ class RoleplayService:
 
     @staticmethod
     def saveHistory(data:list, user_id:str, claim:str):
+        # 使用哈希函数生成claim的唯一标识符
+        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
         # 保存file到roleplay history file之中
-        file = roleplay_history_dir.joinpath(f'chat_{user_id}_{claim}.json')
+        file = roleplay_history_dir.joinpath(f'chat_{user_id}_{claim_hash}.json')
         # 如果不存在文件就直接创建
         if not os.path.exists(file):
             save_json(file, data)

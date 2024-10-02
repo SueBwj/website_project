@@ -22,8 +22,11 @@ class RoleplayResources(Resource):
 
         if not user_cookie or not RoleplayService.file_exist(user_cookie, claim):
             # 第一次进入 roleplay
-            response = setUserId()
+            user_cookie = setUserId()
             reply = RoleplayService.returnFirstReply(claim, user_cookie)
+            response = make_response({
+                "user_id": user_cookie,
+            })
             response.set_data(reply)
             return response
 
