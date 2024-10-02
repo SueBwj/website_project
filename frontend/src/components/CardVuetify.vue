@@ -36,7 +36,14 @@
           :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
           @click="show = !show"
           color="black"
-           :style="{ fontSize: '15px', textTransform: 'capitalize' }"
+          :style="{
+          fontSize: '15px',
+          textTransform: 'capitalize',
+          padding: '2px 6px',          /* 减小 padding 使按钮更细长 */
+          borderRadius: '4px',        /* 设置较小的圆角或为 0 */
+          height: '30px',             /* 可选：设置固定高度 */
+          minWidth: '60px'            /* 可选：设置最小宽度 */
+        }"
         >Reply</v-btn>
       </v-card-actions>
 
@@ -76,19 +83,69 @@
   }
 </script>
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
 .comment {
-  margin-left: 2em;
+  margin: 0.5em 0; /* 减小上下间距 */
+  padding: 0.8em; /* 减小内边距 */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px; /* 增加圆角 */
+  height: fit-content; /* 根据内容自适应宽度 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 柔和的阴影 */
+  transition: box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+
+.comment:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 悬停时增加阴影 */
+}
+
+.v-card {
+  max-width: 600px; /* 限制最大宽度 */
+  margin: 0 auto; /* 居中显示 */
+}
+
+.v-card-title {
+  font-size: 1em; /* 稍微减小标题大小 */
+  font-weight: 500; /* 稍微加粗 */
+}
+
+.v-card-subtitle {
+  font-size: 0.8em; /* 稍微减小副标题大小 */
+  color: #666; /* 更柔和的颜色 */
+}
+
+.v-card-text {
+  font-size: 0.9em; /* 稍微减小正文大小 */
+  line-height: 1.5; /* 增加行高 */
+}
+
+/* 调整点赞和回复按钮样式 */
+.v-btn {
+  font-size: 0.9em;
+  text-transform: none; /* 取消全大写 */
+  min-width: 64px; /* 减小最小宽度 */
+}
+
+/* 调整头像大小 */
+.v-avatar {
+  width: 40px;
+  height: 40px;
 }
 .circle {
-  position:relative;
+  position: relative;
   left: 20px;
   bottom: -28px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 0px rgba(223, 46, 58, 0.5)
+  box-shadow: 0px 0px 0px 0px rgba(223, 46, 58, 0.5);
+  border: 2px solid #e0e0e0; /* 添加圆形边框 */
 }
+
 .img-box {
   position: absolute;
   left: 50%;
@@ -97,27 +154,18 @@
   margin-top: -25px;
   width: 30px;
   height: 30px;
-  /*margin: 5px;*/
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none; /* 防止快速点击图片被选中，可不加，为提高体验，博主加上了这几行代码。*/
+  user-select: none; /* 防止选中图片 */
 }
 
 .check {
-  -webkit-transition: box-shadow 0.5s;
-  -moz-transition: box-shadow 0.5s;
-  -o-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
   box-shadow: 0px 0px 0px 1em rgba(226, 32, 44, 0);
 }
+
 .img-box-check {
   animation: anm 0.5s;
-  -moz-animation: anm 0.5s;
-  -webkit-animation: anm 0.5s;
-  -o-animation: anm 0.5s;
 }
+
 @keyframes anm {
   0% {
     transform: scale(0);
