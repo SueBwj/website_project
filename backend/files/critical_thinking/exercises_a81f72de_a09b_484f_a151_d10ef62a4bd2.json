@@ -1,0 +1,77 @@
+[
+    {
+        "Statement": "Do policies that incentivize early death address societal problems effectively?",
+        "Argument": "Yes, they free up resources for younger generations and reduce the burden on healthcare systems.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "While the argument suggests potential benefits, it does not consider the ethical implications or the negative impact on individuals and families, making it a weak argument.",
+        "type": "choice",
+        "id": 1
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on *incentive*. So what incentive does this create? It creates an incentive that the government *wants you to die* at 75 years old.",
+        "Assumption": "The government can influence when people die based on incentives.",
+        "options": {
+            "a": "Assumption Made",
+            "b": "Assumption Not Made"
+        },
+        "Correct": "Assumption Made",
+        "Explanation": "Explanation: The statement suggests that government incentives could lead to a situation where people die by a certain age. Implicitly, it assumes the government has the power to influence life expectancy through these incentives.",
+        "type": "choice",
+        "id": 2
+    },
+    {
+        "Statement": "The comment suggests that creating a certain policy gives incentives for both the government and family members to prefer people to die at 75 years old.",
+        "Conclusion": "The policy will definitely lead families to value money over the well-being of older relatives.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "Conclusion Does Not Follow",
+        "Explanation": "The statement discusses potential incentives and possibilities but does not provide evidence to support the definite behavior of family members valuing money over well-being.",
+        "type": "choice",
+        "id": 3
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on incentive. Any decision you basically ever make in politics and government, the first thing you need to look at is what incentives does this create and what incentive can I foresee it creating. So what incentive does this create? It creates an incentive that the government wants you to die at 75 years old. It's also a very easy to foresee incentive that your family may want you to die at 75. So you don't spend your money and they get more, they don't have to take care of you, they don't lose their money either. You listed out half the incentive structure already, 'No job, no dignity, no respect, they are angry, kids are gone, you are a burden, you are a bother, you worry'",
+        "Inference": "The comment implies that both governments and families could have an incentive to prefer individuals to die at a specific age to avoid financial and caregiving burdens.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "True",
+        "Explanation": "The passage explicitly discusses incentives whereby the government and family might prefer one to pass away at 75 due to financial reasons and the burden of care, indicating that this inference is true.",
+        "type": "choice",
+        "id": 4
+    },
+    {
+        "Statement": "The comment suggests that policies might create incentives for people to feel like they are a burden and should not live beyond a certain age.",
+        "Conclusion": "The incentives described might lead some individuals to prematurely end their own lives.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "a",
+        "Explanation": "The comment emphasizes that the incentives could foster a view that people are burdens after a certain age, which might encourage some individuals to consider ending their lives prematurely. The conclusion logically follows from the incentive-based reasoning presented.",
+        "type": "choice",
+        "id": 5
+    },
+    {
+        "Statement": "Does the proposed idea create a dangerous incentive structure for the elderly?",
+        "Argument": "Yes, it creates a scenario where the family and government have financial incentives to prefer the early death of the elderly.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument directly addresses the potential negative incentives created by the proposal, making it a strong argument by showing a clear disadvantage.",
+        "type": "write",
+        "id": 6
+    }
+]

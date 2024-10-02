@@ -1,0 +1,77 @@
+[
+    {
+        "Statement": "Does the incentive structure in society encourage people to desire others' death at a certain age?",
+        "Argument": "Yes, the argument suggests that there's an incentive for both governments and family members to prefer people to die at 75, due to economic and caregiving burdens.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "Weak Argument",
+        "Explanation": "The argument presents a hypothetical situation without evidence or thorough analysis of real-world scenarios, making it a weak argument.",
+        "type": "choice",
+        "id": 1
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on *incentive*.",
+        "Assumption": "All actions of governments are motivated by incentives.",
+        "options": {
+            "a": "Assumption Made",
+            "b": "Assumption Not Made"
+        },
+        "Correct": "Assumption Made",
+        "Explanation": "Explanation: The statement implies that governments operate primarily on incentives, thereby assuming that all their actions are influenced by such motivations.",
+        "type": "choice",
+        "id": 2
+    },
+    {
+        "Statement": "A government policy suggests that individuals should be encouraged to plan their retirement around the age of 75. This policy is presented as a way to ensure better allocation of resources while allowing families to plan for a financially stable future.",
+        "Conclusion": "The policy incentivizes both the government and families to prefer individuals dying at age 75.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "Conclusion Does Not Follow",
+        "Explanation": "Explanation: The policy is about planning for retirement and resource allocation, but does not explicitly incentivize or prefer death at age 75. It lacks direct evidence linking the policy to such intentions.",
+        "type": "choice",
+        "id": 3
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on incentive. Any decision in politics and government, the first thing to look at is what incentives it creates. This creates an incentive that the government wants you to die at 75 years old. Families may also have incentives for individuals to die at 75 to gain more financially and avoid burdens.",
+        "Inference": "The comment suggests that policies favoring individuals dying at 75 are incentivized for financial reasons.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "Probably True",
+        "Explanation": "The comment highlights incentives for governments and families for individuals to die at 75 due to financial benefits and reduced burden. While this is a strong suggestion, it is not explicitly stated or universally applied, making it 'probably true'.",
+        "type": "choice",
+        "id": 4
+    },
+    {
+        "Statement": "The comment suggests that policies or societal attitudes create incentives that make people want others to die at a certain age due to potential burdens.",
+        "Question": "Does the comment provide evidence that these incentives actively lead to people wanting others to die at 75?",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "b",
+        "Explanation": "The statement is describing a perceived incentive structure but does not provide concrete evidence that such incentives have led to actual desires or actions for people to die at 75.",
+        "type": "choice",
+        "id": 5
+    },
+    {
+        "Statement": "Does the incentive structure discussed in the comment persuade people to want others to die at a certain age?",
+        "Argument": "Yes, the comment outlines how the government and family members could have financial and social incentives for wanting someone to die at 75, presenting it as a burden if one continues to live past that age.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument clearly relates to the original claim by explaining how specific incentives could lead to such a desire, making a coherent and strong case.",
+        "type": "write",
+        "id": 6
+    }
+]

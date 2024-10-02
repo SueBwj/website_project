@@ -1,0 +1,77 @@
+[
+    {
+        "Statement": "Is it valid to assert that the policy incentivizes both the government and families to want individuals to die at 75?",
+        "Argument": "Yes, because it creates financial and social incentives for both parties to benefit from the death of the individual at post-retirement age.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument suggests a clear motivation for the parties involved, implying there are advantageous outcomes from the policy. This makes it a strong argument since it aligns with the logical structure provided in the comment.",
+        "type": "choice",
+        "id": 1
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on incentive.",
+        "Assumption": "Incentives have a direct influence on the decisions made by governments.",
+        "options": {
+            "a": "Assumption Made",
+            "b": "Assumption Not Made"
+        },
+        "Correct": "Assumption Made",
+        "Explanation": "Explanation: The statement suggests that incentives are a fundamental factor in decision-making, thereby assuming that incentives directly influence governmental decisions.",
+        "type": "choice",
+        "id": 2
+    },
+    {
+        "Statement": "The comment discusses the potential incentives created by a government policy that seemingly encourages individuals to die at 75.",
+        "Conclusion": "The government has intentionally created incentives for people to die at 75.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "Conclusion Does Not Follow",
+        "Explanation": "Explanation: While the comment discusses incentives, it does not provide evidence that the government intentionally created these incentives with the purpose of having people die at 75. It only analyzes possible implications of such a policy.",
+        "type": "choice",
+        "id": 3
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively on incentive. Any decision you make in politics and government, the first thing you need to look at is what incentives does it create. What incentive does this create? It creates an incentive for the government to want you to die at 75 years old. It's also a foreseeable incentive for your family to want you to die at 75.",
+        "Inference": "The incentive structure implied in the comment suggests a conflict of interest where both government and family might benefit from individuals dying at a certain age.",
+        "options": {
+            "a": "True",
+            "b": "Probably True",
+            "c": "More Information Required",
+            "d": "Probably False",
+            "e": "False"
+        },
+        "Correct": "True",
+        "Explanation": "The passage sets up a scenario where the incentives align for both the government and family to want an individual to die at a certain age, making the inference true.",
+        "type": "choice",
+        "id": 4
+    },
+    {
+        "Statement": "The comment suggests that the government's incentive might be for individuals to die at 75 to reduce burden on resources.",
+        "Conclusion": "The primary incentive discussed is the financial benefit to families if the elderly pass away at 75.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "a",
+        "Explanation": "The comment explicitly mentions the possibility of families wanting individuals to die at 75 to access financial resources and reduce care responsibilities, thereby making the conclusion follow.",
+        "type": "choice",
+        "id": 5
+    },
+    {
+        "Statement": "Does the comment suggest that government policy imposes indirect pressure on individuals over 75 years old to die?",
+        "Argument": "Yes, the government creates incentives that might lead people to believe they are a burden after 75, adding to the pressure to consider death as an option.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The comment implies that the government's incentives structure pushes towards considering death at 75 to alleviate the burden, making this a strong argument.",
+        "type": "write",
+        "id": 6
+    }
+]

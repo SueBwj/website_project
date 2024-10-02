@@ -1,0 +1,76 @@
+[
+    {
+        "Statement": "Is it beneficial for governments to create incentives that could lead to negative outcomes for citizens?",
+        "Argument": "Creating an incentive for citizens to die at a certain age reduces healthcare costs for the government.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "b",
+        "Explanation": "The argument addresses a reduction in costs but doesn't consider the ethical implications or the main issue of negative health outcomes, making it a weak argument.",
+        "type": "choice",
+        "id": 1
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on incentive.",
+        "Assumption": "All actions of humans and governments can be explained by incentives.",
+        "options": {
+            "a": "Assumption Made",
+            "b": "Assumption Not Made"
+        },
+        "Correct": "Assumption Made",
+        "Explanation": "Explanation: The statement presents the idea that incentives are the primary driver for actions of humans and governments, assuming that there's little or no other basis for their actions.",
+        "type": "choice",
+        "id": 2
+    },
+    {
+        "Statement": "The comment argues that the government's incentive structure could make families want their relatives to die at a certain age, such as 75, to reduce their burden and costs.",
+        "Conclusion": "Families will definitely act on this incentive and want their relatives to die at 75.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "Conclusion Does Not Follow",
+        "Explanation": "Explanation: The comment suggests a possibility of incentives but does not prove that all families will act on such incentives.",
+        "type": "choice",
+        "id": 3
+    },
+    {
+        "Statement": "The comment suggests that incentivizing death at 75 could lead to negative outcomes, including lack of respect and support for older individuals, and family members preferring inheritance over caretaking.",
+        "Question": "What main inference can be drawn from the comment about the incentive structure created by the government and family?",
+        "Options": {
+            "a": "The incentive structure supports longer, healthier lives for seniors.",
+            "b": "There is an incentive for both the government and families to prefer that individuals die by 75.",
+            "c": "Incentives are irrelevant in the context of family and government decisions.",
+            "d": "Government policies discourage families from considering financial implications."
+        },
+        "Correct": "b",
+        "Explanation": "The comment highlights how the proposed incentive structure could lead to preferences for individuals dying at 75 to alleviate financial and emotional burdens, thereby implying that both government and family gain incentives contrary to supporting elders beyond this age.",
+        "type": "choice",
+        "id": 4
+    },
+    {
+        "Statement": "Governments and families are driven by incentive structures that may sway their decisions regarding individuals living past a certain age.",
+        "Conclusion": "The incentive structures mentioned will undeniably lead to individuals constantly wishing for others to die at 75.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "b",
+        "Explanation": "While the incentive structures could lead to undesirable motivations, it is not a certainty that they will universally result in such extreme desires. Incentives can be mitigated or influenced by ethical principles, laws, and individual values, so the conclusion does not follow.",
+        "type": "choice",
+        "id": 5
+    },
+    {
+        "Statement": "Does the argument imply that societal and family incentives create pressure for individuals to die by a certain age?",
+        "Argument": "Yes, the comment suggests that both government and family may have incentives for individuals to die at 75.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument directly derives from the points discussed in the comment, highlighting perceived incentives for both societal and familial pressure.",
+        "type": "write",
+        "id": 6
+    }
+]

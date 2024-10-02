@@ -1,0 +1,76 @@
+[
+    {
+        "Statement": "Does having an age limit of 75 create an incentive for individuals and governments to wish for someone's death?",
+        "Argument": "Yes, the policy encourages the idea that people become burdensome after a certain age.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "a",
+        "Explanation": "The argument suggests a directly negative impact of the policy by associating it with societal pressures and perceptions, making it a strong argument.",
+        "type": "choice",
+        "id": 1
+    },
+    {
+        "Statement": "Humans and governments work almost exclusively at their most basic on *incentive*.",
+        "Assumption": "All decisions made by humans and governments are motivated by incentives.",
+        "options": {
+            "a": "Assumption Made",
+            "b": "Assumption Not Made"
+        },
+        "Correct": "Assumption Made",
+        "Explanation": "Explanation: The statement implies that incentives are the primary driving force behind decisions, assuming there are no other significant motivators.",
+        "type": "choice",
+        "id": 2
+    },
+    {
+        "Statement": "The comment suggests that government policies and family dynamics create incentives for individuals to die by the age of 75.",
+        "Conclusion": "The government's incentive is primarily motivated by economic reasons to favor individuals dying at age 75.",
+        "Options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "Conclusion Follows",
+        "Explanation": "The comment discusses economic incentives, implying government financial incentives to avoid costs associated with aging individuals, which supports the conclusion.",
+        "type": "choice",
+        "id": 3
+    },
+    {
+        "Statement": "The comment suggests that the incentive structure created by a policy could lead to the desire for individuals, including the government and family members, to prefer one's death at a certain age.",
+        "Question": "What primary concern does the comment raise about the proposed incentive structure?",
+        "Options": {
+            "a": "It promotes financial independence.",
+            "b": "It encourages earlier retirement.",
+            "c": "It may create a desire for individuals to die at age 75.",
+            "d": "It incentivizes a healthier lifestyle."
+        },
+        "Correct": "c",
+        "Explanation": "The comment argues that the incentive structure might lead to a preference for individuals to die at 75, as it may relieve financial burdens and responsibilities from family and government.",
+        "type": "choice",
+        "id": 4
+    },
+    {
+        "Statement": "The Reddit comment discusses the idea that a societal incentive structure encourages individuals and governments to see elderly people as burdens rather than valuable members of society.",
+        "Conclusion": "This societal incentive structure encourages a positive view of aging.",
+        "options": {
+            "a": "Conclusion Follows",
+            "b": "Conclusion Does Not Follow"
+        },
+        "Correct": "b",
+        "Explanation": "The commentary suggests that the structure creates incentives for individuals and governments to want elderly people to die by 75, implying a negative view of aging, not a positive one. Thus, the conclusion does not follow.",
+        "type": "choice",
+        "id": 5
+    },
+    {
+        "Statement": "Should the incentive of financial interests influence decisions about end-of-life policies?",
+        "Argument": "Yes, financial incentives drive most human actions, and aligning end-of-life policies with this reality ensures fair and efficient outcomes.",
+        "options": {
+            "a": "Strong Argument",
+            "b": "Weak Argument"
+        },
+        "Correct": "Weak Argument",
+        "Explanation": "The argument fails to address ethical implications and reduces complex end-of-life decisions to financial considerations alone, which is not sufficient to support the statement.",
+        "type": "write",
+        "id": 6
+    }
+]
