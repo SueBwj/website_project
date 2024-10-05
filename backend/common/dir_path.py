@@ -11,3 +11,5 @@ critical_thinking_dir = Path(__file__).parent.parent.joinpath('files','critical_
 data_dir = Path(__file__).parent.parent.joinpath('files','data')
 
 example_dir = Path(__file__).parent.parent.joinpath('files','example')
+
+normal_chat_history_dir = Path(__file__).parent.parent.joinpath('files','normal_chat_history')
