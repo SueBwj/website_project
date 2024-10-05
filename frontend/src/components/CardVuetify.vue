@@ -12,11 +12,11 @@
             image="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
           ></v-avatar>
         </template>
-        <v-card-title class="text-left">{{ comments.author }}</v-card-title>
+        <v-card-title class="text-left">{{ comments.name }}</v-card-title>
         <v-card-subtitle class="text-left">Vue Creator</v-card-subtitle>
       </v-card-item>
       <v-card-text class="py-1 text-left" >
-         {{ comments.content }}
+         {{ comments.comment }}
       </v-card-text>
     </div>
       <v-card-actions class="custom-actions">
@@ -34,7 +34,7 @@
         <v-spacer></v-spacer>
 
         <v-btn
-          v-if="comments.replies.length > 0"
+          v-if="comments.subcomment.length > 0"
           :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
           @click="show = !show"
           color="black"
@@ -51,7 +51,7 @@
 
       <v-expand-transition>
         <div v-show="show">
-          <card-vuetify :comments = "item"  v-for="(item,index) in comments.replies" :key="index"/>
+          <card-vuetify :comments = "item"  v-for="(item,index) in comments.subcomment" :key="index"/>
         </div>
       </v-expand-transition>
     </v-card>
@@ -137,7 +137,7 @@
 .circle {
   position: relative;
   left: 20px;
-  bottom: -28px;
+  bottom: -25px;
   width: 30px;
   height: 30px;
   border-radius: 50%;

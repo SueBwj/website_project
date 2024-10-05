@@ -16,17 +16,9 @@
         <v-card-title class="text-left">Nicole</v-card-title>
         <v-card-subtitle class="text-left">Vue Creator</v-card-subtitle>
       </v-card-item>
-      <h2 class="text-left pl-4 font-weight-bold" :style="{ fontSize: '20px' }">You should try to start a business with AI Now</h2>
+      <h2 class="text-left pl-4 font-weight-bold" :style="{ fontSize: '20px' }">rights from people who engage with anti-Zionism and Gaza as atrendy cause</h2>
       <v-card-text class="py-1 text-left pl-10" :style="{ fontSize: '15px' }">
-        We are in an insane timeline. This is probably as big as the .com boom in my opinion. Maybe bigger.
-
-If you are struggling for cash, are out of a job, or just want to start a side hustle; do it and now!
-
-You have the best tool infront of you. ChatGPT.
-
-With voice mode released, the potential of business ideas have just opened up even further. I sense a lot of children books coming along with natural voices, mini skits, shows, and that sort of thing.
-
-Then you have text to pictures which has been out for a long while but videos are starting to pickup and are only getting better.
+        {{ comments[0].comment }}
       </v-card-text>
     </div>
       
@@ -35,16 +27,7 @@ Then you have text to pictures which has been out for a long while but videos ar
   <div class="comments pt-5">
     <h3 >Comments</h3>
     <div class="row m-2">
-      <CardVuetify :comments="comments[0]"/>
-    </div>
-    <div class="row m-2">
-      <CardVuetify :comments="comments[0]" />
-    </div>
-    <div class="row m-2">
-      <CardVuetify :comments="comments[0]" />
-    </div>
-    <div class="row m-2">
-      <CardVuetify :comments="comments[0]" />
+      <CardVuetify v-for="(comment,index) in comments[0].subcomment" :comments="comment" :key="index"/>
     </div>
   </div>
 </template>
@@ -52,33 +35,15 @@ Then you have text to pictures which has been out for a long while but videos ar
 <script>
 /* eslint-disable */
 import CardVuetify from './CardVuetify.vue'
-
+import jsonComment from '../../../backend/files/comment_data/discussion_subset1.json'
 export default {
 name: 'CommentReddit',
 components: {
   CardVuetify
 },
 data(){
-    return{
-      comments: [
-      {
-        author: 'John Doe',
-        content: 'This is the first comment.',
-        replies: [
-          {
-            author: 'Jane Doe',
-            content: 'I agree with you!',
-            replies: [
-              {
-                author: 'Bob Smith',
-                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                replies: []
-              }
-            ]
-          }
-        ]
-      }
-    ],
+  return {
+    comments:jsonComment,
   }
   
 },

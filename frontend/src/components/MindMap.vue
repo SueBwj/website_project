@@ -28,7 +28,7 @@
       name: 'MindMap',
       data() {
         return {
-            topic_id: 3,
+            topic_id: 4,
             activeNodes: [],
             showMenu: false,
             menuX: 0,
