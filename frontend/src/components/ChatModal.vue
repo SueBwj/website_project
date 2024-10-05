@@ -137,14 +137,6 @@ export default {
     mindMapData: {
       type: Object,
       default: null
-    },
-    userAvatar: { // 用户头像
-      type: String,
-      default: 'https://via.placeholder.com/40?text=U' // 默认用户头像
-    },
-    botAvatar: { // 机器人头像
-      type: String,
-      default: 'https://www.flaticon.com/svg/static/icons/svg/2814/2814666.svg' // Flaticon 机器人头像URL
     }
   },
   data() {
@@ -161,7 +153,9 @@ export default {
       exercises: [],
       currentExerciseIndex: 0,
       isQuizActive: false,
-      currentOptions: [] // 新增：当前选项按钮
+      currentOptions: [], // 新增：当前选项按钮
+      botAvatar: require('../assets/robot.png'),
+      userAvatar: require('../assets/user.png')
     };
   },
   computed: {
