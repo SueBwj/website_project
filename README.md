@@ -9,6 +9,6 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 ### Todo
 - 前端
     - 交互时的评论定位
-    - 完成critcal exerciese 的设计
+    - 完成ai输出的功能实时显示在页面 websocket
 - 后端
     - 评论的内容和结构
