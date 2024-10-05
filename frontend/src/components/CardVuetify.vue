@@ -91,7 +91,6 @@
 .comment {
   margin: 0.5em 0; /* 减小上下间距 */
   padding: 0.8em; /* 减小内边距 */
-  border: 1px solid #e0e0e0;
   border-radius: 12px; /* 增加圆角 */
   height: fit-content; /* 根据内容自适应宽度 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 柔和的阴影 */
