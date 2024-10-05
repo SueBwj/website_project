@@ -1,0 +1,34 @@
+[
+    {
+        "role": "user",
+        "content": "您好"
+    },
+    {
+        "role": "assistant",
+        "content": "您好！有什么可以帮助您的吗？"
+    },
+    {
+        "role": "user",
+        "content": "您好"
+    },
+    {
+        "role": "assistant",
+        "content": "您好！有什么我可以帮助您的吗？"
+    },
+    {
+        "role": "user",
+        "content": "您好"
+    },
+    {
+        "role": "assistant",
+        "content": "您好！有什么我可以帮助您的吗？"
+    },
+    {
+        "role": "user",
+        "content": "您好"
+    },
+    {
+        "role": "assistant",
+        "content": "您好，有什么我可以帮助您的吗？"
+    }
+]
