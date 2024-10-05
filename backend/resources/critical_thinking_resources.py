@@ -20,22 +20,20 @@ class CriticalThinkingExerciseResources(Resource):
         第一次请求时, 会生成一组新的习题并存储用户 ID 和习题信息.
         后续请求时, 会返回之前生成的习题.
         """
-        user_cookie = request.args.get('user_id')
+        user_cookie = request.args.get('user_device_id')
         claim = request.args.get('claim')
 
         if not user_cookie or not CriticalThinkingService.exercise_exists(user_cookie):
             # 第一次进入训练
-            user_cookie = generate_uid()
             exercises = CriticalThinkingService.generate_exercises(user_cookie, claim)
             response = make_response({'exercises': exercises})
-            response.set_cookie('user_id', user_cookie)
-            print(response)
+            response.set_cookie('user_device_id', str(user_cookie))
             return response
 
         # 返回之前生成的习题
         exercises = CriticalThinkingService.get_exercises(user_cookie)
         response = make_response({'exercises': exercises})
-        response.set_cookie('user_id', user_cookie)
+        response.set_cookie('user_device_id', str(user_cookie))
         return response
 
     def post(self):
@@ -46,7 +44,7 @@ class CriticalThinkingExerciseResources(Resource):
         """
         user_cookie = getUserId()  # 使用 getUserId() 获取用户 ID
         if not user_cookie:
-            return {'error': 'user_id not found'}, 400
+            return {'error': 'user_device_id not found'}, 400
 
         data = request.get_json()
         exercise_id = data.get('exercise_id')
