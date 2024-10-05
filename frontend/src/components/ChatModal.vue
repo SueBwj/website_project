@@ -170,7 +170,7 @@ export default {
       if (this.message.trim() !== '') {
         const userMessage = this.message;
         this.messages.push({ text: userMessage, sender: 'user' });
-      
+      if(this.claim){
         axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${this.message}`,{withCredentials: true})
         .then(response => {
           this.messages.push({text: response.data, sender: 'bot'})
@@ -179,6 +179,17 @@ export default {
         .catch(error => {
           console.error("return reply error: ", error)
         })
+      }else{
+        // 正常对话 -- normal conversation
+        axios.get(`http://localhost:5000/normal_conversation&message=${this.message}`,{withCredentials: true})
+        .then(response => {
+          this.messages.push({text: response.data, sender: 'bot'})
+          this.scrollToBottom();
+        })
+        .catch(error => {
+          console.error("return reply error: ", error)
+        })
+      }
         this.message = '';
         // // 模拟回复
         // setTimeout(() => {
