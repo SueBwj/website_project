@@ -1,77 +1,26 @@
 [
     {
-        "Statement": "Is it reasonable to conclude that the government and families have incentives to wish for someone's death at age 75?",
-        "Argument": "The comment suggests that governing and familial relations are driven by financial incentives, which may lead to a desire for individuals to die at 75 for economic benefits.",
-        "options": {
-            "a": "Strong Argument",
-            "b": "Weak Argument"
-        },
-        "Correct": "Weak Argument",
-        "Explanation": "The argument relies heavily on an assumption that financial incentives entirely dictate such personal and societal motives, without considering the complexity of human relationships and ethical considerations. Therefore, it oversimplifies and generalizes the incentive structures.",
-        "type": "choice",
+        "choice": "[\n    {\n        \"Statement\": \"Should Vitamin C fortification be expanded beyond existing school snacks?\",\n        \"Argument\": \"Since Vitamin C fortification already exists in school snacks, further fortification is unnecessary.\",\n        \"options\": {\n            \"a\": \"Strong Argument\",\n            \"b\": \"Weak Argument\"\n        },\n        \"Correct\": \"Weak Argument\",\n        \"Explanation\": \"The argument merely states that fortification exists but doesn't address whether expanding it would have additional benefits or drawbacks. Therefore, it lacks a strong basis for its position.\"\n    },\n    {\n        \"Statement\": \"Should Vitamin C fortification be expanded beyond existing school snacks?\",\n        \"Argument\": \"Yes, expanding Vitamin C fortification to more snacks can improve students' overall health.\",\n        \"options\": {\n            \"a\": \"Strong Argument\",\n            \"b\": \"Weak Argument\"\n        },\n        \"Correct\": \"Strong Argument\",\n        \"Explanation\": \"This argument directly addresses the question with a clear benefit, making a case for the health improvements that could result from expanded fortification, making it a strong argument.\"\n    }\n]",
         "id": 1
     },
     {
-        "Statement": "Humans and governments work almost exclusively at their most basic on incentive. So what incentive does this create? It creates an incentive that the government wants you to die at 75 years old.",
-        "Assumption": "Governments actively create policies to control the age at which people die.",
-        "options": {
-            "a": "Assumption Made",
-            "b": "Assumption Not Made"
-        },
-        "Correct": "Assumption Made",
-        "Explanation": "Explanation: The statement suggests that government policies intentionally create an incentive for people to die at a specific age, which implies the assumption that governments have such control over age-related outcomes.",
-        "type": "choice",
+        "choice": "[\n    {\n      \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n      \"Assumption\": \"All school snacks contain Vitamin C fortification.\",\n      \"options\": {\n        \"a\": \"Assumption Made\",\n        \"b\": \"Assumption Not Made\"\n      },\n      \"Correct\": \"Assumption Not Made\",\n      \"Explanation\": \"Explanation: The statement merely indicates that Vitamin C fortification exists in some school snacks, not necessarily all.\"\n    },\n    {\n      \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n      \"Assumption\": \"Vitamin C is an important nutrient for children.\",\n      \"options\": {\n        \"a\": \"Assumption Made\",\n        \"b\": \"Assumption Not Made\"\n      },\n      \"Correct\": \"Assumption Not Made\",\n      \"Explanation\": \"Explanation: The statement does not make any claim regarding the importance of Vitamin C; it only mentions that fortification exists.\"\n    }\n]",
         "id": 2
     },
     {
-        "Statement": "The author of the comment suggests that the decision-making processes in politics and government are heavily influenced by underlying incentives.",
-        "Conclusion": "Incentives in politics and governance are often designed to benefit the most powerful individuals.",
-        "options": {
-            "a": "Conclusion Follows",
-            "b": "Conclusion Does Not Follow"
-        },
-        "Correct": "Conclusion Does Not Follow",
-        "Explanation": "Explanation: The comment focuses on how incentives drive decision-making but does not specifically state that these are designed to benefit the most powerful individuals. The conclusion is too specific to follow from the provided text.",
-        "type": "choice",
+        "choice": "[\n    {\n      \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n      \"Conclusion\": \"All school snacks must contain vitamin C due to fortification standards.\",\n      \"options\": {\n        \"a\": \"Conclusion Follows\",\n        \"b\": \"Conclusion Does Not Follow\"\n      },\n      \"Correct\": \"Conclusion Does Not Follow\",\n      \"Explanation\": \"The statement only indicates that vitamin C fortification exists in school snacks, not that all school snacks must be fortified. The conclusion cannot be deduced from the statement.\"\n    },\n    {\n      \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n      \"Conclusion\": \"There is an effort to improve children's nutrition through fortified school snacks.\",\n      \"options\": {\n        \"a\": \"Conclusion Follows\",\n        \"b\": \"Conclusion Does Not Follow\"\n      },\n      \"Correct\": \"Conclusion Follows\",\n      \"Explanation\": \"The statement implies an existing practice of vitamin C fortification in school snacks, which suggests a motive to enhance children's nutrition. Thus, the conclusion follows from the statement.\"\n    }\n]",
         "id": 3
     },
     {
-        "Statement": "The comment suggests that government policies might create incentives for individuals to die at a particular age, such as 75, due to the reduced burden on families and resources.",
-        "Inference": "A government policy that encourages people to die at a specific age could lead to ethical and social dilemmas.",
-        "Options": {
-            "a": "True",
-            "b": "Probably True",
-            "c": "More Information Required",
-            "d": "Probably False",
-            "e": "False"
-        },
-        "Correct": "True",
-        "Explanation": "The comment highlights ethical concerns and perceived incentives surrounding government policies aimed at encouraging a specific age of death. This inference is true as it aligns with the underlying issues discussed in the comment.",
-        "type": "choice",
+        "choice": "[\n    {\n        \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n        \"Inference\": \"All school snacks now contain vitamin C as a result of fortification efforts.\",\n        \"options\": {\n            \"a\": \"True\",\n            \"b\": \"Probably True\",\n            \"c\": \"More Information Required\",\n            \"d\": \"Probably False\",\n            \"e\": \"False\"\n        },\n        \"Correct\": \"More Information Required\",\n        \"Explanation\": \"The statement indicates that some school snacks have been fortified with vitamin C, but it does not provide enough information to conclude that all school snacks have undergone this change. Therefore, additional information would be required to confirm the inference.\"\n    },\n    {\n        \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n        \"Inference\": \"The addition of vitamin C to school snacks is part of a health initiative aimed at improving children's nutrition.\",\n        \"options\": {\n            \"a\": \"True\",\n            \"b\": \"Probably True\",\n            \"c\": \"More Information Required\",\n            \"d\": \"Probably False\",\n            \"e\": \"False\"\n        },\n        \"Correct\": \"Probably True\",\n        \"Explanation\": \"The inference is likely since fortification of food products often aims to improve nutritional profiles. However, the statement lacks specific details about the motivation behind the fortification, so we cannot be entirely certain, making 'probably true' the most appropriate choice.\"\n    }\n]",
         "id": 4
     },
     {
-        "Statement": "The comment discusses a governmental or societal incentive structure that allegedly promotes the desire for individuals to die at the age of 75. It mentions incentives related to government preferences and family benefits.",
-        "Question": "Does the comment logically conclude that an incentive structure indeed exists promoting death at age 75?",
-        "Options": {
-            "a": "Conclusion Follows",
-            "b": "Conclusion Does Not Follow"
-        },
-        "Correct": "b",
-        "Explanation": "The comment expresses a concern about potential incentives but does not provide concrete evidence that such an incentive structure actively exists or is promoted by societal systems. It presents a hypothetical scenario rather than an established fact.",
-        "type": "choice",
+        "choice": "[\n    {\n        \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n        \"Conclusion\": \"All school snacks contain vitamin C.\",\n        \"options\": {\n            \"a\": \"Conclusion Follows\",\n            \"b\": \"Conclusion Does Not Follow\"\n        },\n        \"Correct\": \"b\",\n        \"Explanation\": \"The comment states that vitamin C fortification exists in some school snacks, but it does not specify that all school snacks have been fortified. Therefore, the conclusion does not necessarily follow.\"\n    },\n    {\n        \"Statement\": \"Vitamin C fortification already exists in school snacks.\",\n        \"Conclusion\": \"There are school snacks available that do not have vitamin C fortification.\",\n        \"options\": {\n            \"a\": \"Conclusion Follows\",\n            \"b\": \"Conclusion Does Not Follow\"\n        },\n        \"Correct\": \"a\",\n        \"Explanation\": \"The statement acknowledges the existence of vitamin C fortification in school snacks, but does not mention exclusivity. This implies that there could be snacks without it, meaning the conclusion follows.\"\n    }\n]",
         "id": 5
     },
     {
-        "Statement": "Does the proposed incentive system create a better societal structure by encouraging earlier death?",
-        "Argument": "Yes, because it offers financial benefits to younger family members and reduces the burden on governmental resources.",
-        "options": {
-            "a": "Strong Argument",
-            "b": "Weak Argument"
-        },
-        "Correct": "b",
-        "Explanation": "The argument assumes financial and societal benefits without addressing ethical implications and the potential negative emotional impact on societal values and family dynamics, making it a weak argument.",
-        "type": "write",
+        "write": "[\n    {\n        \"Statement\": \"Is it necessary to further increase vitamin C fortification in school snacks?\",\n        \"Argument\": \"Yes, despite its presence, further fortification ensures that all children meet their daily vitamin C requirements.\",\n        \"options\": {\n            \"a\": \"Strong Argument\",\n            \"b\": \"Weak Argument\"\n        },\n        \"Correct\": \"a\",\n        \"Explanation\": \"The argument provides a clear benefit of increasing vitamin C fortification, directly addressing the potential for ensuring adequate nutrition, making it a strong argument.\"\n    },\n    {\n        \"Statement\": \"Is it necessary to further increase vitamin C fortification in school snacks?\",\n        \"Argument\": \"No, excessive vitamin C intake can lead to health issues such as stomach upset.\",\n        \"options\": {\n            \"a\": \"Strong Argument\",\n            \"b\": \"Weak Argument\"\n        },\n        \"Correct\": \"a\",\n        \"Explanation\": \"The argument highlights a potential health risk of excessive intake, which directly addresses the consideration of increasing vitamin C fortification, making it a strong argument.\"\n    }\n]",
         "id": 6
     }
 ]

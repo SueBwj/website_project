@@ -6,7 +6,7 @@
   </nav>
   <div class="container-fluid text-center mt-5">
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 comment-container">
         <CommentReddit />
       </div>
       <div class="col-8">
@@ -76,6 +76,19 @@ export default {
 
 <style>
 
+#liveToastBtn {
+  position: fixed; /* 固定位置 */
+  bottom: 50px; /* 距离底部20px */
+  right: 20px; /* 距离右侧20px */
+  z-index: 9999; /* 确保在其他内容之上 */
+}
+
+.comment-container {
+  max-height: 800px;
+  overflow-y: auto; /* 允许垂直滚动 */
+}
+
+/* 其他样式保持不变 */
 #liveToastBtn {
   position: fixed; /* 固定位置 */
   bottom: 50px; /* 距离底部20px */

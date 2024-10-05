@@ -13,17 +13,17 @@
           </h5>
           <div class="basic-button">
             <button type="button" class="btn btn-sm me-1 add" @click="startNewConversation">
-            <i class="fas fa-edit"></i>
-          </button>
-          <button type="button" class="close btn p-0" @click="closeModal" aria-label="关闭">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button type="button" class="close btn p-0" @click="closeModal" aria-label="关闭">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
         </div>
         
         <!-- 模态框主体 -->
-        <div class="chat-container">
-          <div id="chatContent" ref="chatContent">
+        <div class="chat-container" ref="chatContent">
+          <div id="chatContent">
             <!-- 聊天内容 -->
             <div
               v-for="(msg, index) in messages"
@@ -38,25 +38,33 @@
                 @error="handleImageError"
               />
               <!-- 消息内容 -->
-              <div class="message-text" v-html="formatMessage(msg.text)">
+              <div class="message-text">
+                <template v-if="!msg.isOptions">
+                  <div v-html="formatMessage(msg.text)"></div>
+                </template>
+                <template v-else>
+                  <div v-html="formatMessage(msg.text)"></div>
+                </template>
               </div>
             </div>
           </div>
         </div>
+        
+        <!-- 预设选项按钮区域 -->
         <transition name="fade">
-          <!-- 预设选项按钮区域 -->
           <div class="preset-options" v-if="showPresetOptions">
             <button 
               v-for="(option, index) in presetOptions" 
               :key="index"  
               class="preset-option-btn rounded-pill"
               @click="handlePresetOption(option)"
-              >
-                <i :class="option.icon"></i>
-                {{ option.text }}
-              </button>
+            >
+              <i :class="option.icon"></i>
+              {{ option.text }}
+            </button>
           </div>
         </transition>
+        
         <!-- 预设问题按钮区域 -->
         <div class="preset-questions">
           <button 
@@ -68,6 +76,19 @@
             {{ question }}
           </button>
         </div>
+        
+        <!-- 选项按钮区域（单独呈现） -->
+        <div class="option-buttons" v-if="currentOptions.length > 0">
+          <button 
+            v-for="(option, index) in currentOptions" 
+            :key="index" 
+            class="option-btn"
+            @click="handleUserAnswer(option.key, option.value)"
+          >
+            {{ option.key }}: {{ option.value }}
+          </button>
+        </div>
+        
         <!-- 模态框底部 -->
         <div class="modal-footer">
           <input
@@ -81,6 +102,7 @@
             send
           </button>
         </div>
+        
         <!-- 归属信息 -->
         <div class="attribution">
           Icon by <a href="https://www.flaticon.com/free-icon/ai_2814666?term=robot&page=1&position=9&origin=search&related_id=2814666" target="_blank">Flaticon</a>
@@ -136,6 +158,10 @@ export default {
         { icon: 'fas fa-search', text: 'Explore Claims' },
       ],
       showPresetOptions: true,
+      exercises: [],
+      currentExerciseIndex: 0,
+      isQuizActive: false,
+      currentOptions: [] // 新增：当前选项按钮
     };
   },
   computed: {
@@ -165,37 +191,33 @@ export default {
       this.$emit('close');
     },
     sendMessage() {
-      // 一旦用户发送信息，则取消预设选项
-      this.showPresetOptions = false;
       if (this.message.trim() !== '') {
         const userMessage = this.message;
         this.messages.push({ text: userMessage, sender: 'user' });
-      if(this.claim){
-        axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${this.message}`,{withCredentials: true})
-        .then(response => {
-          this.messages.push({text: response.data, sender: 'bot'})
-          this.scrollToBottom();
-        })
-        .catch(error => {
-          console.error("return reply error: ", error)
-        })
-      }else{
-        // 正常对话 -- normal conversation
-        axios.get(`http://localhost:5000/normal_conversation&message=${this.message}`,{withCredentials: true})
-        .then(response => {
-          this.messages.push({text: response.data, sender: 'bot'})
-          this.scrollToBottom();
-        })
-        .catch(error => {
-          console.error("return reply error: ", error)
-        })
-      }
+        this.scrollToBottom()
+        if(this.claim){
+          // 一旦用户发送信息，则取消预设选项
+          this.showPresetOptions = false;
+          axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${this.message}`,{withCredentials: true})
+          .then(response => {
+            this.messages.push({text: response.data, sender: 'bot'})
+            this.scrollToBottom();
+          })
+          .catch(error => {
+            console.error("return reply error: ", error)
+          })
+        }else{
+          // 正常对话 -- normal conversation
+          axios.get(`http://localhost:5000/normal_conversation?message=${this.message}`,{withCredentials: true})
+          .then(response => {
+            this.messages.push({text: response.data, sender: 'bot'})
+            this.scrollToBottom();
+          })
+          .catch(error => {
+            console.error("return reply error: ", error)
+          })
+        }
         this.message = '';
-        // // 模拟回复
-        // setTimeout(() => {
-        //   this.messages.push({ text: '这是自动回复的消息', sender: 'bot' });
-        //   this.scrollToBottom();
-        // }, 1000);
       }
     },
     startNewConversation(){
@@ -203,6 +225,8 @@ export default {
       this.messages = [];
       // 重新显示预设选项
       this.showPresetOptions = true;
+      // 重置当前选项
+      this.currentOptions = [];
       // 可能需要重置其他相关状态
       // 例如：重置 claim
       this.$emit('reset-claim');
@@ -215,10 +239,10 @@ export default {
         if(this.claim){
           axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
             .then(response => {
-            this.messages.push({ text: response.data, sender: 'bot' });
-            this.scrollToBottom();
-            this.getQuestionList(response.data)
-          })
+              this.messages.push({ text: response.data, sender: 'bot' });
+              this.scrollToBottom();
+              this.getQuestionList(response.data)
+            })
             .catch(error => {
               console.error("返回回复错误: ", error)
             });
@@ -226,10 +250,10 @@ export default {
           // 如果claim为空，则使用随机选择的claim
           axios.get(`http://localhost:5000/roleplay?claim=${randomClaim.value}&message=${userMessage}`, { withCredentials: true })
             .then(response => {
-            this.messages.push({ text: response.data, sender: 'bot' });
-            this.scrollToBottom();
-            this.getQuestionList(response.data)
-          })
+              this.messages.push({ text: response.data, sender: 'bot' });
+              this.scrollToBottom();
+              this.getQuestionList(response.data)
+            })
             .catch(error => {
               console.error("返回回复错误: ", error)
             });
@@ -244,7 +268,17 @@ export default {
       // 完成特定的操作
       this.messages.push({ text: this.message, sender: 'user' });
       if(option.text === 'Critical exercises'){
-        this.CriticalExercises()
+        this.messages.push({text: `随机选取claim: ${randomClaim.value}进行Critical Exercises，请回答以下问题：`, sender: 'bot'})
+        console.log("randomClaim.value", randomClaim.value)
+        axios.get(`http://localhost:5000/critical_thinking?claim=${randomClaim.value}`, {withCredentials: true})
+        .then(response => {
+          this.exercises = response.data['exercises']
+          console.log("exercises", this.exercises)
+          this.CriticalExercises()
+        })
+        .catch(error => {
+          console.error("Critical Exercises error", error)
+        })
       }
       if(option.text === 'Explore Claims'){
         this.ExploreClaims()
@@ -253,6 +287,53 @@ export default {
       this.showPresetOptions = false; // 隐藏预设选项
       this.message = '';
     },
+
+    handleUserAnswer(selectedKey, selectedValue){
+     // 显示用户选择的答案
+     console.log("this.currentExerciseIndex", this.currentExerciseIndex)
+     this.messages.push({
+       text: `你选择了: ${selectedKey}: ${selectedValue}`,
+       sender: 'user'
+     });
+     this.scrollToBottom();
+
+     // 显示正确答案
+     const currentExercise = this.exercises[this.currentExerciseIndex]
+     const questionData = JSON.parse(currentExercise.choice);
+     const currentItem = questionData[this.questionIndex];
+     if (currentItem && currentItem.Correct) {
+       this.messages.push({
+         text: `正确答案是: ${currentItem.Correct} 理由如下: ${currentItem.Explanation}`,
+         sender: 'bot'
+       });
+       this.scrollToBottom();
+     }
+     // 清空当前选项
+     this.currentOptions = [];
+     // 增加questionIndex以遍历下一个问题
+     this.questionIndex++;
+     if (this.questionIndex < questionData.length) {
+       setTimeout(() => {
+         this.displayCurrentExercise();
+       }, 1000); // 可根据需要调整延迟时间
+     } else {
+       this.scrollToBottom();
+       this.isQuizActive = false;
+       this.questionIndex = 0;
+       this.currentExerciseIndex++;
+       if (this.currentExerciseIndex < this.exercises.length) {
+         // 如果还有其他练习，可以选择继续
+         this.displayCurrentExercise();
+       } else {
+         // 所有练习完成后的处理
+         this.messages.push({
+           text: '所有练习已完成。',
+           sender: 'bot'
+         });
+         this.scrollToBottom();
+       }
+     }
+   },
 
     ExploreClaims(){
       console.log("Explore Claims")
@@ -268,12 +349,54 @@ export default {
     },
     CriticalExercises(){
       console.log("Critical Exercises")
-      // 让mindmap随机选择一个节点然后返回
-      
-      this.$emit('randomchoice', true);
-
+      if(this.exercises.length > 0){
+        this.isQuizActive = true
+        this.currentExerciseIndex = 0
+        this.displayCurrentExercise()
+      }
     },
+    displayCurrentExercise() {
+      const exercise = this.exercises[this.currentExerciseIndex]
+      if(exercise){
+        let questionData = []
+        console.log("exercise", exercise)
+        try {
+          questionData = JSON.parse(exercise.choice);
+          console.log("questionData", questionData)
+        } catch (e) {
+          console.error("解析问题数据出错:", e);
+        }
+        // 使用独立的questionIndex来遍历questionData
+        if (!this.questionIndex) {
+          this.questionIndex = 0;
+        }
+        const currentItem = questionData[this.questionIndex]
+        if (currentItem && currentItem.Statement) {
+          this.messages.push({
+            text: `Statement ${this.questionIndex + 1}: ${currentItem.Statement}`,
+            sender: 'bot'
+          });
+          this.scrollToBottom();
 
+          if (currentItem.Argument) {
+            this.messages.push({
+              text: `Argument: ${currentItem.Argument}`,
+              sender: 'bot'
+            });
+            this.scrollToBottom();
+          }
+          // 设置当前选项
+          this.setCurrentOptions(currentItem.options)
+        }
+      }
+    },
+    setCurrentOptions(options) {
+      // 将选项转换为数组形式
+      this.currentOptions = Object.entries(options).map(([key, value]) => ({
+        key,
+        value
+      }));
+    },
     getMessageClass(sender) {
       return sender === 'user' ? 'user-message' : 'bot-message';
     },
@@ -298,11 +421,11 @@ export default {
     },
     scrollToBottom() {
       this.$nextTick(() => {
-        const chatContent = this.$refs.chatContent;
-        if (chatContent) {
-          chatContent.scrollTop = chatContent.scrollHeight;
-        }
-      });
+       const chatContainer = this.$refs.chatContainer;
+       if (chatContainer) {
+         chatContainer.scrollTop = chatContainer.scrollHeight;
+       }
+     });
     },
     formatMessage(text) {
       // 转换有序列表
@@ -352,7 +475,7 @@ export default {
       if (node.children && node.children.length > 0) {
           node.children.forEach(child => {
             texts = texts.concat(collectNodeTexts(child));
-          });
+          })
         }
         return texts;
       };
@@ -401,7 +524,7 @@ export default {
   position: fixed; /* 固定位置 */
   bottom: 50px; /* 距离底部20px */
   right: 20px; /* 距离右侧20px */
-  width: 450px; /* 设置固定宽度 */
+  width: 540px; /* 设置固定宽度 */
   max-width: 90%; /* 响应式宽度 */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -462,7 +585,7 @@ export default {
 .chat-container {
   background: #ffffff;
   padding: 20px;
-  height: 400px; /* 调整高度 */
+  height: 320px; /* 调整高度 */
   overflow-y: auto;
 }
 
@@ -733,5 +856,32 @@ export default {
   font-size: 16px;
   width: 20px;
   text-align: center;
+}
+
+/* 选项按钮样式 */
+.option-btn {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #20c997; /* 与预设按钮颜色一致 */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 14px;
+}
+
+.option-btn:hover {
+  background: #17a2b8;
+  transform: translateY(-2px);
+}
+
+/* 单独的选项按钮区域样式 */
+.option-buttons {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 </style>
