@@ -5,7 +5,7 @@
 from flask_restful import Resource
 from services.roleplay_services import RoleplayService, RoleplayPromptService
 from flask import make_response, request
-from common.cookies import setUserId
+from common.cookies import generate_uid, setUserId
 
 class RoleplayResources(Resource):
     
@@ -13,16 +13,16 @@ class RoleplayResources(Resource):
         """
         根据请求参数返回相应的 roleplay chatbot 回复信息
         """
-        user_cookie = request.cookies.get('user_id')
+        user_cookie = request.cookies.get('user_device_id')
+        print(user_cookie)
         claim = request.args.get('claim', None)
         message = request.args.get('message', None)
 
         if not claim:
             return {'error': 'no claim'}, 400
 
-        if not user_cookie or not RoleplayService.file_exist(user_cookie, claim):
+        if not RoleplayService.file_exist(user_cookie, claim):
             # 第一次进入 roleplay
-            user_cookie = setUserId()
             reply = RoleplayService.returnFirstReply(claim, user_cookie)
             response = make_response({
                 "user_id": user_cookie,
@@ -34,11 +34,13 @@ class RoleplayResources(Resource):
             return {'error': 'message not exist'}, 400
 
         # 处理常规对话
+        print(user_cookie, claim, message)
         reply = RoleplayService.returnReply(user_cookie, claim, message)
         response = make_response({
             "user_id": user_cookie,
         })
         response.set_data(reply)
+        print(response)
         return response
 
 

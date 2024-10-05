@@ -74,8 +74,8 @@ class RoleplayService:
     def returnReply(user_cookie:str, claim:str ,message:str):
         """对用户的消息进行回应"""
         # 根据user_id和claim取出对应的历史文件
-        file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim) + '.json')
-        data = load_json(file)
+        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
+        data = []
         data.append({
             'role':'user',
             'content': f'{message}'
@@ -93,7 +93,8 @@ class RoleplayService:
         """
         判断文件是否存在
         """
-        file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim) + '.json')
+        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
+        file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim_hash) + '.json')
         return os.path.exists(file)
 
 
