@@ -11,6 +11,7 @@
         </ul>
     </div>
     <ChatModal
+    :mindMapData="mindMapData"
     :visible="dialogVisible"
     @close="dialogVisible = false"
     :mode="mode"
@@ -25,26 +26,25 @@
     import MindMap from "simple-mind-map"
     import axios from 'axios'
     import ChatModal from "@/components/ChatModal.vue";
-
-
     export default {
-    data() {
+      name: 'MindMap',
+      data() {
         return {
             topic_id: 3,
             activeNodes: [],
             showMenu: false,
             menuX: 0,
             menuY: 0,
-            mode : 'Brainstorm',
+            mode :null,
             dialogVisible:false,
-            claim:''
+            claim:'',
+            mindMapData:null,
         }
     },
-    components:{
-      ChatModal
-    },
-    mounted() {
-      
+      components:{
+        ChatModal
+      },
+      mounted() {
       // eslint-disable-next-line
       const mindMap = new MindMap({
           el: document.getElementById('mindMapContainer'),
@@ -56,6 +56,7 @@
         },
         initRootNodePosition: ['left', 'center']
       });
+      
       // 加载树结构
       this.loadTree(mindMap)
       
@@ -77,6 +78,7 @@
           this.claim = node.nodeData.data.text
         }else{
           this.mode = 'Brainstorm'
+          this.claim = node.nodeData.data.text
         }
         if(!node.isRoot){
           this.showContextMenu(rect.cx,rect.cy + rect.h/2)
@@ -84,11 +86,10 @@
         
       })
     },
-
-    methods:{
-      loadTree(mindMap){
-        console.log("loadTree function is called");
-        axios.get(`http://localhost:5000/tree/${this.topic_id}`)
+      methods:{
+        loadTree(mindMap){
+          console.log("loadTree function is called");
+          axios.get(`http://localhost:5000/tree/${this.topic_id}`)
           .then(response => {
             console.log(response.data)
             mindMap.setData({
@@ -97,9 +98,8 @@
               },
               children: response.data[0].children
             })
-            // 应用节点样式
-            this.applyNodeStyle(mindMap)
-            
+            this.mindMapData = mindMap.getData()
+            console.log('this.mindMapData',this.mindMapData)
           })
           .catch(error => {
             console.error("Error loading tree data:", error)
@@ -113,6 +113,7 @@
         console.log("y坐标是",this.menuY)
         console.log('menu')
       },
+      
       brainstorm(){
         this.mode = 'Brainstorm'
         this.showMenu = false
@@ -122,30 +123,7 @@
         this.mode = 'Explore claims'
         this.showMenu = false
         this.dialogVisible = true; // 打开聊天窗口
-      },
-      applyNodeStyle(mindMap){
-        const traverse = (node) => {
-          console.log("travserse node data",node.opt.data)
-          if (!node) return;
-
-          if (node.data && node.data.text) {
-            if(node.data.text === 'Evidence'){
-              node.setStyle('color', 'green')
-            }
-            if(node.data.text === 'Objection'){
-              node.setStyle('color', 'red')
-            }
-          }
-          if(node.children && node.children.length > 0){
-            node.children.forEach(child => {
-              traverse(child)
-            })
-          }
-      };
-      const treeData = mindMap.renderer.root
-      console.log("root ",mindMap.renderer.root)
-      traverse(treeData)
-    }
+      }
   }
 }
 </script>

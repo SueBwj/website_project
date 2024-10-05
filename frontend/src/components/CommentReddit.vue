@@ -16,8 +16,8 @@
         <v-card-title class="text-left">Nicole</v-card-title>
         <v-card-subtitle class="text-left">Vue Creator</v-card-subtitle>
       </v-card-item>
-      <h2 class="text-left pl-4 font-weight-bold" :style="{ fontSize: '25px' }">You should try to start a business with AI Now</h2>
-      <v-card-text class="py-1 text-left pl-10" :style="{ fontSize: '20px' }">
+      <h2 class="text-left pl-4 font-weight-bold" :style="{ fontSize: '20px' }">You should try to start a business with AI Now</h2>
+      <v-card-text class="py-1 text-left pl-10" :style="{ fontSize: '15px' }">
         We are in an insane timeline. This is probably as big as the .com boom in my opinion. Maybe bigger.
 
 If you are struggling for cash, are out of a job, or just want to start a side hustle; do it and now!

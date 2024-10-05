@@ -15,20 +15,22 @@
         <v-card-title class="text-left">{{ comments.author }}</v-card-title>
         <v-card-subtitle class="text-left">Vue Creator</v-card-subtitle>
       </v-card-item>
-      <v-card-text class="py-1 text-left" :style="{ fontSize: '20px' }">
+      <v-card-text class="py-1 text-left" >
          {{ comments.content }}
       </v-card-text>
     </div>
-      <v-card-actions>
-        <div>
-          <div class="circle flex-h" @click="handleClick" :class="isUp?'check':''">
-            <div class="img-box" :class="isUp?'img-box-check':''">
+      <v-card-actions class="custom-actions">
+         <!-- 修改的部分开始 -->
+         <div class="support-container">
+          <div class="circle" @click="handleClick" :class="isUp ? 'check' : ''">
+            <div class="img-box" :class="isUp ? 'img-box-check' : ''">
               <img v-if="isUp" src="../assets/heart.svg" alt="" />
               <img v-else src="../assets/heart-outline.svg" alt="" />
             </div>
           </div>
-          <div class="support-num">{{this.support}}</div>
+          <div class="support-num">{{ support }}</div>
         </div>
+        <!-- 修改的部分结束 -->
         <v-spacer></v-spacer>
 
         <v-btn
@@ -86,7 +88,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-
 .comment {
   margin: 0.5em 0; /* 减小上下间距 */
   padding: 0.8em; /* 减小内边距 */
@@ -118,7 +119,7 @@
 }
 
 .v-card-text {
-  font-size: 0.9em; /* 稍微减小正文大小 */
+  font-size: 0.6em; /* 稍微减小正文大小 */
   line-height: 1.5; /* 增加行高 */
 }
 
@@ -138,23 +139,29 @@
   position: relative;
   left: 20px;
   bottom: -28px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0px 0px 0px 0px rgba(223, 46, 58, 0.5);
-  border: 2px solid #e0e0e0; /* 添加圆形边框 */
+  display: flex; /* 添加 Flexbox */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
 }
 
+
 .img-box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -25px;
-  margin-top: -25px;
   width: 30px;
   height: 30px;
   user-select: none; /* 防止选中图片 */
+  display: flex; /* 使用 Flexbox */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+.img-box img {
+  width: 20px; /* 根据需要调整 */
+  height: 20px; /* 根据需要调整 */
 }
 
 .check {
@@ -242,7 +249,6 @@
 .support-num{
   position: relative;
   left: 45px;
-  bottom: 25px;
-  font-size: 25px;
+  font-size: 15px;
 }
 </style>

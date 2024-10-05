@@ -91,7 +91,11 @@
 </template>
 
 <script>
+/* eslint-disable */
 import axios from "axios";
+import { ref } from "vue";
+
+const randomClaim = ref('')
 
 export default {
   name: 'ChatModal',
@@ -105,7 +109,12 @@ export default {
       default: 'Chat'
     },
     claim: {
-      type: String
+      type: String,
+      default: ''
+    },
+    mindMapData: {
+      type: Object,
+      default: null
     },
     userAvatar: { // 用户头像
       type: String,
@@ -140,8 +149,14 @@ export default {
       if(newVal.trim() !== ''){
         // 在开启新话题的时候清空聊天窗口
         this.messages = [{ text: `正在加载关于支持观点" ${newVal} "的理由...`, sender: 'bot' }]
-        this.getGptReply()
-        this.getQuestionList()
+        this.getGptReply(newVal)
+        this.getQuestionList(newVal)
+      }
+    },
+    mindMapData(newVal){
+      console.log("newVal",newVal)
+      if(newVal){
+        randomClaim.value = this.choiceRandomClaim()
       }
     }
   },
@@ -186,15 +201,29 @@ export default {
         const userMessage = question;
         this.messages.push({ text: userMessage, sender: 'user' });
         this.showPresetOptions = false;
-
-        axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
-          .then(response => {
+        if(this.claim){
+          axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
+            .then(response => {
             this.messages.push({ text: response.data, sender: 'bot' });
             this.scrollToBottom();
+            this.getQuestionList(response.data)
           })
-          .catch(error => {
-            console.error("返回回复错误: ", error)
-          });
+            .catch(error => {
+              console.error("返回回复错误: ", error)
+            });
+        }else{
+          // 如果claim为空，则使用随机选择的claim
+          axios.get(`http://localhost:5000/roleplay?claim=${randomClaim.value}&message=${userMessage}`, { withCredentials: true })
+            .then(response => {
+            this.messages.push({ text: response.data, sender: 'bot' });
+            this.scrollToBottom();
+            this.getQuestionList(response.data)
+          })
+            .catch(error => {
+              console.error("返回回复错误: ", error)
+            });
+        }
+        this.question_list = []
       }
     },
     handlePresetOption(option) {
@@ -203,19 +232,46 @@ export default {
       this.message = option.text;
       // 完成特定的操作
       this.messages.push({ text: this.message, sender: 'user' });
+      if(option.text === 'Critical exercises'){
+        this.CriticalExercises()
+      }
+      if(option.text === 'Explore Claims'){
+        this.ExploreClaims()
+      }
       // this.sendMessage();
       this.showPresetOptions = false; // 隐藏预设选项
       this.message = '';
     },
+
+    ExploreClaims(){
+      console.log("Explore Claims")
+      console.log("claim", randomClaim.value)
+      // 将claim作为参数传递给getGptReply
+      if(randomClaim.value){  
+        this.message = `正在加载关于支持观点" ${randomClaim.value} "的理由...`
+        this.messages.push({text: this.message, sender: 'bot'})
+        this.getGptReply(randomClaim.value)
+        // 准备问题
+        this.getQuestionList(randomClaim.value)
+      }
+    },
+    CriticalExercises(){
+      console.log("Critical Exercises")
+      // 让mindmap随机选择一个节点然后返回
+      
+      this.$emit('randomchoice', true);
+
+    },
+
     getMessageClass(sender) {
       return sender === 'user' ? 'user-message' : 'bot-message';
     },
     getAvatar(sender) {
       return sender === 'user' ? this.userAvatar : this.botAvatar;
     },
-    getGptReply(){
+    getGptReply(claim){
       this.showPresetOptions = false;
-      axios.get(`http://localhost:5000/roleplay?claim=${this.claim}`)
+      axios.get(`http://localhost:5000/roleplay?claim=${claim}`,{withCredentials: true})
       .then(response => {
         this.messages.push({text: response.data, sender: 'bot'})
         this.scrollToBottom();
@@ -258,8 +314,8 @@ export default {
       if (parts.length === 2) return parts.pop().split(';').shift();
       return null;
     },
-    getQuestionList(){
-      axios.get(`http://localhost:5000/roleplay/prompt?claim=${this.claim}`, {withCredentials: true})
+    getQuestionList(claim){
+      axios.get(`http://localhost:5000/roleplay/prompt?claim=${claim}`, {withCredentials: true})
       .then(response => {
         try {
           // 假设 response.data 是一个字符串，需要解析为 JSON
@@ -272,7 +328,34 @@ export default {
       .catch(error => {
         console.error('roleplay question list error', error)
       })
-    }
+    },
+    choiceRandomClaim() {
+      if (!this.mindMapData) {
+        console.warn("No data available for choiceRandomClaim");
+        return;
+      }
+      console.log("mindMapData", this.mindMapData);
+      const collectNodeTexts = (node) => {
+      if (!node) return [];
+      let texts = [node.data.text];
+      if (node.children && node.children.length > 0) {
+          node.children.forEach(child => {
+            texts = texts.concat(collectNodeTexts(child));
+          });
+        }
+        return texts;
+      };
+      const allTexts = collectNodeTexts(this.mindMapData);
+      if (allTexts.length === 0) {
+          console.warn("No texts found in mindMapData");
+          return;
+        }
+
+      const randomIndex = Math.floor(Math.random() * allTexts.length);
+      const returnText = allTexts[randomIndex];
+      console.log("随机选择的文本:", returnText);
+      return returnText;
+    },
   },
 };
 </script>
@@ -368,7 +451,7 @@ export default {
 .chat-container {
   background: #ffffff;
   padding: 20px;
-  height: 250px; /* 调整高度 */
+  height: 400px; /* 调整高度 */
   overflow-y: auto;
 }
 
@@ -404,6 +487,7 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: relative;
   white-space: pre-wrap; /* 保留换行符 */
+  font-size: 12px;
   text-align: left;
 }
 
