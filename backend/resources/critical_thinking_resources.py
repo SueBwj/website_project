@@ -27,13 +27,13 @@ class CriticalThinkingExerciseResources(Resource):
             # 第一次进入训练
             exercises = CriticalThinkingService.generate_exercises(user_cookie, claim)
             response = make_response({'exercises': exercises})
-            response.set_cookie('user_device_id', str(user_cookie))
+            response.set_cookie('user_id', str(user_cookie))
             return response
 
         # 返回之前生成的习题
-        exercises = CriticalThinkingService.get_exercises(user_cookie)
+        exercises = CriticalThinkingService.get_exercises(str(user_cookie))
         response = make_response({'exercises': exercises})
-        response.set_cookie('user_device_id', str(user_cookie))
+        response.set_cookie('user_id', str(user_cookie))
         return response
 
     def post(self):

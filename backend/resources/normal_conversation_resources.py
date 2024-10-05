@@ -20,7 +20,7 @@ class NormalConversationResources(Resource):
         print(user_cookie, message)
         reply = NormalConversationService.returnReply(str(user_cookie), str(message))
         response = make_response({
-            "user_id": user_cookie,
+            "user_id": str(user_cookie),
         })
         response.set_data(reply)
         print(response)
