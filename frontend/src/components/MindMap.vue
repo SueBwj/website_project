@@ -1,18 +1,38 @@
 <template>
   <div id="mindMapContainer">
     <div class="menus">
-      <div>
-        <v-btn prepend-icon="$vuetify" @click="addChildNode" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 20px;">
-        </v-btn>
-        <v-btn prepend-icon="$vuetify" @click="addSameNode" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 20px;">
-        </v-btn>
-        <v-btn prepend-icon="$vuetify" @click="removeNode" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 20px;">
-        </v-btn>
-        <v-btn prepend-icon="$vuetify" @click="setToSupport" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 20px;">
-        </v-btn>
-        <v-btn prepend-icon="$vuetify" @click="setToObjection" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 20px;">
-        </v-btn>
-      </div>
+        <div class="button-container">
+          <span class="button">
+            <v-btn prepend-icon="fas fa-arrow-right" @click="addChildNode" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 10px;">
+            </v-btn>
+            <p>SonNode</p>
+          </span>
+          <span class="button">
+            <v-btn prepend-icon="fas fa-bars" @click="addSameNode" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 10px;">
+            </v-btn>
+            <p>SameNode</p>
+          </span>
+          <span class="button">
+            <v-btn prepend-icon="fas fa-times" @click="removeNode" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 10px;">
+            </v-btn>
+            <p>Remove</p>
+          </span>
+          <span class="button">
+            <v-btn prepend-icon="fas fa-check-circle" @click="setToSupport" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 10px;">
+            </v-btn>
+            <p>Support</p>
+          </span>
+          <span class="button">
+            <v-btn prepend-icon="fas fa-exclamation-triangle" @click="setToObjection" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 10px;">
+            </v-btn>
+            <p>Objection</p>
+          </span>
+          <span class="button">
+            <v-btn prepend-icon="fas fa-database" @click="setToPremise" rounded="sm" style="margin-right: 10px; margin-top: 20px; margin-bottom: 10px;">
+            </v-btn>
+            <p>Premise</p>
+          </span>
+        </div>
 </div>
   </div>
   <div class="context-me" v-if="showMenu" :style="{ top: menuY + 'px', left: menuX + 'px' }">
@@ -23,6 +43,12 @@
           <li @click="brainstorm">
             <i class="fas fa-lightbulb"></i> {{ this.mode = 'Brainstorm' }}
           </li>
+          <li @click="addChildNode"><i class="fas fa-arrow-right"></i>Add child node</li>
+          <li @click="addSameNode"><i class="fas fa-arrow-bars"></i>Add same node</li>
+          <li @click="removeNode"><i class="fas fa-arrow-times"></i>Remove node</li>
+          <li @click="setToSupport"><i class="fas fa-arrow-check-circle"></i>Set to support</li>
+          <li @click="setToObjection"><i class="fas fa-exclamation-triangle"></i>Set to objection </li>
+          <li @click="setToPremise"><i class="fas fa-database"></i>Set to premise </li>
     </ul>
   </div>
   <ChatModal
@@ -40,7 +66,7 @@
   import MindMap from "simple-mind-map"
   import axios from 'axios'
   import ChatModal from "@/components/ChatModal.vue";
-  let mindMap=null
+  let mindMap = null;
   // 激活当前节点列表
   export default {
     name: 'MindMap',
@@ -63,52 +89,53 @@
     },
     mounted() {
     // eslint-disable-next-line
-    mindMap = new MindMap({
-        el: document.getElementById('mindMapContainer'),
-        data: {
-        "data": {
-            "text": "根节点"
+      mindMap = new MindMap({
+          el: document.getElementById('mindMapContainer'),
+          data: {
+          "data": {
+              "text": "根节点"
+          },
+          "children": []
         },
-        "children": []
-      },
-    
-    });
-    
-    // 加载树结构
-    this.loadTree(mindMap)
-    
-    mindMap.setThemeConfig({
-      // lineColor: '#009CE0',
-      lineWidth: 5,
-      lineStyle: 'curve'
-  })
-    mindMap.on('node_active', (node, nodeList) => {
-      this.activeNodes = nodeList; // 使用 this 访问 activeNodes
-      if(node){
-        this.clickContent = node.nodeData.data.text
-        this.$emit('update-click-content', this.clickContent)
-      }
-      if(!node){
-        this.showMenu = false
-      }
-    });
-    
-    mindMap.on('node_contextmenu',(event, node) => {
-      console.log('click node and event information: ', node)
-      console.log('click right')
-      const rect = node.getRect()
-      const is_comment = node.children.length === 0 ? true : false
-      if(!is_comment){
-        this.mode = 'Explore claims'
-        this.claim = node.nodeData.data.text
-      }else{
-        this.mode = 'Brainstorm'
-        this.claim = node.nodeData.data.text
-      }
-      if(!node.isRoot){
-        this.showContextMenu(rect.cx,rect.cy + rect.h/2)
-      }
+        initRootExpand: ['left', 'center']
+      });
+      mindMap.setTheme('simpleBlack')
       
+      // 加载树结构
+      this.loadTree(mindMap)
+      
+      mindMap.setThemeConfig({
+        // lineColor: '#009CE0',
+        lineWidth: 5,
+      })
+      
+      mindMap.on('node_active', (node, nodeList) => {
+        this.activeNodes = nodeList; // 使用 this 访问 activeNodes
+        if(node){
+          this.clickContent = node.nodeData.data.text
+          this.$emit('update-click-content', this.clickContent)
+        }
+        if(!node){
+          this.showMenu = false
+        }
+      });
+    
+      mindMap.on('node_contextmenu',(event, node) => {
+        console.log('click node and event information: ', node)
+        console.log('click right')
+        const rect = node.getRect()
+        const is_comment = node.children.length === 0 ? true : false
+        if(!is_comment){
+          this.mode = 'Explore claims'
+          this.claim = node.nodeData.data.text
+        }else{
+          this.mode = 'Brainstorm'
+          this.claim = node.nodeData.data.text
+        }
+        if(!node.isRoot){
+          this.showContextMenu(rect.cx,rect.cy + rect.h/2)
+        }
+
     });
   },
     methods:{
@@ -150,55 +177,54 @@
       this.dialogVisible = true; // 打开聊天窗口
     },
     addChildNode() {
-      // 确保至少有一个节点被激活
-      if (this.activeNodes.length > 0) {
-        // 获取当前激活的节点
-        const activeNode = this.activeNodes[0];
-        // 使用 mindMap.execCommand 添加子节点
-        mindMap.execCommand('INSERT_CHILD_NODE', activeNode);
-        this.showMenu = false; // 关闭上下文菜单
-      }
-    },
-    addSameNode(){
-      if (mindMap) {
-        mindMap.execCommand('INSERT_NODE')
-      }
-      this.showMenu = false; // 关闭菜单
-    },
-    removeNode(){
-      if (mindMap) {
-        mindMap.execCommand('REMOVE_NODE')
-      }
-      this.showMenu = false; // 关闭菜单
-    },
-    setToSupport() {
-      if (this.activeNodes.length > 0) {
-        this.activeNodes.forEach(node => {
-          node.setStyle('lineColor', '#008000')
-          node.setStyle('lineStyle','curve')
-          node.setStyle('lineWidth', 5)
-          node.setStyle('fillColor', '#CCFFCC')
-        })
-        this.showMenu = false
-      }
-    },
-    setToObjection() {
-      if (this.activeNodes.length > 0) {
-        this.activeNodes.forEach(node => {
-          node.setStyle('lineColor', '#FF0000')
-          node.setStyle('lineStyle','curve')
-          node.setStyle('lineWidth', 5)
-          node.setStyle('fillColor', '#FFCCCC')
-        })
-        this.showMenu = false
-      }
-    },
+        // 确保至少有一个节点被激活
+        if (this.activeNodes.length > 0) {
+          // 获取当前激活的节点
+          const activeNode = this.activeNodes[0];
+          // 使用 mindMap.execCommand 添加子节点
+          mindMap.execCommand('INSERT_CHILD_NODE', activeNode);
+          this.showMenu = false; // 关闭上下文菜单
+        }
+      },
+      addSameNode(){
+        if (mindMap) {
+          mindMap.execCommand('INSERT_NODE')
+        }
+        this.showMenu = false; // 关闭菜单
+      },
+      removeNode(){
+        if (mindMap) {
+          mindMap.execCommand('REMOVE_NODE')
+        }
+        this.showMenu = false; // 关闭菜单
+      },
+      setToSupport() {
+        if (this.activeNodes.length > 0) {
+          this.activeNodes.forEach(node => {
+            node.setStyle('lineColor', '#008000')
+            node.setStyle('lineStyle','curve')
+            node.setStyle('lineWidth', 5)
+            node.setStyle('fillColor', '#CCFFCC')
+          })
+          this.showMenu = false
+        }
+      },
+      setToObjection() {
+        if (this.activeNodes.length > 0) {
+          this.activeNodes.forEach(node => {
+            node.setStyle('lineColor', '#FF0000')
+            node.setStyle('lineStyle','curve')
+            node.setStyle('lineWidth', 5)
+            node.setStyle('fillColor', '#FFCCCC')
+          })
+          this.showMenu = false
+        }
+      },
 }
 }
 </script>
 
 <style>
-
 #mindMapContainer {
   width: 100%;
   height: 800px;
@@ -270,4 +296,14 @@ margin-top: 20px;
 margin-bottom: 20px;
 text-transform: capitalize;
 } */
+
+.button-container {
+  display: flex; /* 使用 flex 布局 */
+  flex-direction: row; /* 设置为横向排列 */
+  align-items: center; /* 垂直居中 */
+}
+.button p{
+  font-size: 12px;
+  text-indent: -1em; /* 将文字缩进一个字符的宽度 */
+}
 </style>
