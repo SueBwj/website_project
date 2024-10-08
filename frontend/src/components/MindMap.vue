@@ -112,7 +112,8 @@
       mindMap.on('node_active', (node, nodeList) => {
         this.activeNodes = nodeList; // 使用 this 访问 activeNodes
         if(node){
-          this.clickContent = node.nodeData.data.text
+          console.log(node)
+          this.clickContent = node.nodeData.data.comment
           this.$emit('update-click-content', this.clickContent)
         }
         if(!node){

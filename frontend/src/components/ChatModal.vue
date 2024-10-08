@@ -179,6 +179,7 @@ export default {
         }
         else{
           this.messages = [{ text: `正在加载关于观点" ${newVal} "的Critical Exercises...`, sender: 'bot' }]
+          this.showPresetOptions = false;
           this.getExercise(newVal)
         }
       }
@@ -273,6 +274,7 @@ export default {
       this.messages.push({ text: this.message, sender: 'user' });
       if(option.text === 'Critical exercises'){
         this.messages.push({text: `随机选取claim: ${randomClaim.value}进行Critical Exercises，请回答以下问题：`, sender: 'bot'})
+        this.question_list = []
         this.getExercise(randomClaim.value);
       }
       if(option.text === 'Explore Claims'){

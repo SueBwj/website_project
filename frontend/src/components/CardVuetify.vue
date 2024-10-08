@@ -53,7 +53,7 @@
 
       <v-expand-transition>
         <div v-show="show">
-          <card-vuetify :comments = "item"  v-for="(item,index) in comments.subcomment" :key="index"/>
+          <card-vuetify :comments = "item"  v-for="(item,index) in comments.subcomment" :key="index" ref="childCards" />
         </div>
       </v-expand-transition>
     </v-card>
@@ -89,7 +89,7 @@
       this.isUp = !this.isUp
     },
     scrollToCard() {
-        this.$refs.cardRef.scrollIntoView({ behavior: 'smooth' });
+      this.$refs.cardRef.$el.scrollIntoView({ behavior: 'smooth' });
     },
     highlightAndScroll() {
       this.isActive = true;
@@ -101,27 +101,41 @@
       return content && this.clickContent && content.toLowerCase().includes(this.clickContent.toLowerCase());
     },
     handleClickContentChange() {
-      if (this.checkContent(this.comments.comment)) {
-        this.highlightAndScroll();
-      } else {
-        this.isActive = false;
-        // 检查子评论
-        for (let subcomment of this.comments.subcomment) {
-          if (this.checkContent(subcomment.comment)) {
-            this.show = true; // 展开子评论
-            this.$nextTick(() => {
-              // 找到匹配的子评论组件并突出显示
-              const matchingCard = this.$children.find(child => 
-                child.$options.name === "CardVuetify" && child.checkContent(subcomment.comment)
-              );
-              if (matchingCard) {
-                matchingCard.highlightAndScroll();
-              }
-            });
-            return;
+      this.recursivelyCheckContent(this);
+    },
+
+    recursivelyCheckContent(component) {
+    // 检查当前组件的评论
+    if (this.checkContent(component.comments.comment)) {
+      component.highlightAndScroll();
+      return true; // 找到匹配项，返回true
+    }
+
+    // 展开子评论
+    component.show = true;
+
+    // 检查子评论
+    if (component.comments.subcomment && component.comments.subcomment.length > 0) {
+      this.$nextTick(() => {
+        const childCards = component.$refs.childCards;
+        if (Array.isArray(childCards)) {
+          for (let childCard of childCards) {
+            if (this.recursivelyCheckContent(childCard)) {
+              return true; // 如果在子组件中找到匹配项，返回true
+            }
+          }
+        } else if (childCards) {
+          // 只有一个子组件的情况
+          if (this.recursivelyCheckContent(childCards)) {
+            return true;
           }
         }
-      }
+      });
+    }
+
+      // 如果没有找到匹配项
+      component.isActive = false;
+      return false;
     },
   },
   watch: {
@@ -145,9 +159,15 @@
 }
 
 .highlight-card {
-  border: 2px solid #3f51b5;
-  box-shadow: 0 4px 8px rgba(63, 81, 181, 0.2);
-  transition: border 0.3s, box-shadow 0.3s;
+  border: 3px solid #ff4081;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
+  background-color: #fff9c4;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  box-shadow: 0 0 20px rgba(255, 64, 129, 0.7);
 }
 
 .comment:hover {
