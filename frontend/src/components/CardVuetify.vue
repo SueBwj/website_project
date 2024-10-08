@@ -98,7 +98,6 @@
       });
     },
     checkContent(content) {
-      console.log(content)
       return content && this.clickContent && content.toLowerCase().includes(this.clickContent.toLowerCase());
     },
     handleClickContentChange() {
