@@ -71,7 +71,7 @@
         },
         clickContent: {
           type: String,
-          required: true
+          default: ''
         }
     },
     data: () => ({
@@ -88,21 +88,49 @@
         this.support=this.support-1
       this.isUp = !this.isUp
     },
-    mounted() {
-      if (this.clickContent && this.comments.comment.includes(this.clickContent)) {
-      this.isActive = true
+    scrollToCard() {
+        this.$refs.cardRef.scrollIntoView({ behavior: 'smooth' });
+    },
+    highlightAndScroll() {
+      this.isActive = true;
       this.$nextTick(() => {
-        this.scrollToCard()
-        })
+        this.scrollToCard();
+      });
+    },
+    checkContent(content) {
+      console.log(content)
+      return content && this.clickContent && content.toLowerCase().includes(this.clickContent.toLowerCase());
+    },
+    handleClickContentChange() {
+      if (this.checkContent(this.comments.comment)) {
+        this.highlightAndScroll();
+      } else {
+        this.isActive = false;
+        // 检查子评论
+        for (let subcomment of this.comments.subcomment) {
+          if (this.checkContent(subcomment.comment)) {
+            this.show = true; // 展开子评论
+            this.$nextTick(() => {
+              // 找到匹配的子评论组件并突出显示
+              const matchingCard = this.$children.find(child => 
+                child.$options.name === "CardVuetify" && child.checkContent(subcomment.comment)
+              );
+              if (matchingCard) {
+                matchingCard.highlightAndScroll();
+              }
+            });
+            return;
+          }
+        }
       }
     },
-    methods: {
-      scrollToCard() {
-        this.$refs.cardRef.scrollIntoView({ behavior: 'smooth' });
+  },
+  watch: {
+      clickContent: {
+        handler: 'handleClickContentChange',
       }
     }
-  }
-  }
+}
 </script>
 <style>
 

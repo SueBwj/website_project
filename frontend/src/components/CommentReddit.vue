@@ -49,7 +49,7 @@ components: {
 props: {
   clickContent: {
     type: String,
-    required: true
+    default: ''
   }
 },
 data(){

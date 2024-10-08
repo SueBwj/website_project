@@ -8,8 +8,5 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 
 ### Todo
 - 前端
-    - 交互时的评论定位
     - 完成ai输出的功能实时显示在页面 websocket
-    - 完成右键点击功能的对应
-- 后端
-    - 评论的内容和结构
+    - 展开评论后可以返回到原来的评论位置
