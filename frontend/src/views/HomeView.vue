@@ -7,10 +7,10 @@
   <div class="container-fluid text-center mt-5">
     <div class="row">
       <div class="col-4 comment-container">
-        <CommentReddit />
+        <CommentReddit :clickContent="currentClickContent"/>
       </div>
       <div class="col-8">
-        <MindMap />
+        <MindMap @update-click-content="updateClickContent"/>
       </div>
     </div>
     <div class="chat-container">
@@ -61,14 +61,21 @@ export default {
   },
   setup() {
     const isChatModalVisible = ref(false); // 控制对话框的可见性
+    const currentClickContent = ref('')
 
     const toggleChatModal = () => {
       isChatModalVisible.value = !isChatModalVisible.value; // 切换对话框的可见性
     };
 
+    const updateClickContent = (content) => {
+      currentClickContent.value = content
+    }
+
     return {
       isChatModalVisible,
-      toggleChatModal
+      toggleChatModal,
+      updateClickContent,
+      currentClickContent
     };
   }
 }

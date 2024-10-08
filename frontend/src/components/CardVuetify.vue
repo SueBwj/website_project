@@ -2,6 +2,8 @@
   <div class="comment">
     <v-card  
         class="mx-auto pl-1"
+        :class="{'highlight-card': isActive}"
+        ref="cardRef"
         variant="text"
       >
       <div class="border-s-lg">
@@ -66,12 +68,17 @@
             default: () => {
                 return {}
             }
+        },
+        clickContent: {
+          type: String,
+          required: true
         }
     },
     data: () => ({
       show:false,
       isUp: false,
-      support:0
+      support:0,
+      isActive: false
     }),
     methods: {
     handleClick () {
@@ -80,6 +87,19 @@
       else
         this.support=this.support-1
       this.isUp = !this.isUp
+    },
+    mounted() {
+      if (this.clickContent && this.comments.comment.includes(this.clickContent)) {
+      this.isActive = true
+      this.$nextTick(() => {
+        this.scrollToCard()
+        })
+      }
+    },
+    methods: {
+      scrollToCard() {
+        this.$refs.cardRef.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
   }
@@ -97,6 +117,11 @@
   transition: box-shadow 0.3s ease; /* 添加过渡效果 */
 }
 
+.highlight-card {
+  border: 2px solid #3f51b5;
+  box-shadow: 0 4px 8px rgba(63, 81, 181, 0.2);
+  transition: border 0.3s, box-shadow 0.3s;
+}
 
 .comment:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 悬停时增加阴影 */

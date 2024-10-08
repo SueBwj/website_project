@@ -54,6 +54,7 @@
           dialogVisible:false,
           claim:'',
           mindMapData:null,
+          clickContent:null,
       }
   },
     components:{
@@ -82,6 +83,10 @@
   })
     mindMap.on('node_active', (node, nodeList) => {
       this.activeNodes = nodeList; // 使用 this 访问 activeNodes
+      if(node){
+        this.clickContent = node.nodeData.data.text
+        this.$emit('update-click-content', this.clickContent)
+      }
       if(!node){
         this.showMenu = false
       }

@@ -27,7 +27,12 @@
   <div class="comments pt-5">
     <h3 >Comments</h3>
     <div class="row m-2">
-      <CardVuetify v-for="(comment,index) in comments[0].subcomment" :comments="comment" :key="index"/>
+      <CardVuetify
+       v-for="(comment,index) in comments[0].subcomment" 
+       :comments="comment" 
+       :key="index"
+       :clickContent="clickContent"
+       />
     </div>
   </div>
 </template>
@@ -41,11 +46,21 @@ name: 'CommentReddit',
 components: {
   CardVuetify
 },
+props: {
+  clickContent: {
+    type: String,
+    required: true
+  }
+},
 data(){
   return {
     comments:jsonComment,
   }
-  
+},
+watch: {
+  clickContent(newVal) {
+    console.log("clickContent", newVal)
+  }
 },
 }
 
