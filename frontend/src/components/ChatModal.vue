@@ -168,9 +168,15 @@ export default {
       console.log("newVal",newVal)
       if(newVal.trim() !== ''){
         // 在开启新话题的时候清空聊天窗口
-        this.messages = [{ text: `正在加载关于支持观点" ${newVal} "的理由...`, sender: 'bot' }]
-        this.getGptReply(newVal)
-        this.getQuestionList(newVal)
+        if(this.mode === 'Explore claims'){
+          this.messages = [{ text: `正在加载关于支持观点" ${newVal} "的理由...`, sender: 'bot' }]
+          this.getGptReply(newVal)
+          this.getQuestionList(newVal)
+        }
+        else{
+          this.messages = [{ text: `正在加载关于观点" ${newVal} "的Critical Exercises...`, sender: 'bot' }]
+          this.getExercise(newVal)
+        }
       }
     },
     mindMapData(newVal){
@@ -263,16 +269,7 @@ export default {
       this.messages.push({ text: this.message, sender: 'user' });
       if(option.text === 'Critical exercises'){
         this.messages.push({text: `随机选取claim: ${randomClaim.value}进行Critical Exercises，请回答以下问题：`, sender: 'bot'})
-        console.log("randomClaim.value", randomClaim.value)
-        axios.get(`http://localhost:5000/critical_thinking?claim=${randomClaim.value}`, {withCredentials: true})
-        .then(response => {
-          this.exercises = response.data['exercises']
-          console.log("exercises", this.exercises)
-          this.CriticalExercises()
-        })
-        .catch(error => {
-          console.error("Critical Exercises error", error)
-        })
+        this.getExercise(randomClaim.value);
       }
       if(option.text === 'Explore Claims'){
         this.ExploreClaims()
@@ -327,6 +324,18 @@ export default {
          this.scrollToBottom();
        }
      }
+   },
+   getExercise(claim){
+    console.log("getExercise", claim)
+    axios.get(`http://localhost:5000/critical_thinking?claim=${claim}`, {withCredentials: true})
+    .then(response => {
+      this.exercises = response.data['exercises']
+      console.log("exercises", this.exercises)
+      this.CriticalExercises()
+    })
+    .catch(error => {
+      console.error("Critical Exercises error", error)
+    })
    },
 
     ExploreClaims(){
@@ -579,7 +588,7 @@ export default {
 .chat-container {
   background: #ffffff;
   padding: 20px;
-  height: 320px; /* 调整高度 */
+  height: 400px; /* 调整高度 */
   overflow-y: auto;
 }
 

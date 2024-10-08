@@ -18,17 +18,12 @@
   <div class="context-me" v-if="showMenu" :style="{ top: menuY + 'px', left: menuX + 'px' }">
     <ul>
           <li @click="exploreClaims">
-            <i class="fas fa-pen"></i> {{ this.mode === 'Brainstorm' ? 'Explore claims' : 'Brainstorm' }}
+            <i class="fas fa-pen"></i> {{ this.mode = 'Explore claims' }}
           </li>
           <li @click="brainstorm">
-            <i class="fas fa-lightbulb"></i> {{ this.mode === 'Brainstorm' ? 'Brainstorm' : 'Explore claims' }}
+            <i class="fas fa-lightbulb"></i> {{ this.mode = 'Brainstorm' }}
           </li>
-          <li @click="addChildNode"><i class="fas fa-pen"></i>Add child node</li>
-          <li @click="addSameNode"><i class="fas fa-pen"></i>Add same node</li>
-          <li @click="removeNode"><i class="fas fa-pen"></i>Remove node</li>
-          <li @click="setToSupport"><i class="fas fa-pen"></i>Set to support</li>
-          <li @click="setToObjection"><i class="fas fa-pen"></i>Set to objection </li>
-      </ul>
+    </ul>
   </div>
   <ChatModal
   :mindMapData="mindMapData"
