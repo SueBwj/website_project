@@ -137,6 +137,10 @@ export default {
     mindMapData: {
       type: Object,
       default: null
+    },
+    topic_id: {
+      type: Number,
+      default: 4
     }
   },
   data() {
@@ -198,7 +202,7 @@ export default {
         if(this.claim){
           // 一旦用户发送信息，则取消预设选项
           this.showPresetOptions = false;
-          axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${this.message}`,{withCredentials: true})
+          axios.get(`http://localhost:5000/roleplay?topic_id=${this.topic_id}&claim=${this.claim}&message=${this.message}`,{withCredentials: true})
           .then(response => {
             this.messages.push({text: response.data, sender: 'bot'})
             this.scrollToBottom();
@@ -237,7 +241,7 @@ export default {
         this.messages.push({ text: userMessage, sender: 'user' });
         this.showPresetOptions = false;
         if(this.claim){
-          axios.get(`http://localhost:5000/roleplay?claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
+          axios.get(`http://localhost:5000/roleplay?topic_id=${this.topic_id}&claim=${this.claim}&message=${userMessage}`, { withCredentials: true })
             .then(response => {
               this.messages.push({ text: response.data, sender: 'bot' });
               this.scrollToBottom();
@@ -248,7 +252,7 @@ export default {
             });
         }else{
           // 如果claim为空，则使用随机选择的claim
-          axios.get(`http://localhost:5000/roleplay?claim=${randomClaim.value}&message=${userMessage}`, { withCredentials: true })
+          axios.get(`http://localhost:5000/roleplay?topic_id=${this.topic_id}&claim=${randomClaim.value}&message=${userMessage}`, { withCredentials: true })
             .then(response => {
               this.messages.push({ text: response.data, sender: 'bot' });
               this.scrollToBottom();
@@ -408,7 +412,7 @@ export default {
     },
     getGptReply(claim){
       this.showPresetOptions = false;
-      axios.get(`http://localhost:5000/roleplay?claim=${claim}`,{withCredentials: true})
+      axios.get(`http://localhost:5000/roleplay?topic_id=${this.topic_id}&claim=${claim}`,{withCredentials: true})
       .then(response => {
         this.messages.push({text: response.data, sender: 'bot'})
         this.scrollToBottom();
@@ -452,7 +456,7 @@ export default {
       return null;
     },
     getQuestionList(claim){
-      axios.get(`http://localhost:5000/roleplay/prompt?claim=${claim}`, {withCredentials: true})
+      axios.get(`http://localhost:5000/roleplay/prompt?topic_id=${this.topic_id}&claim=${claim}`, {withCredentials: true})
       .then(response => {
         try {
           // 假设 response.data 是一个字符串，需要解析为 JSON

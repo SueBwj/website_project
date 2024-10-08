@@ -17,13 +17,14 @@ class RoleplayResources(Resource):
         print(user_cookie)
         claim = request.args.get('claim', None)
         message = request.args.get('message', None)
+        topic_id = request.args.get('topic_id', None)
 
         if not claim:
             return {'error': 'no claim'}, 400
 
         if not RoleplayService.file_exist(user_cookie, claim):
             # 第一次进入 roleplay
-            reply = RoleplayService.returnFirstReply(claim, user_cookie)
+            reply = RoleplayService.returnFirstReply(claim, user_cookie,topic_id)
             response = make_response({
                 "user_id": user_cookie,
             })
@@ -52,10 +53,12 @@ class RoleplayPromptResources(Resource):
         根据请求参数返回相应的 roleplay chatbot 回复信息
         """
         claim = request.args.get('claim', None)
+        topic_id = request.args.get('topic_id', None)
+
         user_cookie = request.cookies.get('user_id')
         if not claim:
             return {'error': 'no claim'}, 400
         
         # 根据 claim 生成 2-3 个问题, 返回一个列表包含三个问题
-        question_list = RoleplayPromptService.generate_question(claim,user_cookie)
+        question_list = RoleplayPromptService.generate_question(claim,user_cookie, topic_id)
         return {'question_list': question_list}, 200

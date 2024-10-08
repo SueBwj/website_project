@@ -31,6 +31,7 @@
   @close="dialogVisible = false"
   :mode="mode"
   :claim="claim"
+  :topic_id="topic_id"
   >
   </ChatModal>
 </template>
