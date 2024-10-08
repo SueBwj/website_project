@@ -77,6 +77,5 @@ class TreeServices:
         for item in data:
             tree_data.append(TreeServices.get_comment_tree_structure(item))
         
-        print(tree_data)
 
         return tree_data
