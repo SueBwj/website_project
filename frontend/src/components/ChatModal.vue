@@ -213,7 +213,7 @@ export default {
           })
         }else{
           // 正常对话 -- normal conversation
-          axios.get(`http://localhost:5000/normal_conversation?message=${this.message}`,{withCredentials: true})
+          axios.get(`http://localhost:5000/normal_conversation?message=${this.message}&topic=${this.topic_id}`,{withCredentials: true})
           .then(response => {
             this.messages.push({text: response.data, sender: 'bot'})
             this.scrollToBottom();
@@ -234,6 +234,7 @@ export default {
       this.currentOptions = [];
       // 可能需要重置其他相关状态
       // 例如：重置 claim
+      this.question_list = []
       this.$emit('reset-claim');
     },
     handlePresetQuestion(question) {
