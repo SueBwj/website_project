@@ -153,9 +153,11 @@
   margin: 0.5em 0; /* 减小上下间距 */
   padding: 0.8em; /* 减小内边距 */
   border-radius: 12px; /* 增加圆角 */
-  height: fit-content; /* 根据内容自适应宽度 */
+  height: auto; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 柔和的阴影 */
-  transition: box-shadow 0.3s ease; /* 添加过渡效果 */
+  transition: all 0.3s ease; /* 添加过渡效果 */
+  position: relative;
+  z-index: 1;
 }
 
 .highlight-card {
@@ -164,6 +166,7 @@
   background-color: #fff9c4;
   transform: scale(1.02);
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .highlight-card:hover {
@@ -175,8 +178,9 @@
 }
 
 .v-card {
-  max-width: 600px; /* 限制最大宽度 */
+  max-width: 100%; /* 限制最大宽度 */
   margin: 0 auto; /* 居中显示 */
+  overflow: visible;
 }
 
 .v-card-title {
@@ -242,6 +246,16 @@
 
 .img-box-check {
   animation: anm 0.5s;
+}
+
+
+/* 移除嵌套评论的左边距 */
+.v-expand-transition .comment {
+  margin-left: 0;
+}
+/* 确保展开的内容不会重叠 */
+.v-expand-transition {
+  overflow: visible;
 }
 
 @keyframes anm {

@@ -1,6 +1,6 @@
 <template>
   <div class="topic">
-    <h2>Topic</h2>
+    <h4>Topic</h4>
     <v-card  
         class="mx-auto"
         variant="text"
@@ -66,9 +66,5 @@ watch: {
 
 </script>
 <style>
-h3{
-  text-align: left;
-  margin-left: 1em;
- }
 
 </style>
