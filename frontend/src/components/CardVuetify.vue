@@ -72,6 +72,10 @@
         clickContent: {
           type: String,
           default: ''
+        },
+        replyComment: {
+          type: String,
+          default: ''
         }
     },
     data: () => ({
@@ -97,17 +101,19 @@
         this.scrollToCard();
       });
     },
-    checkContent(content) {
-      return content && this.clickContent && content.toLowerCase().includes(this.clickContent.toLowerCase());
+    checkContent(content, compare_content) {
+      return content && compare_content && content.toLowerCase().includes(compare_content.toLowerCase());
     },
     handleClickContentChange() {
-      this.recursivelyCheckContent(this);
+      this.recursivelyCheckContent(this, this.clickContent);
     },
-
-    recursivelyCheckContent(component) {
-    // 检查当前组件的评论
-    if (this.checkContent(component.comments.comment)) {
-      component.highlightAndScroll();
+    handleReplyCommentChange() {
+      this.recursivelyCheckContent(this, this.replyComment);
+    },
+    recursivelyCheckContent(component, compare_content) {
+      // 检查当前组件的评论
+      if (this.checkContent(component.comments.comment, compare_content)) {
+        component.highlightAndScroll();
       return true; // 找到匹配项，返回true
     }
 
@@ -120,13 +126,13 @@
         const childCards = component.$refs.childCards;
         if (Array.isArray(childCards)) {
           for (let childCard of childCards) {
-            if (this.recursivelyCheckContent(childCard)) {
+            if (this.recursivelyCheckContent(childCard, compare_content )) {
               return true; // 如果在子组件中找到匹配项，返回true
             }
           }
         } else if (childCards) {
           // 只有一个子组件的情况
-          if (this.recursivelyCheckContent(childCards)) {
+          if (this.recursivelyCheckContent(childCards, compare_content)) {
             return true;
           }
         }
@@ -141,6 +147,9 @@
   watch: {
       clickContent: {
         handler: 'handleClickContentChange',
+      },
+      replyComment: {
+        handler: 'handleReplyCommentChange',
       }
     }
 }

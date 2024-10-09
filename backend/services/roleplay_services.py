@@ -149,7 +149,7 @@ class RoleplayService:
     
 
     @staticmethod
-    def insertClaim(claim:str,topic_id)->list:
+    def insertClaimComment(claim:str,topic_id)->list:
         """
         返回插入了claim相关评论后的数据
         """
@@ -182,7 +182,7 @@ class RoleplayService:
 
         # 将 all_comments 插入到 data 中
         data[0]['comment'] = data[0]['comment'].replace('{评论}', all_comments) 
-        return claim, data
+        return claim, data, all_comments
 
 
     @staticmethod
@@ -191,15 +191,8 @@ class RoleplayService:
         claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
         # 保存file到roleplay history file之中
         file = roleplay_history_dir.joinpath(f'chat_{user_id}_{claim_hash}.json')
-        # 如果不存在文件就直接创建
-        if not os.path.exists(file):
-            save_json(file, data)
-        else:
-            # 如果存在文件就直接追加
-            old_data = load_json(file)
-            for item in data:
-                old_data.append(item)
-            save_json(file, old_data)
+        # 每一次都直接覆盖
+        save_json(file, data)
     
     @staticmethod
     def getGeneratedText(messages):
@@ -222,7 +215,7 @@ class RoleplayService:
     @staticmethod
     def returnFirstReply(claim:str,user_id:str,topic_id):
         # 先插入观点
-        claim, messages = RoleplayService.insertClaim(claim, topic_id)
+        claim, messages, all_comments = RoleplayService.insertClaimComment(claim, topic_id)
         # 获取reply
         reply = RoleplayService.getGeneratedText(messages)
         messages.append({
@@ -231,14 +224,15 @@ class RoleplayService:
         })
         # 将记录保存
         RoleplayService.saveHistory(messages, user_id, claim)
-        return reply
+        return reply, all_comments
 
     @staticmethod
     def returnReply(user_cookie:str, claim:str ,message:str):
         """对用户的消息进行回应"""
         # 根据user_id和claim取出对应的历史文件
         claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
-        data = []
+        file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim_hash) + '.json')
+        data = load_json(file)
         data.append({
             'role':'user',
             'content': f'{message}'

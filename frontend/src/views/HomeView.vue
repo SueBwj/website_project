@@ -7,10 +7,15 @@
   <div class="container-fluid text-center mt-5">
     <div class="row">
       <div class="col-4 comment-container">
-        <CommentReddit :clickContent="currentClickContent"/>
+        <CommentReddit 
+        :clickContent="currentClickContent"
+        :replyComment="replyComment"
+        />
       </div>
       <div class="col-8">
-        <MindMap @update-click-content="updateClickContent"/>
+        <MindMap 
+        @update-click-content="updateClickContent" 
+        />
       </div>
     </div>
     <div class="chat-container">
@@ -35,7 +40,11 @@
         </div>
       </div> -->
       <div class="chat-modal">
-        <ChatModal :visible="isChatModalVisible" @close="isChatModalVisible = false" />
+        <ChatModal 
+        :visible="isChatModalVisible" 
+        @close="isChatModalVisible = false"
+        @update-reply-comment="updateReplyComment"
+        />
       </div>
     </div>
     
@@ -45,7 +54,6 @@
 <script>
 /* eslint-disable */
 import MindMap from '@/components/MindMap.vue';
-import CardVuetify from '@/components/CardVuetify.vue';
 import CommentReddit from '@/components/CommentReddit.vue';
 import ChatModal from '@/components/ChatModal.vue';
 import {ref} from 'vue';
@@ -55,14 +63,13 @@ export default {
   name: 'HomeView',
   components: {
     MindMap,
-    CardVuetify,
     CommentReddit,
     ChatModal
   },
   setup() {
     const isChatModalVisible = ref(false); // 控制对话框的可见性
     const currentClickContent = ref('')
-
+    const replyComment = ref('')
     const toggleChatModal = () => {
       isChatModalVisible.value = !isChatModalVisible.value; // 切换对话框的可见性
     };
@@ -71,11 +78,18 @@ export default {
       currentClickContent.value = content
     }
 
+    const updateReplyComment = (content) => {
+      console.log("HomeView updating replyComment:", content);
+      replyComment.value = content;
+    }
+
     return {
       isChatModalVisible,
       toggleChatModal,
       updateClickContent,
-      currentClickContent
+      currentClickContent,
+      replyComment,
+      updateReplyComment
     };
   }
 }

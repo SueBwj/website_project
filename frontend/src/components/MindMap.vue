@@ -140,6 +140,7 @@
     });
   },
     methods:{
+      
       loadTree(mindMap){
         console.log("loadTree function is called");
         axios.get(`http://localhost:5000/tree/${this.topic_id}`)

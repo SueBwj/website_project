@@ -2,6 +2,7 @@
 主要是关于 roleplay 的 api，在聊天框进行对话
 """
 
+import json
 from flask_restful import Resource
 from services.roleplay_services import RoleplayService, RoleplayPromptService
 from flask import make_response, request
@@ -24,11 +25,12 @@ class RoleplayResources(Resource):
 
         if not RoleplayService.file_exist(user_cookie, claim):
             # 第一次进入 roleplay
-            reply = RoleplayService.returnFirstReply(claim, user_cookie,topic_id)
+            reply, all_comments = RoleplayService.returnFirstReply(claim, user_cookie,topic_id)
             response = make_response({
                 "user_id": user_cookie,
             })
-            response.set_data(reply)
+            data = {'reply': reply, 'all_comments': all_comments}
+            response.set_data(json.dumps(data).encode('utf-8'))
             return response
 
         if not message:
@@ -40,7 +42,8 @@ class RoleplayResources(Resource):
         response = make_response({
             "user_id": user_cookie,
         })
-        response.set_data(reply)
+        data = {'reply': reply, 'all_comments': ''}
+        response.set_data(json.dumps(data).encode('utf-8'))
         print(response)
         return response
 

@@ -32,6 +32,7 @@
        :comments="comment" 
        :key="index"
        :clickContent="clickContent"
+       :replyComment="replyComment"
        />
     </div>
   </div>
@@ -50,6 +51,10 @@ props: {
   clickContent: {
     type: String,
     default: ''
+  },
+  replyComment: {
+    type: String,
+    default: ''
   }
 },
 data(){
@@ -60,6 +65,9 @@ data(){
 watch: {
   clickContent(newVal) {
     console.log("clickContent", newVal)
+  },
+  replyComment(newVal) {
+    console.log("replyComment", newVal)
   }
 },
 }

@@ -159,7 +159,8 @@ export default {
       isQuizActive: false,
       currentOptions: [], // 新增：当前选项按钮
       botAvatar: require('../assets/robot.png'),
-      userAvatar: require('../assets/user.png')
+      userAvatar: require('../assets/user.png'),
+      reply_comment: '',
     };
   },
   computed: {
@@ -189,6 +190,10 @@ export default {
       if(newVal){
         randomClaim.value = this.choiceRandomClaim()
       }
+    },
+    reply_comment(newVal){
+      console.log("reply_comment", newVal)
+      this.$emit('update-reply-comment', newVal)
     }
   },
   methods: {
@@ -205,7 +210,9 @@ export default {
           this.showPresetOptions = false;
           axios.get(`http://localhost:5000/roleplay?topic_id=${this.topic_id}&claim=${this.claim}&message=${this.message}`,{withCredentials: true})
           .then(response => {
-            this.messages.push({text: response.data, sender: 'bot'})
+            this.messages.push({text: response.data.reply, sender: 'bot'})
+            this.reply_comment = response.data.all_comments
+            console.log("reply_comment", this.reply_comment)
             this.scrollToBottom();
           })
           .catch(error => {
@@ -417,7 +424,8 @@ export default {
       this.showPresetOptions = false;
       axios.get(`http://localhost:5000/roleplay?topic_id=${this.topic_id}&claim=${claim}`,{withCredentials: true})
       .then(response => {
-        this.messages.push({text: response.data, sender: 'bot'})
+        this.messages.push({text: response.data.reply, sender: 'bot'})
+        this.reply_comment = response.data.all_comments
         this.scrollToBottom();
         const userId = this.getCookie('user_id')
         if(userId){
@@ -464,7 +472,11 @@ export default {
         try {
           // 假设 response.data 是一个字符串，需要解析为 JSON
           console.log("response.data",response.data)
-          this.question_list = response.data.question_list
+          for (let data of response.data.question_list) {
+            if (data) {
+              this.question_list.push(data)
+            }
+          }
         } catch (e) {
           console.error("解析问题列表时出错:", e);
         }
