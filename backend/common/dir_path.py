@@ -13,3 +13,5 @@ data_dir = Path(__file__).parent.parent.joinpath('files','data')
 example_dir = Path(__file__).parent.parent.joinpath('files','example')
 
 normal_chat_history_dir = Path(__file__).parent.parent.joinpath('files','normal_chat_history')
+
+summary_dir = Path(__file__).parent.parent.joinpath('files','summary')

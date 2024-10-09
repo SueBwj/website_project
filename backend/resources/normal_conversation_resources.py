@@ -10,7 +10,7 @@ class NormalConversationResources(Resource):
         """
         user_cookie = request.cookies.get('user_device_id')
         message = request.args.get('message', None)
-
+        topic = request.args.get('topic', None)
 
 
         if not message:
@@ -18,9 +18,9 @@ class NormalConversationResources(Resource):
 
         # 处理常规对话
         print(user_cookie, message)
-        reply = NormalConversationService.returnReply(str(user_cookie), str(message))
+        reply = NormalConversationService.returnReply(str(user_cookie), str(message), str(topic))
         response = make_response({
-            "user_id": str(user_cookie),
+            "user_id": str(user_cookie),    
         })
         response.set_data(reply)
         print(response)
