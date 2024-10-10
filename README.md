@@ -9,4 +9,4 @@ chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-
 ### Todo
 - 前端
     - 完成ai输出的功能实时显示在页面 websocket
-    - 评论展开效果不好
+    - normal chat 需要加上事件背景

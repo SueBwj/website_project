@@ -38,15 +38,15 @@
   <div class="context-me" v-if="showMenu" :style="{ top: menuY + 'px', left: menuX + 'px' }">
     <ul>
           <li @click="exploreClaims">
-            <i class="fas fa-pen"></i> {{ this.mode = 'Explore claims' }}
+            <i class="fas fa-pen"></i> Explore claims
           </li>
           <li @click="brainstorm">
-            <i class="fas fa-lightbulb"></i> {{ this.mode = 'Brainstorm' }}
+            <i class="fas fa-lightbulb"></i> Brainstorm
           </li>
           <li @click="addChildNode"><i class="fas fa-arrow-right"></i>Add child node</li>
-          <li @click="addSameNode"><i class="fas fa-arrow-bars"></i>Add same node</li>
-          <li @click="removeNode"><i class="fas fa-arrow-times"></i>Remove node</li>
-          <li @click="setToSupport"><i class="fas fa-arrow-check-circle"></i>Set to support</li>
+          <li @click="addSameNode"><i class="fas fa-bars"></i>Add same node</li>
+          <li @click="removeNode"><i class="fas fa-times"></i>Remove node</li>
+          <li @click="setToSupport"><i class="fas fa-check-circle"></i>Set to support</li>
           <li @click="setToObjection"><i class="fas fa-exclamation-triangle"></i>Set to objection </li>
           <li @click="setToPremise"><i class="fas fa-database"></i>Set to premise </li>
     </ul>
