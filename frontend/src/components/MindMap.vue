@@ -58,6 +58,7 @@
   :mode="mode"
   :claim="claim"
   :topic_id="topic_id"
+  @reset-claim="resetClaim"
   >
   </ChatModal>
 </template>
@@ -222,6 +223,9 @@
           this.showMenu = false
         }
       },
+      resetClaim(){
+        this.claim = ''
+      }
 }
 }
 </script>

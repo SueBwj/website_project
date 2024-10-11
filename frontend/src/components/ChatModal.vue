@@ -118,6 +118,7 @@ import axios from "axios";
 import { ref } from "vue";
 
 const randomClaim = ref('')
+const MindMapStore = ref(null)
 
 export default {
   name: 'ChatModal',
@@ -188,7 +189,8 @@ export default {
     mindMapData(newVal){
       console.log("newVal",newVal)
       if(newVal){
-        randomClaim.value = this.choiceRandomClaim()
+        MindMapStore.value = newVal
+        randomClaim.value = this.choiceRandomClaim(newVal)
       }
     },
     reply_comment(newVal){
@@ -243,6 +245,8 @@ export default {
       // 例如：重置 claim
       this.question_list = []
       this.$emit('reset-claim');
+      randomClaim.value = this.choiceRandomClaim(MindMapStore.value)
+      console.log("randomClaim", randomClaim.value)
     },
     handlePresetQuestion(question) {
       if (question.trim() !== '') {
@@ -485,12 +489,12 @@ export default {
         console.error('roleplay question list error', error)
       })
     },
-    choiceRandomClaim() {
-      if (!this.mindMapData) {
+    choiceRandomClaim(mindMapData) {
+      if (!mindMapData) {
         console.warn("No data available for choiceRandomClaim");
         return;
       }
-      console.log("mindMapData", this.mindMapData);
+      console.log("mindMapData", mindMapData);
       const collectNodeTexts = (node) => {
       if (!node) return [];
       let texts = [node.data.text];
@@ -501,7 +505,7 @@ export default {
         }
         return texts;
       };
-      const allTexts = collectNodeTexts(this.mindMapData);
+      const allTexts = collectNodeTexts(mindMapData);
       if (allTexts.length === 0) {
           console.warn("No texts found in mindMapData");
           return;

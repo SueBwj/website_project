@@ -20,7 +20,9 @@ class CriticalThinkingExerciseResources(Resource):
         第一次请求时, 会生成一组新的习题并存储用户 ID 和习题信息.
         后续请求时, 会返回之前生成的习题.
         """
-        user_cookie = request.args.get('user_device_id')
+        user_cookie = request.args.get('user_id')
+        if not user_cookie:
+            user_cookie = generate_uid()
         claim = request.args.get('claim')
 
         if not user_cookie or not CriticalThinkingService.exercise_exists(user_cookie):

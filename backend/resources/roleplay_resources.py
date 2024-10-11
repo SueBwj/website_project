@@ -14,8 +14,12 @@ class RoleplayResources(Resource):
         """
         根据请求参数返回相应的 roleplay chatbot 回复信息
         """
-        user_cookie = request.cookies.get('user_device_id')
-        print(user_cookie)
+        user_cookie = request.cookies.get('user_id')
+        if not user_cookie:
+            user_cookie = generate_uid()
+        
+        print(f"当前用户ID: {user_cookie}")
+        
         claim = request.args.get('claim', None)
         message = request.args.get('message', None)
         topic_id = request.args.get('topic_id', None)
@@ -26,11 +30,10 @@ class RoleplayResources(Resource):
         if not RoleplayService.file_exist(user_cookie, claim):
             # 第一次进入 roleplay
             reply, all_comments = RoleplayService.returnFirstReply(claim, user_cookie,topic_id)
-            response = make_response({
-                "user_id": user_cookie,
-            })
+            response = make_response()
             data = {'reply': reply, 'all_comments': all_comments}
             response.set_data(json.dumps(data).encode('utf-8'))
+            response.set_cookie('user_id', user_cookie)
             return response
 
         if not message:
@@ -39,11 +42,10 @@ class RoleplayResources(Resource):
         # 处理常规对话
         print(user_cookie, claim, message)
         reply = RoleplayService.returnReply(user_cookie, claim, message)
-        response = make_response({
-            "user_id": user_cookie,
-        })
+        response = make_response()
         data = {'reply': reply, 'all_comments': ''}
         response.set_data(json.dumps(data).encode('utf-8'))
+        response.set_cookie('user_id', user_cookie)
         print(response)
         return response
 
