@@ -188,7 +188,7 @@ class RoleplayService:
     @staticmethod
     def saveHistory(data:list, user_id:str, claim:str):
         # 使用哈希函数生成claim的唯一标识符
-        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
+        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:12]
         # 保存file到roleplay history file之中
         file = roleplay_history_dir.joinpath(f'chat_{user_id}_{claim_hash}.json')
         # 每一次都直接覆盖
@@ -230,7 +230,7 @@ class RoleplayService:
     def returnReply(user_cookie:str, claim:str ,message:str):
         """对用户的消息进行回应"""
         # 根据user_id和claim取出对应的历史文件
-        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
+        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:12]
         file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim_hash) + '.json')
         data = load_json(file)
         data.append({
@@ -250,7 +250,7 @@ class RoleplayService:
         """
         判断文件是否存在
         """
-        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:8]
+        claim_hash = hashlib.md5(claim.encode()).hexdigest()[:12]
         file = roleplay_history_dir.joinpath('chat_'+ str(user_cookie) + '_' + str(claim_hash) + '.json')
         return os.path.exists(file)
 

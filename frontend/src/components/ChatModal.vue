@@ -128,8 +128,7 @@ export default {
       default: false,
     },
     mode: {
-      type: String,
-      default: 'Chat'
+      type: String
     },
     claim: {
       type: String,
@@ -170,22 +169,25 @@ export default {
     },
   },
   watch:{
-    claim(newVal){
-      console.log("newVal",newVal)
-      if(newVal.trim() !== ''){
-        // 在开启新话题的时候清空聊天窗口
-        if(this.mode === 'Explore claims'){
-          this.messages = [{ text: `正在加载关于支持观点" ${newVal} "的理由...`, sender: 'bot' }]
-          this.getGptReply(newVal)
-          this.getQuestionList(newVal)
-        }
-        else{
-          this.messages = [{ text: `正在加载关于观点" ${newVal} "的Critical Exercises...`, sender: 'bot' }]
-          this.showPresetOptions = false;
-          this.getExercise(newVal)
-        }
-      }
-    },
+    // claim(newVal){
+    //   console.log("newVal",newVal)
+    //   if(newVal.trim() !== ''){
+    //     // 在开启新话题的时候清空聊天窗口
+    //     if(this.mode === 'Explore claims'){
+    //       this.messages = [{ text: `正在加载关于支持观点" ${newVal} "的理由...`, sender: 'bot' }]
+    //       this.getGptReply(newVal)
+    //       this.getQuestionList(newVal)
+    //     }
+    //     else{
+    //       this.messages = [{ text: `正在加载关于观点" ${newVal} "的Critical Exercises...`, sender: 'bot' }]
+    //       this.showPresetOptions = false;
+    //       this.getExercise(newVal)
+    //     }
+    //   }
+    // },
+    // mode(newVal){
+    //   console.log("mode", newVal)`
+    // },
     mindMapData(newVal){
       console.log("newVal",newVal)
       if(newVal){
@@ -369,6 +371,7 @@ export default {
       }
     },
     CriticalExercises(){
+      this.question_list = []
       console.log("Critical Exercises")
       if(this.exercises.length > 0){
         this.isQuizActive = true
@@ -652,7 +655,7 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: relative;
   white-space: pre-wrap; /* 保留换行符 */
-  font-size: 12px;
+  font-size: 15px;
   text-align: left;
 }
 
@@ -703,7 +706,7 @@ export default {
   border-radius: 20px;
   background: #f5f5f5;
   color: #333;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
   transition: background 0.3s, border-color 0.3s;
 }

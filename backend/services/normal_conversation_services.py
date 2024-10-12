@@ -35,7 +35,7 @@ class NormalConversationService:
         messages.append({"role": "user", "content": message})
         # 使用OpenAI客户端生成回复
         completion = client.chat.completions.create(
-            model="gpt-4", 
+            model="gpt-4o", 
             messages=messages,
             temperature=0.5,  # 控制输出的随机性，0.0到1.0之间
             max_tokens=5000  # 限制响应的长度
