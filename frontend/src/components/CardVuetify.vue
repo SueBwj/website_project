@@ -114,35 +114,37 @@
       // 检查当前组件的评论
       if (this.checkContent(component.comments.comment, compare_content)) {
         component.highlightAndScroll();
-      return true; // 找到匹配项，返回true
-    }
+        component.show = true;
+        return true; // 找到匹配项，返回true
+      }
 
-    // 展开子评论
-    component.show = true;
+      // 初始化 foundMatch 为 false
+      let foundMatch = false;
 
-    // 检查子评论
-    if (component.comments.subcomment && component.comments.subcomment.length > 0) {
-      this.$nextTick(() => {
+      // 检查子评论
+      if (component.comments.subcomment && component.comments.subcomment.length > 0) {
         const childCards = component.$refs.childCards;
+
         if (Array.isArray(childCards)) {
           for (let childCard of childCards) {
-            if (this.recursivelyCheckContent(childCard, compare_content )) {
-              return true; // 如果在子组件中找到匹配项，返回true
+            if (this.recursivelyCheckContent(childCard, compare_content)) {
+              foundMatch = true; // 在子组件中找到匹配项
             }
           }
         } else if (childCards) {
           // 只有一个子组件的情况
           if (this.recursivelyCheckContent(childCards, compare_content)) {
-            return true;
+            foundMatch = true;
           }
         }
-      });
-    }
+      }
 
-      // 如果没有找到匹配项
+      // 根据是否找到匹配项来展开或收起子评论
+      component.show = foundMatch;
       component.isActive = false;
-      return false;
-    },
+
+      return foundMatch;
+    }
   },
   watch: {
       clickContent: {
