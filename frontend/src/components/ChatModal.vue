@@ -450,6 +450,11 @@ export default {
      });
     },
     formatMessage(text) {
+      if (typeof text !== 'string') {
+        console.error('Invalid data format: text should be a string');
+        // 如果text不是字符串，则不做处理
+        return text;
+      }
       // 转换有序列表
       const listPattern = /^(\d+\.\s.+(\n|$))+/
       if (listPattern.test(text)) {
