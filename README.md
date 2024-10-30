@@ -1,12 +1,50 @@
-### 参考资料
-思维导图结合llm -- https://raw.githubusercontent.com/xianjianlf2/MindGeniusAI/main/markdownImg/brainStorm.gif
+# Question-Driven Interactive Mind Map
+一个基于Vue.js和Flask的辩论思维导图与智能对话系统，帮助用户更好地理解和探索辩论主题。
 
-chat 参考设计 -- https://github.com/mattmezza/vue-beautiful-chat?tab=readme-ov-file
+## 功能特点
 
-可以使用一些模块
-- vuetify
+- 📊 交互式思维导图展示辩论主题和观点
+- 💬 智能对话系统，支持观点探索和批判性思维训练
+- 🔄 实时更新的评论展示
+- 📱 响应式设计
+- 🎨 美观的UI界面设计
 
-### Todo
-- 前端
-    - 完成ai输出的功能实时显示在页面 websocket
-    - normal chat 需要加上事件背景
+
+## 主要功能模块
+
+### 思维导图
+
+- 使用[simple-mind-map](https://github.com/wanglin2/mind-map/tree/main)实现思维导图
+- <img src="./images/mindmap.png">
+
+
+
+### 对话系统
+- **批判性思维练习**
+- 支持多轮对话
+- 预设问题列表
+- 观点探索功能
+- <img src='./images/chat.png' width='400'>
+
+### 评论展示
+- 实时更新的评论列表
+- 支持评论正负观点高亮标识
+
+
+## 技术栈
+
+### 前端
+- Vue 3
+- Vuex
+- Vue Router
+- Axios
+- Bootstrap
+- Vuetify
+- Simple-mind-map
+
+### 后端
+- Flask
+- Flask-CORS
+- OpenAI API
+
+
